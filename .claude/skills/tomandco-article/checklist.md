@@ -67,7 +67,7 @@ If no honest stat is available, **flag in the email** and ship the article witho
 - The article body contains an "About the author" line at the bottom with the author's role and one credential (years in industry, certification, prior role).
 - Person schema in the JSON-LD block includes `name`, `jobTitle`, `worksFor: Tom & Co`, `sameAs: [LinkedIn URL]`.
 
-**Open question for Tom:** which named human bylines this content? Until confirmed, the engine drafts with `author: "Tom Cummings"` placeholder and flags it in the email.
+**Default byline:** Tom McCaul, Founder, Tom & Co. LinkedIn: https://www.linkedin.com/in/tom-mccaul-77b2778/. The Person schema resolves to Tom McCaul on every article unless Tom Cummings (the engine operator) explicitly substitutes a different named author for a particular piece.
 
 ## 8. Visible "Last reviewed" date
 

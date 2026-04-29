@@ -91,15 +91,27 @@ def extract_html(input_path):
     return p.read_text()
 
 
-def split_paragraphs(html):
-    parts = re.split(r"</?p[^>]*>", html, flags=re.I)
-    return [TextExtractor.__call__ if False else strip_tags(p).strip() for p in parts if p.strip()]
-
-
 def strip_tags(html):
     e = TextExtractor()
     e.feed(html)
     return e.text()
+
+
+def split_paragraphs(html):
+    # Treat each paragraph-level block (p, li, td, h*, aside) as its own paragraph.
+    # Strip JSON-LD scripts so they don't pollute the count.
+    no_script = re.sub(r"<script[\s\S]*?</script>", "", html, flags=re.I)
+    blocks = re.split(
+        r"</(?:p|li|td|th|h[1-6]|aside|blockquote)>",
+        no_script,
+        flags=re.I,
+    )
+    paras = []
+    for b in blocks:
+        text = strip_tags(b).strip()
+        if text:
+            paras.append(text)
+    return paras
 
 
 def count_em_dash(text):
@@ -122,9 +134,8 @@ def count_banned_words(text):
 
 
 def paragraph_word_counts(html):
-    text_only = strip_tags(html)
-    paras = re.split(r"\n\n+", text_only)
-    return [(p.strip(), len(p.split())) for p in paras if p.strip()]
+    paras = split_paragraphs(html)
+    return [(p, len(p.split())) for p in paras]
 
 
 def we_our_frequency(text):

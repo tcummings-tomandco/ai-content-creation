@@ -1,4 +1,29 @@
 {
   "_note": "Tom & Co original calculations and proprietary stats. Each Layer 2 article appends an entry. Each Layer 3 datapoint (survey, anonymised client outcome) is added manually by Tom with `layer: 3`. See .claude/skills/tomandco-article/stat-sourcing.md for the schema.",
-  "stats": []
+  "stats": [
+    {
+      "id": "stat_001",
+      "stat": "UK government direct AI funding announced or detailed across the twelve months covered by the AI Opportunities Action Plan: One Year On",
+      "value": "2.6",
+      "unit": "GBP billion",
+      "date_calculated": "2026-04-29",
+      "applies_to": [
+        "topic IDs: 1, 2, 5, 33, 34, 35, 42, 47",
+        "clusters: Strategy & ROI; Risk, Governance & Legal"
+      ],
+      "method": "Recipe E (funding maths) \u2014 aggregation of named funding lines from a single primary government document",
+      "sources_used": [
+        {
+          "title": "AI Opportunities Action Plan: One Year On",
+          "url": "https://www.gov.uk/government/publications/ai-opportunities-action-plan-one-year-on/ai-opportunities-action-plan-one-year-on",
+          "publisher": "Department for Science, Innovation and Technology (DSIT)",
+          "accessed": "2026-04-29"
+        }
+      ],
+      "workings": "AISI 240 + AIRR 250 + Edinburgh supercomputer 750 + Sovereign AI Unit 500 + TechFirst 187 + Modern Industrial Strategy AI 150 + HDRS gov contribution 400 (of 600 total) + NDL 100 + Robotics/Made Smarter 40 + Smart Data 36 + AI Growth Zones direct 25 + AI Assurance Innovation Fund 11 + Regulators' Pioneer Fund 8.9 + TechLocal AI Accelerator 7.8 + AI Capability Fund 3.6 = 2,709.3 GBP million \u2248 2.6 GBP billion (rounded down conservatively). Excludes the \u00a328.2bn private investment the AI Growth Zones programme is reported to have generated.",
+      "first_used_in": "uk-ai-regulation-2026-principles-based-field-guide",
+      "first_used_date": "2026-04-29",
+      "layer": 2
+    }
+  ]
 }
