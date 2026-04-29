@@ -1,0 +1,4 @@
+{
+  "_note": "Tom & Co original calculations and proprietary stats. Each Layer 2 article appends an entry. Each Layer 3 datapoint (survey, anonymised client outcome) is added manually by Tom with `layer: 3`. See .claude/skills/tomandco-article/stat-sourcing.md for the schema.",
+  "stats": []
+}
