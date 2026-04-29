@@ -70,6 +70,25 @@ Test voice compliance on any draft:
 python3 scripts/voice_check.py output/2026-04-29-uk-ai-regulation-map/article.json
 ```
 
+## Sharing previews with colleagues
+
+Previews live at `https://tcummings-tomandco.github.io/ai-content-creation/` once GitHub Pages is enabled (Settings → Pages → Source: Deploy from branch → main → /docs).
+
+Each approved article gets a stable URL: `https://tcummings-tomandco.github.io/ai-content-creation/previews/{slug}/`.
+
+All preview pages carry `<meta name="robots" content="noindex,nofollow">` so search engines and LLM crawlers do not pick them up. Anyone with the URL can read the page; the URL is not discoverable. Treat it as "shareable but not public."
+
+To publish a new preview:
+
+```bash
+python3 scripts/publish_preview.py output-folder-name
+# or republish everything from scratch:
+python3 scripts/publish_preview.py --all
+git add docs && git commit -m "Publish preview: <title>" && git push
+```
+
+If the previews need real authentication, switch to a Vercel preview deployment with project-level password protection. The engine's output is host-agnostic — only the publish step changes.
+
 ## The 10-element GEO checklist
 
 Every article must ship with all ten before approval. From the editorial playbook:
@@ -112,7 +131,7 @@ Voice rules (warnings, not auto-fails):
 - **Notification channel**: gmail (not Slack — reserved for non-engine work).
 - **Cadence**: 2 supporting articles per week, plus 1 newsroom slot per fortnight, plus 90-day refresh sweeps. Not daily.
 - **Categories**: new "AI" category on the website (existing categories are Strategy, Design, Awards, News, Adobe Commerce updates, Headless, Partners, Podcasts & Webinars).
-- **Author byline**: open question — "Tom Cummings" placeholder until confirmed. Person schema requires a LinkedIn URL.
+- **Author byline**: Tom McCaul, Founder, Tom & Co. LinkedIn: https://www.linkedin.com/in/tom-mccaul-77b2778/. Default for every article unless explicitly overridden.
 - **CMS**: Next.js 16, articles stored in `src/data/articles.json` in the website repo. No headless CMS.
 - **Schema injection**: Phase 1 embeds JSON-LD inline in `content`. Phase 2 ideally adds article-level schema injection to the website renderer.
 
