@@ -19,14 +19,46 @@ Read `data/voice_samples/` for the real corpus. Patterns observed across the fou
 
 ## What changes for the GEO content engine
 
-The existing voice is agency-marketing — chatty, client-storytelling. The GEO content engine writes **authority articles**: question-led, scannable, citation-rich, UK-specific, designed for LLMs to extract verbatim.
+The existing voice is agency-marketing: chatty, client-storytelling. The GEO content engine writes **authority articles**: question-led, scannable, citation-rich, UK-specific, designed for LLMs to extract verbatim.
 
 So the dial shifts. Keep the warmth, drop the chat. Specifically:
 
 - Lead with the answer, not the anecdote. Answer paragraph is the first 40–80 words; client stories come later as evidence.
 - Substance density goes up. Every paragraph in the body should carry either a specific number, a regulator name, a sterling figure, a date, or a named scheme (BridgeAI, Made Smarter, Innovate UK Smart Grants, AI Growth Zones).
-- First-person plural is fine but used sparingly — don't open every paragraph with "we". Let the article be about the topic, not the agency. Agency presence shows up in the original Tom & Co stat and the byline, not in self-reference.
+- First-person plural is fine but used sparingly. Don't open every paragraph with "we". Let the article be about the topic, not the agency. Agency presence shows up in the original Tom & Co stat and the byline, not in self-reference.
 - Section headings stay plain and question-form, not playful, because they double as LLM extraction anchors. ("How much does an AI chatbot cost in the UK?" not "Show Me The Money".)
+
+## Register: friend-who-knows-AI, not corporate
+
+The hardest calibration in this engine is the register. It is not formal corporate analyst-speak. It is not chatty agency-marketing copy either. It is the voice of an expert friend telling you something useful at the pub. Tom & Co is a digital-friendly agency at heart, and the authority content has to keep that personality even while the substance gets more rigorous.
+
+What that means concretely:
+
+- **Open paragraphs and section transitions in conversational language, not analyst language.** Not "The productivity expectation gap is the more interesting finding." Use "Here's the bit that really matters." or "The interesting one, though, is the gap."
+- **Translate jargon as you go, like a friend would.** Not "statistically significant in the BCC dataset (p<0.001)" left bare. Pair it: "statistically significant (p<0.001), not just enthusiasm bias."
+- **Use named, slightly playful labels when they help the reader hold a category.** "The fence-sitters" and "the 'never touching it' crowd" are fine. "Cohort 3" and "the hesitant segment" are not.
+- **Interpret the data on the reader's behalf.** After listing the numbers, give them the punchline in plain language. Friends say what the data means; analysts make you work for it.
+- **Contractions are mandatory when they read naturally.** "It's" not "it is". "Don't" not "do not". "Won't" not "will not". Forced formality reads as corporate.
+- **One conversational aside per major section is welcome.** A bracketed wry comment, a parenthetical reality-check, a "yes, this matters because…" interpretive line. Don't do it every paragraph; do it once where it earns its keep.
+
+What this is NOT permission to do:
+
+- This is not licence to be flippant. The substance must still be primary-source-anchored, citation-rich, defensible. The voice change is sentence-level, not standards-level.
+- This is not licence to drop the structural rigour. Question-form H2s, the comparison table, JSON-LD, the last-reviewed date are all still required.
+- This is not licence to use rhetorical questions as section bridges ("So what does this mean for your business?"). Those are still banned. Conversational rhetorical asides inside a paragraph ("The fence-sitters?") are fine; rhetorical questions used to fill space at section breaks are not.
+- This is not licence to over-pun, over-quip, or write headings as jokes. The H1 and H2s still need to read as user prompts an LLM would extract.
+
+### The canonical before-and-after
+
+The corporate version (do not):
+
+> The productivity expectation gap is the more interesting finding. Current AI users expect a net +71 percentage point productivity gain over the next twelve months. Firms still planning to adopt expect +46pp. The unsure expect +26pp. Non-adopters expect -3pp. The expectation gap between current users and non-adopters is statistically significant.
+
+The friend-who-knows-AI version (do):
+
+> Here's the bit that really matters. Firms already using AI expect a +71pp productivity gain over the next year. Firms still planning it: +46pp. The fence-sitters: +26pp. The "never touching it" crowd: -3pp. So the people closest to the technology are the most optimistic about what it can do, and the people furthest from it are the least. The gap is statistically real (p<0.001 in the BCC dataset), not just enthusiasm bias.
+
+Substance is identical. The register is the difference. Every paragraph in every article should be checked against this contrast.
 
 ## Hard rules — these are non-negotiable
 
