@@ -51,7 +51,7 @@ Use `format-mapping.md` to pick the structural template for the topic's Cluster 
 - Where the comparison table goes (required for vs/best/alternative; recommended otherwise)
 - Where the original UK stat lives, prominently in the body
 - The internal link placements (2–4)
-- The "Last reviewed" stamp position
+- The `date` field in article.json (drives Storyblok `published_at`; the website renderer shows it in the article header)
 
 ### 4. Draft
 
@@ -100,6 +100,50 @@ To `output/{YYYY-MM-DD}-{slug}/`:
 - `qa_report.md` — the 10-element scoresheet plus voice-guide spot-check (em-dash count, banned-word count, paragraph length distribution)
 - `internal_link_suggestions.md` — 2–4 anchor texts and target Tom & Co URLs for the website-side `prebuild` link injector to consume (or for manual placement)
 - `stat_bank_update.json` — any new original calculation to merge back into `data/stat_bank.json`
+- `key_stats.json` — **mandatory.** 3–5 of the most punchy, scannable statistics from the article, deliberately picked to render as stat tiles at the top of the published page. See section 7a below.
+
+### 7a. Build key_stats.json
+
+Storyblok renders `ai_blog_key_stat` items as visually prominent tiles at the top of the article (above the body text). They are the cheapest way to add scannable structure to a long-form piece. Every article must ship with 3–5 of them.
+
+**Selection rules:**
+
+- Pick from the stats already cited in the article body. Do not invent numbers, do not pull from external sources at this stage — the stat must trace back to an inline citation in the article you just drafted.
+- Favour stats that tell the article's story in isolation. A reader who scans only the stat tiles should grasp the article's headline argument.
+- Use a mix of magnitudes where possible: one percentage, one absolute figure, one date, one ratio. Visual variety helps.
+- Prefer the Layer 2 Tom & Co original calculation as one of the stats if the article has one — it earns brand citation lift over time.
+- Each value field should be ≤ 12 characters where possible (e.g. `£2.6bn`, `54%`, `2 Aug 2026`, `€35m / 7%`, `5 principles`). The Storyblok renderer truncates long values.
+
+**Format (write this to `key_stats.json` in the article's output folder):**
+
+```json
+{
+  "stats": [
+    {
+      "value": "54%",
+      "label": "Of UK firms use AI in 2026 (up from 23% in 2023)",
+      "source": "BCC and University of Essex, March 2026"
+    },
+    {
+      "value": "6%",
+      "label": "Of organisations see ≥5% enterprise EBIT impact from AI",
+      "source": "McKinsey State of AI, March 2025"
+    },
+    {
+      "value": "+71pp",
+      "label": "Net productivity gain current AI users expect over 12 months",
+      "source": "BCC and University of Essex, March 2026"
+    },
+    {
+      "value": "10–20%",
+      "label": "Cost reduction in software engineering, IT and manufacturing",
+      "source": "McKinsey State of AI, March 2025"
+    }
+  ]
+}
+```
+
+The push script reads this file and builds the `ai_blog_key_stats` blok from it. Articles without a `key_stats.json` will still publish, but they will only show the single Layer 2 stat from the stat bank (if any) and the rendered page will read denser. Do not skip this step.
 
 ### 8. Email Tom for approval
 

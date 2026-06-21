@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "5 principles",
+      "label": "Apply across UK sectors via existing regulators (safety, transparency, fairness, accountability, contestability)",
+      "source": "DSIT 2023 white paper"
+    },
+    {
+      "value": "2 Aug 2026",
+      "label": "EU AI Act high-risk obligations become enforceable for UK firms whose outputs reach the EU",
+      "source": "EU AI Act, Article 113"
+    },
+    {
+      "value": "£2.6bn",
+      "label": "UK government AI funding committed across the past 12 months",
+      "source": "Tom & Co analysis of gov.uk, April 2026"
+    },
+    {
+      "value": "€35m / 7%",
+      "label": "Max EU AI Act penalty for prohibited-AI breaches (turnover-based ceiling)",
+      "source": "EU AI Act, Article 99"
+    }
+  ]
+}

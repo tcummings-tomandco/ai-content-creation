@@ -74,16 +74,18 @@ Add up the named UK AI funding pots (BridgeAI, Innovate UK Smart Grants, Made Sm
 
 Where a regulator publishes obligations and a deadline (EU AI Act 2 Aug 2026, FCA AI consultation, ICO guidance refresh), estimate the implementation effort in person-days based on a comparable programme (GDPR rollout published estimates from the ICO/CMS reports). Cite as "Tom & Co implementation effort estimate based on the ICO's published GDPR readiness benchmarks."
 
-**Methodology footnote template** (always included when a Layer 2 stat is used):
+**Methodology — do NOT include inline in the article body.**
 
-```html
-<aside class="methodology">
-  <strong>Methodology.</strong> The figure of {X} is a Tom & Co calculation. We took
-  [source] (accessed {date}, {URL}), applied [the derivation: e.g. "ONS median knowledge-worker
-  hourly compensation of £x.xx multiplied by Bain's 23% productivity uplift over 1,800 productive
-  hours per year"], and arrived at the reported value. Workings: {one-line maths}.
-</aside>
-```
+Earlier drafts of this skill mandated an `<aside class="methodology">` block in the article showing the full workings of every Layer 2 calculation. In practice this rendered as a wall of attribution text in the body and broke the visual rhythm of the article without adding reader value. Removed.
+
+What we do instead:
+
+- The article cites the result with a one-line attribution. Examples: *"Tom & Co aggregation of named UK AI funding lines listed on gov.uk in April 2026"*, or *"Tom & Co analysis of ONS Business Insights data, April 2026"*. That sits inline in the prose where the stat is first used.
+- The full workings live in `data/stat_bank.json` under the `workings` field (see schema below). That file is the engine's audit trail and the source of truth for re-using calculations across articles.
+- The article's `sources.md` output file also records the workings so a human reviewer can verify before approval.
+- The Storyblok `ai_blog_key_stat` tile's `source` field carries the one-line attribution for the published page.
+
+If you genuinely need to show the workings to readers (e.g. for a flagship pillar piece where the calculation is the headline), put them in a separate "Methodology" section at the very end of the article, AFTER the body and before the author byline — not in a body-text `<aside>`.
 
 **Append to stat_bank.json after every Layer 2 calculation:**
 

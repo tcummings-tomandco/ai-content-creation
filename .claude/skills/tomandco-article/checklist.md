@@ -69,12 +69,14 @@ If no honest stat is available, **flag in the email** and ship the article witho
 
 **Default byline:** Tom McCaul, Founder, Tom & Co. LinkedIn: https://www.linkedin.com/in/tom-mccaul-77b2778/. The Person schema resolves to Tom McCaul on every article unless Tom Cummings (the engine operator) explicitly substitutes a different named author for a particular piece.
 
-## 8. Visible "Last reviewed" date
+## 8. Visible date on the rendered page
 
 **Pass criteria:**
-- The article body contains a visible line near the top (immediately under the H1 or just below the answer paragraph) reading: `Last reviewed: {YYYY-MM-DD}`.
+- The `date` field in `article.json` is set to the day the article was drafted or last refreshed (`YYYY-MM-DD`).
+- The push step sets Storyblok's `published_at` to that same date, which the website renderer surfaces in the article header (alongside read time and author).
 - The `dateModified` field in the Article JSON-LD matches.
 - The roadmap row's `Notes` records the next review-due date (today + 90 days for supporting articles, today + 60 days for pillars).
+- **Do not include a "Last reviewed:" line in the body text.** It duplicates the Storyblok-rendered date and reads awkwardly as the first line under the hero. The freshness signal is carried by `published_at` (which feeds the page header) and the JSON-LD `dateModified` (which LLM crawlers ingest).
 
 ## 9. 2–4 internal links with descriptive anchor text
 
@@ -124,7 +126,7 @@ Topic ID: {n}  |  Cluster: {cluster}  |  Priority: {p}  |  Word count: {w}
 5. Original UK stat: PASS/FAIL/N/A — [Layer 1/2/3, source]
 6. JSON-LD schema: PASS/FAIL/N/A — [schemas included]
 7. Author byline + Person schema: PASS/FAIL/N/A — [author, LinkedIn]
-8. Last reviewed date: PASS/FAIL/N/A — [stamp present, dateModified matches]
+8. Visible date / dateModified: PASS/FAIL/N/A — [article.json `date` set, Storyblok `published_at` matches, JSON-LD `dateModified` matches]
 9. 2-4 internal links: PASS/FAIL/N/A — [links chosen, anchors]
 10. Robots.txt check: PASS/FAIL/SITE-LEVEL — [last verified]
 

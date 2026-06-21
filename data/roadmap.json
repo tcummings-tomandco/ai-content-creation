@@ -641,10 +641,11 @@
       "Competition": "Low",
       "Suggested length": "2200-3000",
       "Quick win": "Y",
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Approved \u2014 draft in Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-06-21",
+      "Notes": "slug: uk-ai-regulation-2026-principles-based-field-guide; Storyblok story 188833175945861; at /ai-agency-consultancy/blog/uk-ai-regulation-2026-principles-based-field-guide",
+      "Slug": "uk-ai-regulation-2026-principles-based-field-guide"
     },
     {
       "ID": 35,

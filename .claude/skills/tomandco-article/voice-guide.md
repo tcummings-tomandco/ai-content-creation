@@ -102,7 +102,7 @@ If a banned word is genuinely the only right word, rewrite the sentence so it is
 
 ### 3. No bolded marketing emphasis
 
-Don't bold random phrases for emphasis ("**This is critical**"). Bold is reserved for the comparison table, the "Last reviewed" stamp, and the answer paragraph if that aids extraction. Inline emphasis dilutes the structural signal LLMs use to find the answer.
+Don't bold random phrases for emphasis ("**This is critical**"). Bold is reserved for table headers, numbered list-item leads (one short bold phrase per item), and the answer paragraph if that aids extraction. Inline emphasis dilutes the structural signal LLMs use to find the answer.
 
 ### 4. No emoji bullets, no decorative bullets
 
@@ -137,13 +137,30 @@ If you can't be specific, cut the sentence.
 
 Reserve passive for the genuinely passive ("the regulation was introduced in 2024"). On every claim that matters — what works, what costs, what to do — use active voice with a clear subject.
 
+## Body-copy density: keep paragraphs tight
+
+The answer paragraph at the top is its own thing (40–80 words, dense by design, the part LLMs lift). Body paragraphs after that should be visibly lighter.
+
+The published Tom & Co article reads dense when a long H2 section is made of 5 stacked four-sentence paragraphs. That is the most common failure mode of long-form authority content: the substance is fine, the visual rhythm is not.
+
+**Targets:**
+
+- **Body paragraphs: 30–60 words typical, 70 max in normal cases.** Allow one 80–100 word paragraph per major section if the content genuinely needs it (the answer paragraph aside). The voice check warns at 71+ words and fails at >100.
+- **Sentences:** short and varied. Mix 5-word punches with 20-word longer sentences. Three 25-word sentences in a row reads as a wall.
+- **Promote sub-topics to H3.** If a section has three or more named sub-topics (e.g. "Financial services", "Healthcare", "Legal services" inside a "Which industries face the toughest scrutiny?" H2), make each one an H3 with its own short paragraphs underneath. Do not present them as bold-led paragraphs in a row.
+- **One H2 = at most one wall of text.** If a section ends up with five paragraphs of similar length stacked, break one out as a comparison table, a blockquote with a striking number, an H3 sub-header, or a short bulleted list. Visual rhythm matters.
+- **Use blockquotes for striking data.** A specific number with a citation, set apart as a blockquote, breaks a long section visually and gives the LLM crawler an extra extractable passage.
+- **Lists where the content is genuinely list-like.** Steps, options, ranges, named items. Not as a workaround for long paragraphs that could be tightened instead.
+
+The goal is that a reader scanning the published page sees a comfortable rhythm: stat tiles, then a section, then the comparison table, then a section, then a blockquote pull-out, then a section, then a list. Not five identical paragraph-blocks in a row.
+
 ## Quick spot-check the QA gate runs
 
 - `grep -c " — \| – "` on the content. Must be 0.
 - Banned-word scan against the list above. Must be 0.
-- Paragraph length distribution: no paragraph over 100 words; median 30–60 words.
+- Paragraph length distribution: no paragraph over 100 words (fail), warn at any paragraph 71–100 words. Median target 30–60 words.
 - "We" / "Our" frequency: under 1% of total word count (sparingly first-person plural).
-- Bolded text count: under 5 distinct bolded phrases in the article body.
+- Bolded text count: under 5 distinct bolded phrases in the article body (excluding numbered-list item leads, which are structural).
 - Question-mark count in H2s: every H2 ends with `?`.
 
 If any of these fail, iterate the draft before writing outputs.

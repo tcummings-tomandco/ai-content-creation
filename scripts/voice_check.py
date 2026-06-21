@@ -171,6 +171,7 @@ def main():
     banned = count_banned_words(text)
     para_lengths = paragraph_word_counts(html)
     long_paras = [n for _, n in para_lengths if n > 100]
+    warn_paras = [(p, n) for p, n in para_lengths if 71 <= n <= 100]
     we_freq = we_our_frequency(text)
     h2_all, h2_bad = h2_check(html)
     bolds = bold_count(html)
@@ -198,6 +199,12 @@ def main():
     print(f"- Paragraphs over 100 words: {len(long_paras)} {'✓' if long_ok else 'FAIL'}")
     if not long_ok:
         failures += 1
+
+    warn_ok = len(warn_paras) == 0
+    print(f"- Paragraphs 71-100 words (target ≤70): {len(warn_paras)} {'✓' if warn_ok else 'WARN'}")
+    if warn_paras:
+        for p, n in warn_paras[:5]:
+            print(f"    [{n} words] {p[:120]}...")
 
     we_ok = we_freq < 1.0
     print(f"- 'We'/'Our' frequency: {we_freq:.2f}% {'✓' if we_ok else 'WARN'}")

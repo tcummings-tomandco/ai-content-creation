@@ -1,9 +1,12 @@
-output/
+# output/ is intentionally committed: the cloud routine writes articles here
+# and the publish-to-storyblok GitHub Action reads them. Do not gitignore it.
+case-studies/
 .DS_Store
 *.pyc
 __pycache__/
 .env
 .env.local
+variables.env
 *.log
 node_modules/
 .vscode/

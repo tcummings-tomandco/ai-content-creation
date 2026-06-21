@@ -7,10 +7,11 @@ Each topic in the roadmap has a `Format` column (e.g. "Definition + benchmark ta
 Every article, regardless of format, opens with the same three components in this order:
 
 1. **H1**: the headline question, ≤70 characters, mirroring the strongest user prompt.
-2. **Last reviewed line**: `Last reviewed: {YYYY-MM-DD}` immediately under the H1.
-3. **Definitive answer paragraph**: 40–80 words, no surrounding context required, contains a specific number/regulator/scheme. This is the single most important paragraph in the article.
+2. **Definitive answer paragraph**: 40–80 words, no surrounding context required, contains a specific number/regulator/scheme. This is the first content under the H1 and the single most important paragraph in the article. The date is rendered separately by Storyblok from the `published_at` field — do not put a "Last reviewed:" line in the body.
 
-Then the format-specific body. Then the universal close:
+3. Format-specific body (see templates below).
+
+Then the universal close:
 
 - **About the author** — one paragraph naming the author, role, one credential, LinkedIn link.
 - **Related Tom & Co articles** — 2 to 4 internal links with descriptive anchor text (covered in element 9).
