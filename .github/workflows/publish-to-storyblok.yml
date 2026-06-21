@@ -1,0 +1,61 @@
+name: Publish pending articles to Storyblok
+
+# Option B publishing half. The cloud routine writes an article and marks its
+# roadmap row "Draft pending Storyblok", then pushes to main. This workflow
+# picks up that push, publishes the article to Storyblok as a draft, and
+# commits the roadmap row back as "Approved — draft in Storyblok".
+#
+# The Storyblok credentials live in this repo's Actions secrets
+# (Settings -> Secrets and variables -> Actions), NOT in the repo and NOT in
+# the cloud routine. Add:
+#   STORYBLOK_OAUTH_TOKEN
+#   STORYBLOK_SPACE_ID
+#   STORYBLOK_ACCESS_TOKEN   (optional; not used by the push but kept consistent)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/roadmap.json'
+      - 'output/**'
+  workflow_dispatch: {}   # allow manual runs from the Actions tab
+
+permissions:
+  contents: write          # lets the job commit the roadmap update back
+
+concurrency:
+  group: publish-to-storyblok
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the engine repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Publish pending articles to Storyblok
+        env:
+          STORYBLOK_OAUTH_TOKEN: ${{ secrets.STORYBLOK_OAUTH_TOKEN }}
+          STORYBLOK_SPACE_ID: ${{ secrets.STORYBLOK_SPACE_ID }}
+          STORYBLOK_ACCESS_TOKEN: ${{ secrets.STORYBLOK_ACCESS_TOKEN }}
+          STORYBLOK_REGION: eu
+        run: python3 scripts/publish_pending.py
+
+      - name: Commit roadmap updates
+        if: success()
+        run: |
+          git config user.name "Tom & Co AI Routine"
+          git config user.email "routine@tomandco.co.uk"
+          git add data/roadmap.json
+          if git diff --staged --quiet; then
+            echo "No roadmap changes to commit."
+          else
+            git commit -m "publish: topics drafted in Storyblok [skip ci]"
+            git push
+          fi
