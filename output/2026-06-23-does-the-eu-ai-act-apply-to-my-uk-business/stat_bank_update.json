@@ -1,0 +1,30 @@
+{
+  "id": "stat_002",
+  "stat": "Annual turnover threshold below which EU AI Act percentage-of-turnover fines are always the operative (lower) cap rather than the fixed euro amount",
+  "value": "420",
+  "unit": "GBP million",
+  "date_calculated": "2026-06-23",
+  "applies_to": [
+    "topic ID: 33",
+    "clusters: Risk, Governance & Legal"
+  ],
+  "method": "Recipe A — sterling conversion and break-even calculation of EU AI Act Article 99 penalty thresholds",
+  "sources_used": [
+    {
+      "title": "EU AI Act Article 99 — Penalties",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-99",
+      "publisher": "European Commission EU AI Act Service Desk",
+      "accessed": "2026-06-23"
+    },
+    {
+      "title": "EU AI Act full text (Regulation (EU) 2024/1689)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+      "publisher": "Official Journal of the European Union",
+      "accessed": "2026-06-23"
+    }
+  ],
+  "workings": "Tier 1 (prohibited AI): fixed cap €35m ÷ 7% = €500m break-even turnover. Tier 2 (high-risk and transparency): €15m ÷ 3% = €500m break-even. Tiers 1 and 2 share the same €500m break-even. EUR/GBP conversion at 0.845 (approximate June 2026 market rate): €500m × 0.845 = £422.5m, rounded conservatively to £420m. Below £420m annual global turnover, the % cap always produces the smaller fine in Tiers 1 and 2. Above £420m, the fixed euro cap is the binding limit. Virtually all UK SMEs and most UK mid-caps are below this threshold.",
+  "first_used_in": "does-the-eu-ai-act-apply-to-my-uk-business",
+  "first_used_date": "2026-06-23",
+  "layer": 2
+}

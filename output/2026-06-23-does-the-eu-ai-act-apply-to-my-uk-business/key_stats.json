@@ -1,0 +1,29 @@
+{
+  "stats": [
+    {
+      "value": "2 Aug 2026",
+      "label": "EU AI Act transparency deadline: chatbots must disclose AI status, AI-generated content must be labelled (Article 50)",
+      "source": "EU AI Act Article 50, Regulation (EU) 2024/1689"
+    },
+    {
+      "value": "€35m / 7%",
+      "label": "Maximum fine for prohibited AI practices — the higher of the fixed amount or % of global annual turnover applies",
+      "source": "EU AI Act Article 99, Regulation (EU) 2024/1689"
+    },
+    {
+      "value": "2 Dec 2027",
+      "label": "Deferred deadline for standalone Annex III high-risk AI (HR, credit scoring, biometrics) after May 2026 Digital Omnibus deal",
+      "source": "EU Digital Omnibus provisional agreement, 7 May 2026"
+    },
+    {
+      "value": "~£420m",
+      "label": "Annual turnover below which the %-of-turnover fine cap always applies — the operative limit for virtually all UK SMEs",
+      "source": "Tom & Co analysis of EU AI Act Article 99 penalty thresholds, EUR/GBP 0.845, June 2026"
+    },
+    {
+      "value": "2 Feb 2025",
+      "label": "Date from which Article 5 prohibited-AI bans and Article 4 AI literacy obligations already apply to in-scope UK businesses",
+      "source": "EU AI Act Article 5 and Article 4, Regulation (EU) 2024/1689"
+    }
+  ]
+}
