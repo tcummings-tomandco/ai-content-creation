@@ -11,11 +11,13 @@ Every article, regardless of format, opens with the same three components in thi
 
 3. Format-specific body (see templates below).
 
-Then the universal close:
+Then the universal close. **Mark these two footer sections with `<h3>` headings exactly** — `<h3>About the author</h3>` and `<h3>Related Tom & Co reading</h3>` — so the publish step can detect and handle them. Do not write them as `<p><strong>About the author</strong></p>`; the converter keys on the heading.
 
-- **About the author** — one paragraph naming the author, role, one credential, LinkedIn link.
-- **Related Tom & Co articles** — 2 to 4 internal links with descriptive anchor text (covered in element 9).
+- **`<h3>About the author</h3>`** followed by one `<p>` naming the author, role, one credential, LinkedIn link. (The publish step strips this from the rendered body — the byline shows via the post's author field — so keep it simple.)
+- **`<h3>Related Tom & Co reading</h3>`** followed by a `<ul>` of 2 to 4 `<li><a href="...">descriptive anchor</a>. One-sentence description.</li>` items (element 9). The publish step turns these into the related-articles card row, using each link's trailing sentence as the card description. Use full live URLs in the form `/ai-agency-consultancy/blog/{slug}` (the site's blog path), not guessed `/blog/{cluster}/...` paths.
 - **JSON-LD `<script>` block** — Article + FAQPage (if applicable) + HowTo (if applicable) + Person.
+
+Also: set the top-level `author` field in article.json to the **string** `"Tom McCaul"` (not an object). The Person/byline details belong in the JSON-LD block and the About-the-author section, not the `author` field.
 
 ## Format templates
 

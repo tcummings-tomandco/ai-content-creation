@@ -78,6 +78,10 @@ KNOWN_LINK_SNIPPETS = {
     },
 }
 
+# The website renders the key-stat tile row 4-across. A 5th tile overflows,
+# so cap the number of stats regardless of how many the skill produced.
+MAX_KEY_STATS = 4
+
 INLINE_TAGS = {"strong", "b", "em", "i", "a", "code", "br"}
 BLOCK_TAGS = {"p", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li",
               "table", "thead", "tbody", "tr", "th", "td", "blockquote",
@@ -321,17 +325,32 @@ def slugify_anchor(text: str) -> str:
     return s[:60].strip("-")
 
 
-def extract_h2_toc(html: str) -> list:
-    """Build ai_blog_toc_item bloks from H2 headings in the article body.
+# Matches the start of the article footer regardless of how it is marked up:
+# an <h2>/<h3>/.../<h6> heading OR a <p><strong>... lead, whose text begins
+# with "about the author" or "related". Tag-agnostic so the converter is
+# robust to however the autonomous routine wrote the byline/related block.
+FOOTER_MARKER = re.compile(
+    r"(?is)(?:<h[1-6][^>]*>|<p[^>]*>\s*<strong[^>]*>)\s*(?:about the author|related\b)"
+)
 
-    Stops at h3 boundaries (About the author / Related Tom & Co reading) and
-    drops anything inside <script>...</script>.
-    """
+
+def split_body_and_footer(html: str):
+    """Split article HTML into (body_html, footer_html) at the first
+    About-the-author / Related marker. footer_html is "" if no marker found.
+    Scripts (JSON-LD) are stripped from both halves by the callers."""
     no_script = re.sub(r"<script[\s\S]*?</script>", "", html)
-    no_footer = re.split(r"<h3[^>]*>\s*About the author", no_script)[0]
-    no_footer = re.split(r"<h3[^>]*>\s*Related Tom", no_footer)[0]
+    m = FOOTER_MARKER.search(no_script)
+    if not m:
+        return no_script, ""
+    return no_script[:m.start()], no_script[m.start():]
+
+
+def extract_h2_toc(html: str) -> list:
+    """Build ai_blog_toc_item bloks from the H2 headings in the article body
+    (the part before the About-the-author / Related footer)."""
+    body, _ = split_body_and_footer(html)
     items = []
-    for i, match in enumerate(re.finditer(r"<h2[^>]*>(.*?)</h2>", no_footer, re.S), start=1):
+    for i, match in enumerate(re.finditer(r"<h2[^>]*>(.*?)</h2>", body, re.S), start=1):
         label = re.sub(r"<[^>]+>", "", match.group(1)).strip()
         if not label:
             continue
@@ -345,25 +364,39 @@ def extract_h2_toc(html: str) -> list:
 
 
 def extract_related_cards(html: str) -> list:
-    """Find the trailing 'Related Tom & Co reading' UL and turn each link into
-    an ai_blog_related_card blok. Best-effort — returns empty list if absent.
+    """Turn the trailing 'Related' block into ai_blog_related_card bloks.
+
+    Works whether the routine wrote the related list as <h3>Related</h3><ul>
+    <li><a>...</a></li> or as <p><strong>Related...</strong><br><a>...</a>.
+    text<br>...</p>. Captures the link text as the card title and any prose
+    immediately after the link (up to the next <br>/<a>) as the snippet.
     """
-    m = re.search(r"<h3[^>]*>\s*Related[\s\S]*?</h3>([\s\S]*?)(?:<script|$)", html, re.I)
-    if not m:
+    _, footer = split_body_and_footer(html)
+    if not footer:
         return []
-    section = m.group(1)
+    # Narrow to the part of the footer at/after the first "Related" marker.
+    rel = re.search(r"(?is)(?:<h[1-6][^>]*>|<p[^>]*>\s*<strong[^>]*>)\s*related\b", footer)
+    section = footer[rel.start():] if rel else ""
+    if not section:
+        return []
+
     cards = []
-    for a in re.finditer(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', section, re.S):
-        href = html_module.unescape(a.group(1))
-        anchor = html_module.unescape(re.sub(r"<[^>]+>", "", a.group(2))).strip()
-        if not anchor:
+    # Each link, plus the trailing prose before the next <br> or <a> or close.
+    pattern = re.compile(
+        r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>([^<]*)', re.S)
+    for m in pattern.finditer(section):
+        href = html_module.unescape(m.group(1)).strip()
+        title = html_module.unescape(re.sub(r"<[^>]+>", "", m.group(2))).strip()
+        trailing = html_module.unescape(m.group(3)).strip().lstrip(".").strip()
+        if not title:
             continue
         known = KNOWN_LINK_SNIPPETS.get(href, {})
+        snippet = known.get("snippet") or trailing or title
         cards.append({
             "component": "ai_blog_related_card",
             "category": known.get("category", "AI"),
-            "title": anchor,
-            "snippet": known.get("snippet") or anchor,
+            "title": title,
+            "snippet": snippet,
             "meta": known.get("meta", ""),
             "image": {"id": None, "filename": None, "alt": "", "fieldtype": "asset"},
             "link": {"url": href, "linktype": "url", "cached_url": href,
@@ -389,8 +422,9 @@ def extract_key_stats_from_article(article: dict, article_path: Path) -> list:
     a key_stats.json (e.g. older articles). Always includes the stat_bank
     entry if it exists, in addition to any key_stats.json items.
 
-    Returns a list of 0–5 ai_blog_key_stat bloks. The schema accepts more,
-    but the rendered tile grid looks best at 3–5.
+    Returns a list of 0–4 ai_blog_key_stat bloks. The website renders the tile
+    row 4-across; a 5th stat overflows/wraps awkwardly, so the list is hard
+    capped at 4 (MAX_KEY_STATS) regardless of how many the skill produced.
     """
     items = []
 
@@ -398,7 +432,7 @@ def extract_key_stats_from_article(article: dict, article_path: Path) -> list:
     if key_stats_path.exists():
         try:
             data = json.loads(key_stats_path.read_text())
-            for s in data.get("stats", [])[:5]:
+            for s in data.get("stats", [])[:MAX_KEY_STATS]:
                 items.append({
                     "component": "ai_blog_key_stat",
                     "value": str(s.get("value", "")).strip(),
@@ -437,7 +471,7 @@ def extract_key_stats_from_article(article: dict, article_path: Path) -> list:
         except json.JSONDecodeError:
             pass
 
-    return items[:5]
+    return items[:MAX_KEY_STATS]
 
 
 def build_seo_block(metadata: dict) -> dict:
@@ -456,12 +490,16 @@ def build_story_payload(article: dict, *, article_path: Path,
     html = article.get("content", "")
     metadata = article.get("metadata", {})
 
-    # Strip JSON-LD scripts before parsing — they should not enter richtext.
-    html_no_script = re.sub(r"<script[\s\S]*?</script>", "", html)
+    # Split off the About-the-author / Related footer so it never enters the
+    # richtext body. The author byline lives in the author_name field; the
+    # related links become the ai_blog_related card blok. This keeps the body
+    # clean regardless of whether the footer was written as <h3> or
+    # <p><strong> (the autonomous routine varies).
+    body_html, _footer_html = split_body_and_footer(html)
 
     # Convert the body HTML to Storyblok richtext.
     builder = RichTextBuilder()
-    builder.feed(html_no_script)
+    builder.feed(body_html)
     richtext_doc = builder.document()
 
     toc = extract_h2_toc(html)
@@ -504,6 +542,17 @@ def build_story_payload(article: dict, *, article_path: Path,
     # plus a midnight UTC stamp.
     published_at = f"{article['date']} 00:00"
 
+    # author_name must be a string. The autonomous routine sometimes writes
+    # `author` as an object ({name, role, linkedin}) rather than a plain
+    # string, so coerce defensively. Falls back to the house byline.
+    author = article.get("author")
+    if isinstance(author, dict):
+        author_name = str(author.get("name") or "Tom McCaul")
+    elif isinstance(author, str) and author.strip():
+        author_name = author.strip()
+    else:
+        author_name = "Tom McCaul"
+
     story = {
         "name": article["title"],
         "slug": article["slug"],
@@ -515,7 +564,7 @@ def build_story_payload(article: dict, *, article_path: Path,
             "category": category,
             "published_at": published_at,
             "read_time": article.get("readTime", ""),
-            "author_name": article.get("author", ""),
+            "author_name": author_name,
             "card_image": {"id": None, "filename": None, "alt": "", "fieldtype": "asset"},
             "featured": bool(article.get("featured", False)),
             "body": body_bloks,

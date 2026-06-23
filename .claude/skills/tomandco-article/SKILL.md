@@ -104,7 +104,7 @@ To `output/{YYYY-MM-DD}-{slug}/`:
 
 ### 7a. Build key_stats.json
 
-Storyblok renders `ai_blog_key_stat` items as visually prominent tiles at the top of the article (above the body text). They are the cheapest way to add scannable structure to a long-form piece. Every article must ship with 3–5 of them.
+Storyblok renders `ai_blog_key_stat` items as visually prominent tiles at the top of the article (above the body text). They are the cheapest way to add scannable structure to a long-form piece. Every article must ship with **exactly 3 or 4** of them. The website renders the tile row 4-across; a 5th tile overflows and wraps awkwardly. Pick the 4 strongest. (The push script hard-caps at 4 as a backstop, so a 5th is silently dropped — choose deliberately rather than relying on the cap.)
 
 **Selection rules:**
 
