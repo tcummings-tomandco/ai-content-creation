@@ -1,0 +1,30 @@
+{
+  "id": "stat_003",
+  "stat": "Break-even productivity saving for a 10-person UK knowledge-worker team on a business AI subscription (~£1,900/year)",
+  "value": "9",
+  "unit": "minutes per person per week",
+  "date_calculated": "2026-06-25",
+  "applies_to": [
+    "topic ID: 47",
+    "clusters: Technical & Build; Strategy & ROI"
+  ],
+  "method": "Recipe D — cost-per-outcome ratio using ONS median earnings data and published vendor pricing",
+  "sources_used": [
+    {
+      "title": "Annual Survey of Hours and Earnings (ASHE) 2024",
+      "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2024",
+      "publisher": "Office for National Statistics",
+      "accessed": "2026-06-25"
+    },
+    {
+      "title": "ChatGPT Plans and Pricing",
+      "url": "https://chatgpt.com/pricing/",
+      "publisher": "OpenAI",
+      "accessed": "2026-06-25"
+    }
+  ],
+  "workings": "ONS ASHE 2024: median full-time weekly earnings £728 × 52 = £37,856/year gross. Employer NI (13.8% above £9,100 secondary threshold): (£37,856 − £9,100) × 0.138 = £3,968. Employer pension 3% minimum (on qualifying earnings above £6,240): (£37,856 − £6,240) × 0.03 = £948. Total employer cost: £37,856 + £3,968 + £948 = £42,772/year ≈ £42,800/year. Hourly rate at 1,800 productive hours/year: £42,800 / 1,800 = £23.78/hour. ChatGPT Business annual at ~£16/user/month: 10 × £16 × 12 = £1,920/year. Per-person annual cost: £192. Hours to break even per person: £192 / £23.78 = 8.07 hours/year. Minutes per week: (8.07 × 60) / 52 = 9.3 min/person/week ≈ under 10 minutes.",
+  "first_used_in": "chatgpt-vs-claude-vs-gemini-for-business",
+  "first_used_date": "2026-06-25",
+  "layer": 2
+}

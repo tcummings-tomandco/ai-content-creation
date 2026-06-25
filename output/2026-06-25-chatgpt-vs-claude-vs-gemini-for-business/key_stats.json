@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "54%",
+      "label": "Of UK SMEs actively use AI in 2026, up from 23% in 2023",
+      "source": "BCC and University of Essex, March 2026"
+    },
+    {
+      "value": "1M tokens",
+      "label": "Context window standard on Claude paid plans and Gemini Advanced since March 2026",
+      "source": "Anthropic and Google, June 2026"
+    },
+    {
+      "value": "~9 min/week",
+      "label": "Saved per person for a team AI subscription to break even (10-person team, £1,900/yr)",
+      "source": "Tom & Co analysis of ONS ASHE 2024, June 2026"
+    },
+    {
+      "value": "£16-25",
+      "label": "Per user/month for a business AI subscription across ChatGPT, Claude, and Gemini (ex-VAT, June 2026)",
+      "source": "OpenAI, Anthropic, Google published pricing, June 2026"
+    }
+  ]
+}

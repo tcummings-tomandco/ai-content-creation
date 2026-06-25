@@ -890,10 +890,11 @@
       "Competition": "High",
       "Suggested length": "2200-3000",
       "Quick win": "Y",
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-06-25",
+      "Notes": "slug: chatgpt-vs-claude-vs-gemini-for-business",
+      "Slug": "chatgpt-vs-claude-vs-gemini-for-business"
     },
     {
       "ID": 48,
