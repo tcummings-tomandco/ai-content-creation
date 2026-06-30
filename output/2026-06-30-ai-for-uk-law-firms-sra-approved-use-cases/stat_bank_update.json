@@ -1,0 +1,24 @@
+{
+  "id": "stat_004",
+  "stat": "AI adoption velocity among the UK's largest solicitors' firms, 2020-2023",
+  "value": "12",
+  "unit": "percentage points per year",
+  "date_calculated": "2026-06-30",
+  "applies_to": [
+    "topic ID: 60",
+    "clusters: UK Industry Verticals; Risk, Governance & Legal"
+  ],
+  "method": "Recipe C — year-on-year delta derived from SRA Risk Outlook Report (November 2023) data",
+  "sources_used": [
+    {
+      "title": "SRA Risk Outlook report: The use of artificial intelligence in the legal market",
+      "url": "https://www.sra.org.uk/sra/research-publications/artificial-intelligence-legal-market/",
+      "publisher": "Solicitors Regulation Authority",
+      "accessed": "2026-06-30"
+    }
+  ],
+  "workings": "SRA Risk Outlook (November 2023) states that 75% of the largest solicitors' firms were using AI, 'nearly twice the number from just three years ago.' Implied baseline (November 2020): 75% / ~2 = approximately 37.5%. Change over 3 years: 75% minus 37.5% = 37.5 percentage points. Annual adoption velocity: 37.5pp / 3 years = 12.5pp per year, rounded conservatively to 12pp. This calculation was completed before ChatGPT's mainstream availability (November 2022), so actual post-2022 velocity is likely higher.",
+  "first_used_in": "ai-for-uk-law-firms-sra-approved-use-cases",
+  "first_used_date": "2026-06-30",
+  "layer": 2
+}

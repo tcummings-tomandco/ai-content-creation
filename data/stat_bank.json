@@ -11,7 +11,7 @@
         "topic IDs: 1, 2, 5, 33, 34, 35, 42, 47",
         "clusters: Strategy & ROI; Risk, Governance & Legal"
       ],
-      "method": "Recipe E (funding maths) \u2014 aggregation of named funding lines from a single primary government document",
+      "method": "Recipe E (funding maths) — aggregation of named funding lines from a single primary government document",
       "sources_used": [
         {
           "title": "AI Opportunities Action Plan: One Year On",
@@ -20,7 +20,7 @@
           "accessed": "2026-04-29"
         }
       ],
-      "workings": "AISI 240 + AIRR 250 + Edinburgh supercomputer 750 + Sovereign AI Unit 500 + TechFirst 187 + Modern Industrial Strategy AI 150 + HDRS gov contribution 400 (of 600 total) + NDL 100 + Robotics/Made Smarter 40 + Smart Data 36 + AI Growth Zones direct 25 + AI Assurance Innovation Fund 11 + Regulators' Pioneer Fund 8.9 + TechLocal AI Accelerator 7.8 + AI Capability Fund 3.6 = 2,709.3 GBP million \u2248 2.6 GBP billion (rounded down conservatively). Excludes the \u00a328.2bn private investment the AI Growth Zones programme is reported to have generated.",
+      "workings": "AISI 240 + AIRR 250 + Edinburgh supercomputer 750 + Sovereign AI Unit 500 + TechFirst 187 + Modern Industrial Strategy AI 150 + HDRS gov contribution 400 (of 600 total) + NDL 100 + Robotics/Made Smarter 40 + Smart Data 36 + AI Growth Zones direct 25 + AI Assurance Innovation Fund 11 + Regulators' Pioneer Fund 8.9 + TechLocal AI Accelerator 7.8 + AI Capability Fund 3.6 = 2,709.3 GBP million ≈ 2.6 GBP billion (rounded down conservatively). Excludes the £28.2bn private investment the AI Growth Zones programme is reported to have generated.",
       "first_used_in": "uk-ai-regulation-2026-principles-based-field-guide",
       "first_used_date": "2026-04-29",
       "layer": 2
@@ -35,10 +35,10 @@
         "topic ID: 33",
         "clusters: Risk, Governance & Legal"
       ],
-      "method": "Recipe A \u2014 sterling conversion and break-even calculation of EU AI Act Article 99 penalty thresholds",
+      "method": "Recipe A — sterling conversion and break-even calculation of EU AI Act Article 99 penalty thresholds",
       "sources_used": [
         {
-          "title": "EU AI Act Article 99 \u2014 Penalties",
+          "title": "EU AI Act Article 99 — Penalties",
           "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-99",
           "publisher": "European Commission EU AI Act Service Desk",
           "accessed": "2026-06-23"
@@ -50,14 +50,14 @@
           "accessed": "2026-06-23"
         }
       ],
-      "workings": "Tier 1 (prohibited AI): fixed cap \u20ac35m \u00f7 7% = \u20ac500m break-even turnover. Tier 2 (high-risk and transparency): \u20ac15m \u00f7 3% = \u20ac500m break-even. Tiers 1 and 2 share the same \u20ac500m break-even. EUR/GBP conversion at 0.845 (approximate June 2026 market rate): \u20ac500m \u00d7 0.845 = \u00a3422.5m, rounded conservatively to \u00a3420m. Below \u00a3420m annual global turnover, the % cap always produces the smaller fine in Tiers 1 and 2. Above \u00a3420m, the fixed euro cap is the binding limit. Virtually all UK SMEs and most UK mid-caps are below this threshold.",
+      "workings": "Tier 1 (prohibited AI): fixed cap €35m ÷ 7% = €500m break-even turnover. Tier 2 (high-risk and transparency): €15m ÷ 3% = €500m break-even. Tiers 1 and 2 share the same €500m break-even. EUR/GBP conversion at 0.845 (approximate June 2026 market rate): €500m × 0.845 = £422.5m, rounded conservatively to £420m. Below £420m annual global turnover, the % cap always produces the smaller fine in Tiers 1 and 2. Above £420m, the fixed euro cap is the binding limit. Virtually all UK SMEs and most UK mid-caps are below this threshold.",
       "first_used_in": "does-the-eu-ai-act-apply-to-my-uk-business",
       "first_used_date": "2026-06-23",
       "layer": 2
     },
     {
       "id": "stat_003",
-      "stat": "Break-even productivity saving for a 10-person UK knowledge-worker team on a business AI subscription (~\u00a31,900/year)",
+      "stat": "Break-even productivity saving for a 10-person UK knowledge-worker team on a business AI subscription (~£1,900/year)",
       "value": "9",
       "unit": "minutes per person per week",
       "date_calculated": "2026-06-25",
@@ -65,7 +65,7 @@
         "topic ID: 47",
         "clusters: Technical & Build; Strategy & ROI"
       ],
-      "method": "Recipe D \u2014 cost-per-outcome ratio using ONS median earnings data and published vendor pricing",
+      "method": "Recipe D — cost-per-outcome ratio using ONS median earnings data and published vendor pricing",
       "sources_used": [
         {
           "title": "Annual Survey of Hours and Earnings (ASHE) 2024",
@@ -80,9 +80,33 @@
           "accessed": "2026-06-25"
         }
       ],
-      "workings": "ONS ASHE 2024: median full-time weekly earnings \u00a3728 \u00d7 52 = \u00a337,856/year gross. Employer NI (13.8% above \u00a39,100 secondary threshold): (\u00a337,856 \u2212 \u00a39,100) \u00d7 0.138 = \u00a33,968. Employer pension 3% minimum (on qualifying earnings above \u00a36,240): (\u00a337,856 \u2212 \u00a36,240) \u00d7 0.03 = \u00a3948. Total employer cost: \u00a337,856 + \u00a33,968 + \u00a3948 = \u00a342,772/year \u2248 \u00a342,800/year. Hourly rate at 1,800 productive hours/year: \u00a342,800 / 1,800 = \u00a323.78/hour. ChatGPT Business annual at ~\u00a316/user/month: 10 \u00d7 \u00a316 \u00d7 12 = \u00a31,920/year. Per-person annual cost: \u00a3192. Hours to break even per person: \u00a3192 / \u00a323.78 = 8.07 hours/year. Minutes per week: (8.07 \u00d7 60) / 52 = 9.3 min/person/week \u2248 under 10 minutes.",
+      "workings": "ONS ASHE 2024: median full-time weekly earnings £728 × 52 = £37,856/year gross. Employer NI (13.8% above £9,100 secondary threshold): (£37,856 − £9,100) × 0.138 = £3,968. Employer pension 3% minimum (on qualifying earnings above £6,240): (£37,856 − £6,240) × 0.03 = £948. Total employer cost: £37,856 + £3,968 + £948 = £42,772/year ≈ £42,800/year. Hourly rate at 1,800 productive hours/year: £42,800 / 1,800 = £23.78/hour. ChatGPT Business annual at ~£16/user/month: 10 × £16 × 12 = £1,920/year. Per-person annual cost: £192. Hours to break even per person: £192 / £23.78 = 8.07 hours/year. Minutes per week: (8.07 × 60) / 52 = 9.3 min/person/week ≈ under 10 minutes.",
       "first_used_in": "chatgpt-vs-claude-vs-gemini-for-business",
       "first_used_date": "2026-06-25",
+      "layer": 2
+    },
+    {
+      "id": "stat_004",
+      "stat": "AI adoption velocity among the UK's largest solicitors' firms, 2020-2023",
+      "value": "12",
+      "unit": "percentage points per year",
+      "date_calculated": "2026-06-30",
+      "applies_to": [
+        "topic ID: 60",
+        "clusters: UK Industry Verticals; Risk, Governance & Legal"
+      ],
+      "method": "Recipe C — year-on-year delta derived from SRA Risk Outlook Report (November 2023) data",
+      "sources_used": [
+        {
+          "title": "SRA Risk Outlook report: The use of artificial intelligence in the legal market",
+          "url": "https://www.sra.org.uk/sra/research-publications/artificial-intelligence-legal-market/",
+          "publisher": "Solicitors Regulation Authority",
+          "accessed": "2026-06-30"
+        }
+      ],
+      "workings": "SRA Risk Outlook (November 2023) states that 75% of the largest solicitors' firms were using AI, 'nearly twice the number from just three years ago.' Implied baseline (November 2020): 75% / ~2 = approximately 37.5%. Change over 3 years: 75% minus 37.5% = 37.5 percentage points. Annual adoption velocity: 37.5pp / 3 years = 12.5pp per year, rounded conservatively to 12pp. This calculation was completed before ChatGPT's mainstream availability (November 2022), so actual post-2022 velocity is likely higher.",
+      "first_used_in": "ai-for-uk-law-firms-sra-approved-use-cases",
+      "first_used_date": "2026-06-30",
       "layer": 2
     }
   ]

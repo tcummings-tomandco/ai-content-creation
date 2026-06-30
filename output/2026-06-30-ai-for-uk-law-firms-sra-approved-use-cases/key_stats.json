@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "75%",
+      "label": "Of UK's largest law firms were using AI in 2023, up from ~38% in 2020",
+      "source": "SRA Risk Outlook Report, November 2023"
+    },
+    {
+      "value": "18 of 45",
+      "label": "AI-generated case citations in Al-Haroun v Qatar National Bank were fabricated",
+      "source": "[2025] EWHC 1383 (Admin), 6 June 2025"
+    },
+    {
+      "value": "~12pp/yr",
+      "label": "AI adoption velocity: largest UK law firms, 2020-2023 (Tom & Co analysis of SRA data)",
+      "source": "Tom & Co analysis of SRA Risk Outlook, November 2023"
+    },
+    {
+      "value": "Feb 2026",
+      "label": "SRA's AI compliance tips for solicitors last updated",
+      "source": "SRA compliance tips, February 2026"
+    }
+  ]
+}

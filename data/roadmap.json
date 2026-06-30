@@ -1138,10 +1138,11 @@
       "Competition": "Low",
       "Suggested length": "2200-3000",
       "Quick win": "Y",
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-06-30",
+      "Notes": "slug: ai-for-uk-law-firms-sra-approved-use-cases",
+      "Slug": "ai-for-uk-law-firms-sra-approved-use-cases"
     },
     {
       "ID": 61,
