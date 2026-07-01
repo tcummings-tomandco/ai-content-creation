@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "90.2%",
+      "label": "Anthropic's multi-agent research system outperformed a single Claude Opus 4 agent on its internal eval",
+      "source": "Anthropic engineering, June 2025"
+    },
+    {
+      "value": "~15x",
+      "label": "Tokens a multi-agent run uses vs an ordinary chat (single agents use ~4x)",
+      "source": "Anthropic engineering, June 2025"
+    },
+    {
+      "value": "7%",
+      "label": "Of UK firms use agentic AI, the least-adopted AI category (vs 85% using text generation)",
+      "source": "BCC Powering Productivity, March 2026"
+    },
+    {
+      "value": "£1.48",
+      "label": "Estimated cost of one complex query as a multi-agent run vs ~10p as a plain chat (Opus 4.8 pricing)",
+      "source": "Tom & Co estimate, July 2026"
+    }
+  ]
+}

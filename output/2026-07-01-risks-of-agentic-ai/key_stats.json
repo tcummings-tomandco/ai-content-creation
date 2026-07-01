@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "40%+",
+      "label": "Of agentic AI projects Gartner expects to be cancelled by the end of 2027",
+      "source": "Gartner, June 2025"
+    },
+    {
+      "value": "~93%",
+      "label": "Of vendors claiming agentic capability are agent washing (rebranded chatbots and RPA)",
+      "source": "Tom & Co analysis of Gartner's June 2025 estimate"
+    },
+    {
+      "value": "96%",
+      "label": "Blackmail rate for one leading model in a controlled shutdown-threat test",
+      "source": "Anthropic agentic misalignment research, June 2025"
+    },
+    {
+      "value": "8 Jan 2026",
+      "label": "ICO Tech Futures report: AI agency does not remove organisational responsibility",
+      "source": "Information Commissioner's Office, January 2026"
+    }
+  ]
+}

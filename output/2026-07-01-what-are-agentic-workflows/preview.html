@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What are agentic workflows? | Tom &amp; Co Preview</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
+  h1 { font-size: 2em; font-weight: 700; margin-bottom: 0.3em; }
+  h2 { font-size: 1.4em; font-weight: 700; margin-top: 2em; }
+  h3 { font-size: 1.15em; font-weight: 700; margin-top: 1.5em; color: #333; }
+  .meta { color: #666; font-size: 0.9em; margin-bottom: 1.5em; font-family: sans-serif; border-bottom: 1px solid #ddd; padding-bottom: 1em; }
+  table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-family: sans-serif; font-size: 0.88em; }
+  th { background: #0066cc; color: white; padding: 8px 10px; text-align: left; }
+  td { border: 1px solid #ddd; padding: 7px 10px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f9f9; }
+  blockquote { border-left: 3px solid #999; padding: 0.7em 1em; margin: 1.2em 0; color: #444; font-style: italic; }
+  a { color: #0066cc; }
+  ul, ol { padding-left: 1.5em; }
+  li { margin-bottom: 0.4em; }
+  .stat-tiles { display: flex; flex-wrap: wrap; gap: 12px; margin: 1em 0 2em 0; }
+  .stat-tile { background: #0066cc; color: white; border-radius: 6px; padding: 14px 18px; flex: 1 1 180px; font-family: sans-serif; }
+  .stat-tile .value { font-size: 1.8em; font-weight: 700; display: block; }
+  .stat-tile .label { font-size: 0.82em; opacity: 0.9; margin-top: 4px; }
+  .stat-tile .source { font-size: 0.72em; opacity: 0.75; margin-top: 6px; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 2em 0; }
+  script { display: none; }
+  .preview-banner { background: #fffbe6; border: 1px solid #f0c040; padding: 8px 14px; font-family: sans-serif; font-size: 0.85em; color: #7a5c00; margin-bottom: 20px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="preview-banner">&#9888; PREVIEW DRAFT &mdash; Not yet published. Date: 2026-07-01 | Topic: What are agentic workflows? | Cluster: Technical &amp; Build / Tools | Slug: what-are-agentic-workflows</div>
+<h1>What are agentic workflows?</h1>
+<div class="meta">2026-07-01 &bull; 7 min read &bull; By Tom McCaul &bull; Category: AI</div>
+<div class="stat-tiles">
+<div class="stat-tile"><span class="value">40%</span><span class="label">Of enterprise apps to feature task-specific AI agents by end of 2026 (up from <5% in 2025)</span><span class="source">Gartner, August 2025</span></div>
+<div class="stat-tile"><span class="value">39% / 23%</span><span class="label">Of organisations experimenting with AI agents vs those scaling them</span><span class="source">McKinsey State of AI, November 2025</span></div>
+<div class="stat-tile"><span class="value">40%+</span><span class="label">Of agentic AI projects Gartner predicts will be scrapped by end of 2027</span><span class="source">Gartner via Reuters, June 2025</span></div>
+<div class="stat-tile"><span class="value">£23.80/hr</span><span class="label">Employer cost of a UK knowledge worker, the baseline an agentic workflow must beat</span><span class="source">Tom & Co analysis of ONS ASHE 2024</span></div>
+</div>
+<p>An agentic workflow is an AI system that breaks a goal into steps and works through them using a language model plus tools, memory and retrieval, instead of answering one prompt in isolation. Anthropic draws a useful line: workflows run the model along predefined code paths, while true agents let the model direct its own steps. Gartner expects task-specific AI agents in 40% of enterprise applications by the end of 2026, up from under 5% in 2025.</p>
+
+<h2>What does "agentic workflow" actually mean in 2026?</h2>
+
+<p>Strip away the marketing and it means one thing: an AI system that does a job in stages. A normal chatbot takes your prompt and returns an answer. An agentic workflow takes a goal, plans the steps, calls tools to gather or change things, checks its own output, and only then finishes.</p>
+
+<p>The building block is what Anthropic calls the "augmented LLM": a language model given three extra powers. Retrieval, so it can look things up. Tools, so it can act (send an email, query a database, run code). Memory, so it can carry context across steps rather than starting fresh each time.</p>
+
+<p>In <a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic's December 2024 guide to building effective agents</a>, agentic systems split into two camps. Workflows are "systems where LLMs and tools are orchestrated through predefined code paths." Agents are "systems where LLMs dynamically direct their own processes and tool usage." Most of what UK businesses ship in 2026 is the workflow kind, and that is usually the right call.</p>
+
+<h2>How is an agentic workflow different from a normal AI workflow or a single agent?</h2>
+
+<p>People use the three terms loosely, so here is the clean split. A plain AI workflow might call a model once inside a fixed process. An agentic workflow chains several model-driven steps with tool use and self-checking. A true agent hands the model the keys: it decides the path itself, loops until the job is done, and stops when it judges the goal met.</p>
+
+<p>The trade-off is predictability against flexibility. Workflows are consistent and cheap to reason about, which matters when an auditor or a regulator asks why the system did what it did. Agents cope with messy, open-ended tasks but cost more, run slower, and are harder to explain after the fact.</p>
+
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Single LLM call</th>
+<th>Agentic workflow</th>
+<th>Autonomous agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Who decides the steps</td>
+<td>You (one prompt)</td>
+<td>Predefined code path</td>
+<td>The model, dynamically</td>
+</tr>
+<tr>
+<td>Tool use</td>
+<td>None or one</td>
+<td>Several, in a set order</td>
+<td>Chosen at runtime</td>
+</tr>
+<tr>
+<td>Predictability</td>
+<td>High</td>
+<td>High</td>
+<td>Lower</td>
+</tr>
+<tr>
+<td>Cost and latency</td>
+<td>Lowest</td>
+<td>Moderate</td>
+<td>Highest</td>
+</tr>
+<tr>
+<td>Good for</td>
+<td>Q&amp;A, drafting</td>
+<td>Defined multi-step jobs</td>
+<td>Open-ended, unpredictable jobs</td>
+</tr>
+<tr>
+<td>Auditability</td>
+<td>Easy</td>
+<td>Easy</td>
+<td>Harder</td>
+</tr>
+</tbody>
+</table>
+
+<p>Anthropic's own advice is blunt: find the simplest solution that works, and only add complexity when the results justify it. Sometimes that means no agentic system at all, just one well-written prompt. The interesting bit is that the people building the most agents say the same thing.</p>
+
+<h2>What are the main agentic workflow patterns?</h2>
+
+<p>There are five patterns worth knowing. They are the vocabulary that engineering teams and vendor docs use, and they map neatly onto real UK business jobs. You can combine them, but most useful systems are one or two of these, not all five stacked up.</p>
+
+<h3>Prompt chaining</h3>
+
+<p>The task is split into ordered steps, and each model call works on the previous output. Draft a proposal, then critique it, then rewrite. Good when a job has clear stages and you want a quality gate between them.</p>
+
+<h3>Routing</h3>
+
+<p>An input is classified, then sent to the right specialist path. A customer email gets tagged as billing, technical, or complaint, and each route uses a tuned prompt. This keeps each step focused and cheaper than one giant do-everything prompt.</p>
+
+<h3>Parallelisation</h3>
+
+<p>Independent subtasks run at the same time, then the results are combined. Review a contract for legal, commercial and data-protection risk in parallel, then merge the flags. Faster, and each pass stays specialised rather than diluted.</p>
+
+<h3>Orchestrator-workers</h3>
+
+<p>A central model breaks a task down on the fly and delegates pieces to worker models. Useful when you cannot predict the subtasks in advance, such as researching a topic where the model decides which angles to chase.</p>
+
+<h3>Evaluator-optimiser</h3>
+
+<p>One model generates, a second scores against criteria, and the loop repeats until the output passes. This is how you get reliably good copy, code, or translations without a human checking every draft.</p>
+
+<h2>What does the adoption data actually show?</h2>
+
+<p>Interest is enormous and delivery is patchy. McKinsey's <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener noreferrer">State of AI report from November 2025</a> found that 88% of organisations now use AI in at least one function, but agentic systems are earlier: 39% are experimenting with AI agents and only 23% have started scaling them anywhere in the business.</p>
+
+<blockquote>
+<p>Gartner predicts that over 40% of agentic AI projects will be scrapped by the end of 2027, citing escalating costs, unclear business value and weak controls. Source: <a href="https://www.reuters.com/business/over-40-agentic-ai-projects-will-be-scrapped-by-2027-gartner-says-2025-06-25/" target="_blank" rel="noopener noreferrer">Gartner via Reuters, June 2025</a>.</p>
+</blockquote>
+
+<p>Here is the bit that really matters for a UK leader. The gap between 39% experimenting and 23% scaling is where most budgets go to die. The projects that survive tend to be narrow agentic workflows with a clear owner and a measurable outcome, not open-ended agents let loose on a vague brief. Start where the job is defined.</p>
+
+<p>There is a sterling case to be made too. On <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2024" target="_blank" rel="noopener noreferrer">ONS Annual Survey of Hours and Earnings 2024</a> median earnings, a UK knowledge worker costs an employer roughly £23.80 an hour once National Insurance and pension are added (Tom &amp; Co analysis). An agentic workflow that reliably saves two hours a week per person clears more than £2,400 a year of that cost, before you count the errors it prevents.</p>
+
+<p>Picture a mid-sized UK firm handling supplier invoices. A routing step reads each invoice, a chaining step matches it to a purchase order, and an evaluator step flags anything that does not reconcile. That is a workflow, not an agent. It runs the same way every time, a person approves the exceptions, and the finance team stops keying data by hand. Boring, defined, and it pays back inside a quarter.</p>
+
+<p>Compare that with the projects that stall. They tend to start with "let's build an agent that runs the whole department" rather than one job with a number attached. Gartner's cancellation figure is not really about the technology failing. It is about scope. The narrower the brief, the higher the survival rate.</p>
+
+<h2>Where do agentic workflows fit in a UK business's stack?</h2>
+
+<p>The honest answer: behind a human, on jobs where the steps are known and the stakes are bounded. Document review, first-draft drafting, data enrichment, ticket triage, and research all suit a workflow. Anything that ends in a decision about a real person needs more care.</p>
+
+<p>That care is a legal one. Under UK GDPR, a "solely automated" decision with a legal or similarly significant effect, such as declining a mortgage or rejecting a job application, gives the individual specific rights. The <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/automated-decision-making-and-profiling/" target="_blank" rel="noopener noreferrer">ICO's guidance on automated decision-making</a> is clear: a human in the loop only counts if they can genuinely change the outcome, not just rubber-stamp it.</p>
+
+<p>This got sharper in 2026. The Data (Use and Access) Act 2025 replaced the old Article 22 with new provisions on automated decisions, and the <a href="https://ico.org.uk/about-the-ico/what-we-do/our-work-on-artificial-intelligence/" target="_blank" rel="noopener noreferrer">ICO's work on AI</a> now includes updated draft guidance issued in March 2026. If your agentic workflow touches decisions about customers or staff, that human-review design is not optional, it is the compliance boundary.</p>
+
+<h2>What should a UK leader do this quarter?</h2>
+
+<p>You do not need a moonshot. You need one workflow that earns its keep and teaches you how these systems behave. Pick the job first, then the pattern.</p>
+
+<ul>
+<li>Pick one repetitive, multi-step job with a clear owner and a number attached to it (hours saved, tickets cleared, drafts produced).</li>
+<li>Start with a workflow, not an agent. Predefined steps are easier to test, cheaper to run, and far easier to explain to an auditor.</li>
+<li>Match the pattern to the job: routing for triage, prompt chaining for staged drafting, evaluator-optimiser where quality has to be consistent.</li>
+<li>Keep a human in the loop on anything that affects a real person's rights, and make sure that human can actually overrule the system.</li>
+<li>Measure against the baseline for four weeks before you decide whether to scale, kill, or expand it.</li>
+</ul>
+
+<p>The teams getting value in 2026 are not the ones with the cleverest agents. They are the ones who picked a boring, well-defined job and made a workflow do it reliably. That is where to start.</p>
+
+<h3>About the author</h3>
+
+<p>Tom McCaul is the founder of Tom &amp; Co, a UK digital growth agency specialising in e-commerce, AI strategy and digital transformation for ambitious brands. With over 15 years in digital commerce and agency leadership, he writes on practical AI adoption and UK regulation for business leaders. <a href="https://www.linkedin.com/in/tom-mccaul-77b2778/" target="_blank" rel="noopener noreferrer">Connect with Tom on LinkedIn</a>.</p>
+
+<h3>Related Tom &amp; Co reading</h3>
+
+<ul>
+<li><a href="/ai-agency-consultancy/blog/how-do-ai-workflows-work">How do AI workflows work?</a>. The mechanics of chaining model calls into a reliable process, and where automation ends and agentic behaviour begins.</li>
+<li><a href="/ai-agency-consultancy/blog/what-is-agentic-ai">What is agentic AI?</a>. The wider category that agentic workflows sit inside, and why autonomy is a spectrum rather than a switch.</li>
+<li><a href="/ai-agency-consultancy/blog/what-are-ai-agents">What are AI agents?</a>. What separates a true agent that directs its own steps from a workflow that follows a set path.</li>
+<li><a href="/ai-agency-consultancy/blog/what-is-an-ai-agent-orchestrator">What is an AI agent orchestrator?</a>. How the orchestrator-workers pattern coordinates multiple models on a single task.</li>
+</ul>
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What are agentic workflows?",
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "author": {
+      "@type": "Person",
+      "name": "Tom McCaul",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tom & Co",
+        "url": "https://www.tomandco.co.uk"
+      },
+      "sameAs": ["https://www.linkedin.com/in/tom-mccaul-77b2778/"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tom & Co",
+      "url": "https://www.tomandco.co.uk",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.tomandco.co.uk/images/logo.png"
+      }
+    },
+    "description": "An agentic workflow is an AI system where a language model plans and carries out a multi-step task using tools, memory and retrieval. This guide covers the workflow-versus-agent distinction, the five common patterns, UK adoption data, and the data-protection rules that apply.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.tomandco.co.uk/ai-agency-consultancy/blog/what-are-agentic-workflows"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an agentic workflow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An agentic workflow is an AI system that breaks a goal into steps and works through them using a language model plus tools, memory and retrieval, rather than answering a single prompt. Anthropic distinguishes workflows, where the model runs along predefined code paths, from true agents, where the model directs its own steps. Gartner expects task-specific AI agents in 40% of enterprise applications by the end of 2026, up from under 5% in 2025."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between an agentic workflow and an AI agent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An agentic workflow chains several model-driven steps with tool use along a predefined code path, so the sequence is set in advance and predictable. A true agent lets the model decide the path itself at runtime, loop until the job is done, and stop when it judges the goal met. Workflows are cheaper, faster and easier to audit; agents cope with open-ended tasks but cost more and are harder to explain."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the five common agentic workflow patterns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Anthropic names five: prompt chaining (ordered steps, each working on the previous output), routing (classify an input then send it to a specialist path), parallelisation (run independent subtasks at once then combine), orchestrator-workers (a central model delegates subtasks to workers), and evaluator-optimiser (one model generates, a second scores, looping until it passes). Most useful systems use one or two, not all five."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do agentic workflows raise UK data protection issues?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, when they make decisions about people. Under UK GDPR, a solely automated decision with a legal or similarly significant effect, such as declining a mortgage or rejecting a job application, gives the individual specific rights. The ICO's guidance says a human in the loop only counts if they can genuinely change the outcome rather than rubber-stamp it. The Data (Use and Access) Act 2025 replaced the old Article 22, and the ICO issued updated draft guidance in March 2026."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tom McCaul",
+    "jobTitle": "Founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Tom & Co",
+      "url": "https://www.tomandco.co.uk"
+    },
+    "sameAs": ["https://www.linkedin.com/in/tom-mccaul-77b2778/"]
+  }
+]
+</script>
+
+</body>
+</html>

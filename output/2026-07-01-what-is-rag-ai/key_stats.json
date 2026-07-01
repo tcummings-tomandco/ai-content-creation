@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "2020",
+      "label": "Year RAG was introduced by Lewis et al. at NeurIPS",
+      "source": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, arXiv:2005.11401, NeurIPS 2020"
+    },
+    {
+      "value": "25%",
+      "label": "Of UK businesses used AI in Dec 2025, up from ~10% in Sept 2023",
+      "source": "ONS Business Insights and Conditions Survey, 8 January 2026"
+    },
+    {
+      "value": "44%",
+      "label": "Of UK firms with 250+ employees now use some form of AI",
+      "source": "ONS Business Insights and Conditions Survey, 8 January 2026"
+    },
+    {
+      "value": "+6.7pp/yr",
+      "label": "UK AI adoption velocity, Sept 2023 to Dec 2025",
+      "source": "Tom & Co analysis of ONS BICS 2023 and 2025 figures"
+    }
+  ]
+}

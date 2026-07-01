@@ -1,0 +1,30 @@
+{
+  "id": "stat_005",
+  "stat": "Implied share of UK firms with 250 or more staff actually running agentic AI, mid-2025",
+  "value": "3",
+  "unit": "percent (approx)",
+  "date_calculated": "2026-07-01",
+  "applies_to": [
+    "topic: agentic AI use cases for mid-market businesses",
+    "clusters: Strategy & ROI; Operations & Efficiency"
+  ],
+  "method": "Recipe C / cross-source derivation — combining two published UK adoption figures the sources did not multiply together",
+  "sources_used": [
+    {
+      "title": "Business insights and impact on the UK economy (Business Insights and Conditions Survey), bulletin 8 January 2026",
+      "url": "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/bulletins/businessinsightsandimpactontheukeconomy/8january2026",
+      "publisher": "Office for National Statistics",
+      "accessed": "2026-07-01"
+    },
+    {
+      "title": "AI Adoption Research (survey February to May 2025)",
+      "url": "https://www.gov.uk/government/publications/ai-adoption-research/ai-adoption-research",
+      "publisher": "Department for Science, Innovation and Technology (IFF Research and Technopolis Group)",
+      "accessed": "2026-07-01"
+    }
+  ],
+  "workings": "ONS BICS (late December 2025): 44% of UK firms with 250+ employees use some form of AI. DSIT AI Adoption Research (survey 12 Feb - 2 May 2025): agentic AI is the least-adopted AI technology at 7% of AI-using firms. Combined: 0.44 x 0.07 = 0.0308 = approximately 3.1% of large/mid-market UK firms running agentic AI in mid-2025. Conservative note: the two surveys use slightly different populations and reference dates, so treat as an order-of-magnitude estimate; neither source published the combined figure.",
+  "first_used_in": "agentic-ai-use-cases-mid-market",
+  "first_used_date": "2026-07-01",
+  "layer": 2
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How do AI workflows work? | Tom & Co Preview</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, 'Times New Roman', serif; font-size: 18px; line-height: 1.7; color: #1a1a1a; background: #fff; }
+  .preview-banner { background: #f5a623; color: #fff; padding: 10px 20px; font-family: sans-serif; font-size: 14px; font-weight: bold; }
+  .container { max-width: 740px; margin: 0 auto; padding: 40px 20px 80px; }
+  .meta { font-family: sans-serif; font-size: 14px; color: #666; margin-bottom: 32px; }
+  .meta span { margin-right: 16px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin-bottom: 24px; font-weight: 700; }
+  h2 { font-size: 1.4rem; margin: 40px 0 16px; font-weight: 700; }
+  h3 { font-size: 1.15rem; margin: 28px 0 12px; font-weight: 700; }
+  p { margin-bottom: 20px; }
+  blockquote { border-left: 4px solid #f5a623; padding: 12px 20px; margin: 28px 0; background: #fdf8f0; font-style: italic; }
+  blockquote p { margin-bottom: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 28px 0; font-family: sans-serif; font-size: 15px; overflow-x: auto; display: block; }
+  th { background: #1a1a1a; color: #fff; padding: 10px 14px; text-align: left; }
+  td { padding: 10px 14px; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f9f9; }
+  ul { margin: 0 0 20px 24px; }
+  li { margin-bottom: 12px; }
+  a { color: #1a6eb5; }
+  em { font-style: italic; }
+  .key-stats { display: flex; flex-wrap: wrap; gap: 16px; margin: 32px 0; }
+  .stat-tile { flex: 1 1 160px; background: #1a1a1a; color: #fff; padding: 20px 16px; border-radius: 4px; }
+  .stat-tile .value { font-size: 2rem; font-weight: 700; font-family: sans-serif; display: block; margin-bottom: 8px; color: #f5a623; }
+  .stat-tile .label { font-family: sans-serif; font-size: 13px; line-height: 1.4; display: block; margin-bottom: 8px; }
+  .stat-tile .source { font-family: sans-serif; font-size: 11px; color: #aaa; display: block; }
+  hr { border: none; border-top: 1px solid #e0e0e0; margin: 40px 0; }
+  @media (max-width: 600px) { h1 { font-size: 1.5rem; } h2 { font-size: 1.2rem; } .stat-tile { flex: 1 1 140px; } }
+</style>
+</head>
+<body>
+<div class="preview-banner">PREVIEW DRAFT — Tom &amp; Co AI Content Engine — 2026-07-01 — Not yet published</div>
+<div class="container">
+
+  <div class="meta">
+    <span>1 July 2026</span>
+    <span>8 min read</span>
+    <span>By Tom McCaul</span>
+    <span>Category: AI</span>
+  </div>
+
+  <h1>How do AI workflows work?</h1>
+
+  <!-- Key stat tiles -->
+  <div class="key-stats">
+    <div class="stat-tile">
+      <span class="value">5 patterns</span>
+      <span class="label">The core AI workflow building blocks: chaining, routing, parallelisation, orchestrator-workers, evaluator-optimizer</span>
+      <span class="source">Anthropic, Building Effective Agents, December 2024</span>
+    </div>
+    <div class="stat-tile">
+      <span class="value">54%</span>
+      <span class="label">Of UK firms actively using AI in 2026, up from 35% in 2025</span>
+      <span class="source">BCC and University of Essex, March 2026</span>
+    </div>
+    <div class="stat-tile">
+      <span class="value">+19pp</span>
+      <span class="label">Single-year jump in UK AI adoption to 2026, the biggest on record (Tom & Co analysis)</span>
+      <span class="source">Tom & Co analysis of BCC adoption series, 2023-2026</span>
+    </div>
+    <div class="stat-tile">
+      <span class="value">2.8x</span>
+      <span class="label">AI high performers more likely to have fundamentally redesigned workflows (55% vs 20%)</span>
+      <span class="source">McKinsey State of AI 2025, November 2025</span>
+    </div>
+  </div>
+
+<p>An AI workflow is a system where a large language model and its tools are orchestrated through predefined code paths. You set the steps in advance, and each one feeds the next in a fixed order: the model drafts, a tool checks, another call refines. Unlike an AI agent, which picks its own path, a workflow does exactly what you designed every time. That predictability is why 55% of AI high performers report redesigning workflows (McKinsey, November 2025).</p>
+
+<h2>What is an AI workflow, and how is it different from an AI agent?</h2>
+
+<p>The clearest definition comes from Anthropic's engineering team. In their December 2024 guide <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Building Effective Agents</a>, they draw a hard line between two things people lump together.</p>
+
+<p>Workflows are "systems where LLMs and tools are orchestrated through predefined code paths." You, the builder, write the sequence. Agents are "systems where LLMs dynamically direct their own processes and tool usage," deciding for themselves what to do next.</p>
+
+<p>Think of it as the difference between a recipe and a chef. A workflow is the recipe: fixed steps, same result each time, easy to test. An agent is the chef: hand it a goal and a kitchen, and it works out the order itself. Most business problems that pay back in 2026 are recipes, not chefs.</p>
+
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>AI workflow</th>
+<th>AI agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Who decides the steps</td>
+<td>You do, in advance, in code</td>
+<td>The model does, at runtime</td>
+</tr>
+<tr>
+<td>Predictability</td>
+<td>High: same path every time</td>
+<td>Lower: path varies by input</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Well-defined tasks with clear steps</td>
+<td>Open-ended tasks with unpredictable steps</td>
+</tr>
+<tr>
+<td>Cost and latency</td>
+<td>Easier to cap and forecast</td>
+<td>Can escalate as the model loops</td>
+</tr>
+<tr>
+<td>Testing and audit</td>
+<td>Straightforward: fixed inputs and outputs</td>
+<td>Harder: behaviour is non-deterministic</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>Draft a document, check it, rewrite it</td>
+<td>Resolve a GitHub issue across many files</td>
+</tr>
+</tbody>
+</table>
+
+<p>Anthropic's own advice is to reach for the simpler option first, and to add multi-step agentic systems only when simpler solutions fall short. A workflow is that middle rung. It gives you structure without handing the model the keys.</p>
+
+<h2>What are the five AI workflow patterns?</h2>
+
+<p>Anthropic named five building blocks. Almost every useful AI workflow you will build in a UK business is one of these, or two of them stitched together. Here is what each does and where it fits.</p>
+
+<h3>Prompt chaining</h3>
+
+<p>Prompt chaining decomposes a task into a sequence of steps, where each model call processes the output of the one before it. Anthropic's example: write an outline, check the outline against criteria, then write the document from the approved outline. You trade a little speed for a lot more accuracy.</p>
+
+<h3>Routing</h3>
+
+<p>Routing classifies an input, then sends it to a specialised follow-up. The example given is customer service: general questions, refund requests, and technical support each go down a different path with its own prompt. It works when the categories are distinct and classification is reliable.</p>
+
+<h3>Parallelisation</h3>
+
+<p>Here several model calls run at once and their outputs are combined. It splits two ways. Sectioning runs independent subtasks side by side, such as one model answering a query while another screens it for unsafe content. Voting runs the same task several times, such as several prompts reviewing code for security flaws, and flags an issue if any of them do.</p>
+
+<h3>Orchestrator-workers</h3>
+
+<p>A central model call breaks a task down, delegates the pieces to worker calls, then synthesises their results. The difference from parallelisation is that the subtasks are not fixed in advance. The orchestrator decides them based on the input, which suits coding changes that touch many files at once.</p>
+
+<h3>Evaluator-optimizer</h3>
+
+<p>One model call produces a response while a second evaluates it and feeds back, in a loop, until the output is good enough. Anthropic's example is literary translation, where a first pass misses nuance and a second reviewer catches it. It shines when you have clear criteria and iteration genuinely improves the result.</p>
+
+<blockquote>
+<p>"Start with simple prompts ... and add multi-step agentic systems only when simpler solutions fall short." (Anthropic, Building Effective Agents, December 2024)</p>
+</blockquote>
+
+<h2>How do you build an AI workflow step by step?</h2>
+
+<p>The mechanics matter less than the sequence. A workflow that pays back tends to come together in the same five moves, whether it runs in n8n, a Python script, or a no-code tool your ops team already has.</p>
+
+<p><strong>1. Pin down the task.</strong> Write the job in one sentence with a clear input and a clear output. "Turn an inbound enquiry email into a drafted reply plus a CRM note." If you cannot state it that plainly, it is not ready to automate yet.</p>
+
+<p><strong>2. Break it into fixed steps.</strong> List the discrete stages: read the email, classify it, pull the relevant account data, draft the reply, log the note. Each stage is one model call or one tool call. This list is your workflow.</p>
+
+<p><strong>3. Give the model its tools and data.</strong> A model on its own only writes text. Connect it to the systems that hold the facts (your CRM, a document store, a search index) so it works from real data, not guesses. Retrieval is what stops the drafts being fiction.</p>
+
+<p><strong>4. Add a check before anything leaves the building.</strong> Insert a verification step: a rules check, a second model call, or a human sign-off. For anything client-facing or regulated, that check is not optional. It is the difference between a helpful draft and a costly mistake sent under your name.</p>
+
+<p><strong>5. Measure, then expand.</strong> Run it on real cases, track how often the output needs correcting, and only widen the scope once the error rate is low and documented. Start with one low-risk task and earn the right to the next.</p>
+
+<h2>What do AI workflows cost, and how fast do they pay back?</h2>
+
+<p>The recurring cost of the model calls is usually the small part. A single workflow run of a few chained calls costs pennies. The real spend is the build time and the tooling, and that is where UK teams either save money or waste it.</p>
+
+<p>The payback maths is friendlier than most people expect. A UK knowledge worker costs roughly £24 an hour of productive time (Tom &amp; Co analysis of ONS Annual Survey of Hours and Earnings 2024 data). A workflow that reliably saves each of a ten-person team even 20 minutes a day clears well over £20,000 of freed-up time a year, against a tooling bill that rarely tops a few thousand.</p>
+
+<p>The catch is the word "reliably." A workflow that produces output nobody trusts, so everyone redoes it by hand, costs you the build and saves you nothing. That is why the check in step four earns its place, and why measuring the correction rate matters more than the raw model bill.</p>
+
+<h2>How many UK businesses actually use AI workflows in 2026?</h2>
+
+<p>Adoption of AI itself is now mainstream, but structured workflows are a narrower, faster-growing slice. According to the <a href="https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/bulletins/businessinsightsandimpactontheukeconomy/8january2026" target="_blank" rel="noopener noreferrer">ONS Business Insights and Conditions Survey</a>, around 25% of UK businesses were using some form of AI in late December 2025, rising to 44% of firms with 250 or more employees.</p>
+
+<p>The <a href="https://www.britishchambers.org.uk/news/2026/03/half-of-smes-using-ai-with-limited-headcount-impact-so-far/" target="_blank" rel="noopener noreferrer">British Chambers of Commerce, with the University of Essex</a>, put the March 2026 figure higher at 54% of UK firms actively using AI, up from 35% in 2025. Here is the interesting one, though. Only around one in ten firms have gone past generic tools like ChatGPT and Copilot into deeper, bespoke integration, and it is that group building genuine workflows rather than typing prompts by hand.</p>
+
+<blockquote>
+<p>Tom &amp; Co analysis of the BCC adoption series (23% in 2023, 25% in 2024, 35% in 2025, 54% in 2026) finds the jump to 2026 was +19 percentage points in a single year, the largest annual gain on record and more than the previous two years combined (+2pp then +10pp).</p>
+</blockquote>
+
+<p>So the gap is not adoption. It is depth. Most firms are using AI casually. The one-in-ten who have built it into repeatable workflows are the ones starting to see structural change, and the distance between the two groups is where the competitive advantage now sits.</p>
+
+<h2>Why do AI workflows drive more value than one-off prompts?</h2>
+
+<p>Casual prompting is genuinely useful, but it does not compound. Every task starts from scratch, quality swings with whoever is typing, and nothing is auditable. A workflow fixes the steps once, so the hundredth run is as reliable as the first and anyone can trigger it.</p>
+
+<p>The data backs the effort up. McKinsey's <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener noreferrer">State of AI 2025 report</a> (November 2025) found that 23% of organisations were scaling agentic systems and 62% were at least experimenting, yet only around 6% qualified as high performers drawing more than 5% of EBIT from AI. What set that 6% apart? They were 2.8 times more likely to have fundamentally redesigned workflows (55% versus 20% of everyone else).</p>
+
+<p>The lesson lands cleanly for a UK SME. Bolting a chatbot onto an unchanged process gets you a novelty. Redrawing the process around what the model does well, with the checks and data connections a workflow gives you, is what moves the numbers. The tool is not the win. The redesigned workflow is.</p>
+
+<h2>Where should a UK business start with AI workflows?</h2>
+
+<p>Pick one task that is high-volume, low-stakes, and clearly defined, and turn that into your first workflow before you touch anything client-critical. The goal of the first build is to learn the pattern cheaply, not to transform the business overnight.</p>
+
+<ul>
+<li><strong>Choose a repetitive internal task first.</strong> Inbound-enquiry triage, meeting-note summaries, or first-draft standard responses are ideal. Nothing goes to a client without a human check during the pilot.</li>
+<li><strong>Map the steps before you pick a tool.</strong> The five-step build above works in any platform. Get the sequence right on paper, then choose n8n, a script, or a no-code tool.</li>
+<li><strong>Connect it to your real data.</strong> A workflow that reads from your CRM or document store beats one that guesses. This is where retrieval turns a clever demo into something trustworthy.</li>
+<li><strong>Instrument the correction rate.</strong> Track how often a human has to fix the output. That single number tells you when to expand and when to stop.</li>
+<li><strong>Only then consider an agent.</strong> If the task genuinely needs the model to decide its own steps, that is when a workflow graduates to something more autonomous. Most tasks never need to.</li>
+</ul>
+
+<p>The firms getting the most from AI in 2026 are not the ones with the flashiest tools. They are the ones who took a dull, repetitive process, gave it fixed steps and a verification gate, and measured the result. That is all an AI workflow really is, and it is the cheapest competitive edge on the table right now.</p>
+
+<h3>About the author</h3>
+
+<p>Tom McCaul is the founder of Tom &amp; Co, a digital growth agency specialising in AI strategy and digital transformation for UK professional services and e-commerce brands. With over 15 years in digital and agency leadership, Tom writes on AI adoption, UK regulation, and the practical realities of implementing AI in growing businesses. <a href="https://www.linkedin.com/in/tom-mccaul-77b2778/" target="_blank" rel="noopener noreferrer">Connect with Tom on LinkedIn</a>.</p>
+
+<h3>Related Tom &amp; Co reading</h3>
+
+<ul>
+<li><a href="/ai-agency-consultancy/blog/what-are-agentic-workflows">What are agentic workflows?</a>. The next step up from fixed workflows, where the model starts making its own routing decisions inside the process.</li>
+<li><a href="/ai-agency-consultancy/blog/what-are-ai-agents">What are AI agents?</a>. How a system that directs its own tool use differs from the predefined workflows covered here, and when each is the right choice.</li>
+<li><a href="/ai-agency-consultancy/blog/what-is-an-ai-agent-orchestrator">What is an AI agent orchestrator?</a>. A closer look at the orchestrator-workers pattern and how a central model coordinates delegated work.</li>
+<li><a href="/ai-agency-consultancy/blog/what-is-rag-ai">What is RAG?</a>. The retrieval technique that connects a workflow to your real data so its outputs are grounded in fact, not guesswork.</li>
+</ul>
+
+</div>
+</body>
+</html>

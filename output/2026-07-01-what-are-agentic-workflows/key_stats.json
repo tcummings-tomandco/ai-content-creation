@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "40%",
+      "label": "Of enterprise apps to feature task-specific AI agents by end of 2026 (up from <5% in 2025)",
+      "source": "Gartner, August 2025"
+    },
+    {
+      "value": "39% / 23%",
+      "label": "Of organisations experimenting with AI agents vs those scaling them",
+      "source": "McKinsey State of AI, November 2025"
+    },
+    {
+      "value": "40%+",
+      "label": "Of agentic AI projects Gartner predicts will be scrapped by end of 2027",
+      "source": "Gartner via Reuters, June 2025"
+    },
+    {
+      "value": "£23.80/hr",
+      "label": "Employer cost of a UK knowledge worker, the baseline an agentic workflow must beat",
+      "source": "Tom & Co analysis of ONS ASHE 2024"
+    }
+  ]
+}

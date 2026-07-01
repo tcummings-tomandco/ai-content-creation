@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What is an AI agent orchestrator? | Tom &amp; Co (preview)</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#666; --line:#e5e5e5; --accent:#0b5cff; --bg:#fff; --tilebg:#f5f7fb; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.65; margin:0; }
+  .wrap { max-width:760px; margin:0 auto; padding:48px 20px 96px; }
+  .meta { color:var(--muted); font-size:0.9rem; margin-bottom:8px; }
+  h1 { font-size:2.2rem; line-height:1.2; margin:0 0 8px; letter-spacing:-0.01em; }
+  h2 { font-size:1.5rem; margin:2.2em 0 0.5em; line-height:1.25; }
+  h3 { font-size:1.15rem; margin:1.6em 0 0.4em; }
+  p { margin:0 0 1em; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin:28px 0 36px; }
+  .tile { background:var(--tilebg); border:1px solid var(--line); border-radius:12px; padding:16px; }
+  .tile-value { font-size:1.6rem; font-weight:700; color:var(--accent); }
+  .tile-label { font-size:0.85rem; margin:6px 0; }
+  .tile-source { font-size:0.72rem; color:var(--muted); }
+  table { width:100%; border-collapse:collapse; margin:1.4em 0; font-size:0.92rem; }
+  th,td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:var(--tilebg); }
+  blockquote { margin:1.4em 0; padding:14px 18px; border-left:4px solid var(--accent); background:var(--tilebg); border-radius:0 8px 8px 0; }
+  blockquote p { margin:0; }
+  ul { padding-left:1.3em; }
+  li { margin-bottom:0.5em; }
+  hr { border:0; border-top:1px solid var(--line); margin:2em 0; }
+  .banner { background:#fff8e1; border:1px solid #f0d98c; border-radius:8px; padding:10px 14px; font-size:0.85rem; color:#6b5900; margin-bottom:24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="banner">Local preview only. Not published. Generated 2026-07-01 by the Tom &amp; Co AI content engine.</div>
+  <div class="meta">2026-07-01 &middot; 8 min read &middot; Tom McCaul &middot; AI</div>
+  <h1>What is an AI agent orchestrator?</h1>
+  <div class="tiles">
+      <div class="tile">
+        <div class="tile-value">90.2%</div>
+        <div class="tile-label">Anthropic's orchestrator-worker system beat a single agent by this margin on its internal research eval</div>
+        <div class="tile-source">Anthropic, multi-agent research system, June 2025</div>
+      </div>
+      <div class="tile">
+        <div class="tile-value">~3.75x</div>
+        <div class="tile-label">Orchestration cost premium over a single agent (Tom & Co analysis of Anthropic token figures)</div>
+        <div class="tile-source">Tom & Co analysis of Anthropic published token figures, July 2026</div>
+      </div>
+      <div class="tile">
+        <div class="tile-value">40%</div>
+        <div class="tile-label">Of enterprise apps will feature task-specific AI agents by end of 2026, up from under 5% in 2025</div>
+        <div class="tile-source">Gartner, August 2025</div>
+      </div>
+      <div class="tile">
+        <div class="tile-value">7%</div>
+        <div class="tile-label">Of UK businesses use agentic AI, the least adopted AI technology measured</div>
+        <div class="tile-source">DSIT AI Adoption Research, fieldwork Feb-May 2025</div>
+      </div>
+  </div>
+  <hr>
+  <p>An AI agent orchestrator is the control layer that coordinates several AI agents so they work as one system. It decides which agent runs, in what order, what context each one gets, and how their outputs combine into a single result. Think of it as the conductor: the individual agents play, the orchestrator sets the sequence, manages handoffs, and keeps the whole thing coherent. Anthropic's orchestrator-worker research system scored 90.2% higher than a single agent on its internal eval.</p>
+
+<h2>What does an AI agent orchestrator actually do?</h2>
+
+<p>A single AI agent takes a goal, picks tools, and acts in a loop until it is done. That works until the job gets too big for one context window, needs several specialisms, or benefits from running tasks in parallel. At that point you need something coordinating multiple agents. That something is the orchestrator.</p>
+
+<p>The orchestrator sits above the agents and owns four jobs. It plans the work, delegates each part to the right agent, passes the context that agent needs, and aggregates the results. Microsoft's <a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns" target="_blank" rel="noopener noreferrer">Azure AI agent orchestration patterns guide</a> (updated 12 February 2026) frames it as managing work distribution, context sharing, and result aggregation across specialised agents.</p>
+
+<p>Here is the distinction that trips people up. An agent is a worker that reasons and acts. An orchestrator is the coordination logic that manages several workers. In Anthropic's <a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener noreferrer">multi-agent research system</a>, a lead agent analyses the query, develops a strategy, and spawns subagents to explore different aspects at once. The lead agent is the orchestrator.</p>
+
+<p>Crucially, an orchestrator is not always a separate piece of software. It can be a dedicated planner agent, a framework's routing logic, or a fixed pipeline you code by hand. What makes it an orchestrator is the role it plays, not the technology. It is whatever holds the plan and decides what happens next.</p>
+
+<h2>How is an orchestrator different from a single AI agent?</h2>
+
+<p>The cleanest way to see the difference is to compare the two side by side on the dimensions that matter when you are deciding which to build. A single agent is simpler and cheaper. An orchestrated multi-agent system is more capable on large, parallel, multi-skill tasks, and it costs a great deal more to run.</p>
+
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Single AI agent</th>
+<th>AI agent orchestrator (multi-agent)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structure</td>
+<td>One agent, one context window, one tool loop</td>
+<td>A coordinating layer over several specialised agents</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Well-scoped tasks a single reasoning loop can finish</td>
+<td>Heavy parallelisation, work exceeding one context window, many complex tools</td>
+</tr>
+<tr>
+<td>Token cost</td>
+<td>~4x a normal chat (Anthropic figure)</td>
+<td>~15x a normal chat (Anthropic figure)</td>
+</tr>
+<tr>
+<td>Reliability risk</td>
+<td>Context overload, tool overload on one agent</td>
+<td>Coordination overhead, handoff failures, harder to debug</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>Lower, sequential by nature</td>
+<td>Can be lower on parallel work, higher when agents depend on each other</td>
+</tr>
+<tr>
+<td>When to avoid</td>
+<td>Task needs several specialisms or parallel search</td>
+<td>All agents need the same shared context, or heavy inter-agent dependencies</td>
+</tr>
+</tbody>
+</table>
+
+<p>Anthropic is direct about the trade-off. Its multi-agent system used about 15x the tokens of a chat, and roughly 4x for a single agent. Token usage alone explained 80% of the performance variance on its BrowseComp evaluation. More tokens, spread across agents with their own context windows, buys more reasoning capacity, at a price.</p>
+
+<h2>What are the main AI agent orchestration patterns?</h2>
+
+<p>Orchestration is not one shape. The Azure architecture guide names five patterns, each suited to a different kind of coordination. Picking the right one is most of the design work. Use the simplest pattern that reliably does the job, because every extra layer adds latency, cost, and new ways to fail.</p>
+
+<h3>Sequential (pipeline)</h3>
+
+<p>Agents run in a fixed line, each working on the previous one's output. Also called prompt chaining or linear delegation. Good for step-by-step jobs with clear dependencies, like a contract that goes template, then clauses, then compliance check, then risk review. The next agent is chosen deterministically, not by the agents themselves.</p>
+
+<h3>Concurrent (parallel)</h3>
+
+<p>Several agents work the same task at once from different angles, and their results are aggregated. Also called fan-out/fan-in or scatter-gather. This is the pattern behind Anthropic's research system, where subagents search different aspects in parallel. It cuts run time and widens coverage, at the cost of more tokens.</p>
+
+<h3>Group chat</h3>
+
+<p>Agents collaborate in one shared thread, with a chat manager deciding who speaks next. Also called roundtable or multi-agent debate. It suits maker-checker loops and human-in-the-loop review, because everything lands in one auditable conversation. Azure's guidance suggests limiting it to three or fewer agents to keep control.</p>
+
+<h3>Handoff (routing)</h3>
+
+<p>One agent assesses a task and either handles it or transfers it to a better-suited agent. Also called triage or dispatch. It is the standard pattern for customer support: a triage agent routes billing questions to a billing agent and technical questions to a technical agent. Only one agent works the task at a time.</p>
+
+<h3>Magentic (dynamic planning)</h3>
+
+<p>For open-ended problems with no set plan. A manager agent builds a task ledger, invokes tool-using agents, checks progress against the goal, and refines the plan as it goes. Azure's example is a site-reliability team automating incident response, where the remediation steps are not known upfront and have to be worked out live.</p>
+
+<h2>What does the data show on orchestration cost versus payoff?</h2>
+
+<p>The payoff is real and so is the bill. On Anthropic's internal research eval, a system using Claude Opus 4 as the orchestrator with Claude Sonnet 4 subagents beat a single Claude Opus 4 agent by 90.2%. The task was finding every board member across S&P 500 IT companies, exactly the kind of wide, parallel search a single agent struggles with.</p>
+
+<blockquote>
+<p>Tom &amp; Co analysis of Anthropic's published token figures puts the orchestration premium at roughly 3.75x a single agent (about 15x a chat for the multi-agent system, divided by about 4x a chat for one agent). So an orchestrated system that would cost a single agent £100 in model spend runs closer to £375 for the same underlying request.</p>
+</blockquote>
+
+<p>That premium is the number to hold in your head. Orchestration is worth paying for when the task genuinely needs parallel work, more context than one window holds, or several tool-heavy specialisms. Anthropic is explicit that it is a poor fit when every agent needs the same shared context or when agents depend heavily on each other.</p>
+
+<p>The wider market is moving fast regardless. Gartner predicts that <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025" target="_blank" rel="noopener noreferrer">40% of enterprise applications will feature task-specific AI agents by the end of 2026</a>, up from under 5% in 2025, and that by 2027 a third of agentic AI deployments will combine agents with different skills. Combining agents is exactly what an orchestrator is for.</p>
+
+<h2>How does orchestration fit a UK business's AI stack in 2026?</h2>
+
+<p>Most UK firms are nowhere near needing this yet, and that is fine. The <a href="https://www.gov.uk/government/publications/ai-adoption-research/ai-adoption-research" target="_blank" rel="noopener noreferrer">DSIT AI Adoption Research</a> (fieldwork February to May 2025, 3,500 businesses) found only 16% of UK businesses use any AI technology, and agentic AI was the least adopted at 7%. Orchestration sits a layer above even that.</p>
+
+<p>There is sector texture, though. The same DSIT research found agentic AI adoption reached 12% in agriculture, mining, manufacturing and energy, and 10% in information and communication, against 5% across businesses overall. Firms running physical operations and data-heavy workflows are further ahead, and they are the ones most likely to hit the ceiling of a single agent first.</p>
+
+<p>McKinsey's <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener noreferrer">State of AI 2025</a> (published November 2025) found 23% of organisations are scaling an agentic system in at least one function, yet no more than 10% of respondents report scaling agents in any given function. The gap between experimenting and scaling is where orchestration decisions actually bite, because a single agent can carry a pilot but rarely carries production breadth.</p>
+
+<p>For a UK SME the honest sequence is: prove value with one well-scoped agent first, measure it, and only reach for orchestration when a real task defeats a single agent. The 3.75x cost premium means an orchestrator you do not need is an expensive way to add fragility. Build up to it when the work demands it, not before.</p>
+
+<h2>What should a UK leader do about agent orchestration this quarter?</h2>
+
+<p>You do not need to commission a multi-agent platform to make progress. You need to understand where a single agent stops being enough, so you spend on orchestration only when it earns its keep.</p>
+
+<p><strong>1. Find your single-agent ceiling.</strong> List the AI tasks you already run or plan to. Flag any that need parallel work, more context than one prompt holds, or three-plus specialisms. Those are your orchestration candidates. Everything else stays a single agent, cheaper and easier to trust.</p>
+
+<p><strong>2. Match the task to a pattern.</strong> Step-by-step work fits sequential. Wide research fits concurrent. Support routing fits handoff. Open-ended problem-solving fits magentic. Review-heavy work fits group chat. Naming the pattern before you build stops you over-engineering.</p>
+
+<p><strong>3. Budget for the premium.</strong> Assume an orchestrated version of a task costs roughly 3.75x a single agent in model spend. If the capability gain does not clearly beat that, the single agent wins. Put the number in the business case, not a footnote.</p>
+
+<p><strong>4. Build in observability from day one.</strong> Orchestrated systems fail in the seams: bad handoffs, lost context, agents looping. Decide how you will log each agent's inputs and outputs before you connect them, or debugging a live multi-agent system becomes guesswork.</p>
+
+<p>The firms that get value from orchestration are not the ones that adopt it earliest. They are the ones that keep single agents single until a real task forces the upgrade, then pick the pattern that fits. Getting that judgement right is worth more than any framework choice.</p>
+
+<h3>About the author</h3>
+
+<p>Tom McCaul is the founder of Tom &amp; Co, a digital growth agency specialising in AI strategy and digital transformation for UK professional services and e-commerce brands. With over 15 years in digital and agency leadership, Tom writes on AI adoption, UK regulation, and the practical realities of implementing AI in growing businesses. <a href="https://www.linkedin.com/in/tom-mccaul-77b2778/" target="_blank" rel="noopener noreferrer">Connect with Tom on LinkedIn</a>.</p>
+
+<h3>Related Tom &amp; Co reading</h3>
+
+<ul>
+<li><a href="/ai-agency-consultancy/blog/what-are-ai-agents">What are AI agents?</a>. The building blocks an orchestrator coordinates: what an AI agent is, how the reason-act loop works, and where a single agent's limits lie.</li>
+<li><a href="/ai-agency-consultancy/blog/what-are-multi-agent-systems">What are multi-agent systems?</a>. The wider architecture orchestration sits inside, covering how several agents divide work and share context.</li>
+<li><a href="/ai-agency-consultancy/blog/what-are-agentic-workflows">What are agentic workflows?</a>. How orchestration patterns like sequential and handoff turn into repeatable business workflows.</li>
+<li><a href="/ai-agency-consultancy/blog/what-is-agentic-ai">What is agentic AI?</a>. The category all of this belongs to, and how autonomous AI differs from a standard chatbot.</li>
+</ul>
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What is an AI agent orchestrator?",
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "author": {
+      "@type": "Person",
+      "name": "Tom McCaul",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tom & Co",
+        "url": "https://www.tomandco.co.uk"
+      },
+      "sameAs": ["https://www.linkedin.com/in/tom-mccaul-77b2778/"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tom & Co",
+      "url": "https://www.tomandco.co.uk",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.tomandco.co.uk/images/logo.png"
+      }
+    },
+    "description": "An AI agent orchestrator is the control layer that coordinates several AI agents, deciding which runs, in what order, with what context, and how outputs combine. Covers the five orchestration patterns, the cost-versus-capability trade-off, and when a UK business should move beyond a single agent.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.tomandco.co.uk/ai-agency-consultancy/blog/what-is-an-ai-agent-orchestrator"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does an AI agent orchestrator actually do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An AI agent orchestrator coordinates several AI agents so they work as one system. It owns four jobs: planning the work, delegating each part to the right agent, passing the context that agent needs, and aggregating the results. It can be a dedicated planner agent, a framework's routing logic, or a fixed pipeline. What makes it an orchestrator is the coordination role it plays, not the technology used."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is an orchestrator different from a single AI agent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A single AI agent is one reasoning loop with one context window, cheaper and simpler. An orchestrator coordinates several specialised agents, which is more capable on large, parallel, multi-skill tasks but far more expensive. Anthropic reports a single agent uses about 4x the tokens of a chat, while a multi-agent orchestrated system uses about 15x, and token usage alone explained 80% of performance variance in its evaluation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the main AI agent orchestration patterns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Microsoft's Azure architecture guide names five: sequential (agents run in a fixed pipeline), concurrent (agents work the same task in parallel and results are aggregated), group chat (agents collaborate in one managed thread), handoff (an agent routes a task to a better-suited agent), and magentic (a manager agent dynamically builds and refines a plan for open-ended problems). Use the simplest pattern that reliably does the job."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is an AI agent orchestrator worth the extra cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Orchestration is worth it when a task genuinely needs parallel work, more context than one window holds, or several tool-heavy specialisms. Tom & Co analysis of Anthropic's published token figures puts the orchestration premium at roughly 3.75x a single agent's model spend. It is a poor fit when every agent needs the same shared context or when agents depend heavily on each other, and an unnecessary orchestrator adds cost and fragility."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tom McCaul",
+    "jobTitle": "Founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Tom & Co",
+      "url": "https://www.tomandco.co.uk"
+    },
+    "sameAs": ["https://www.linkedin.com/in/tom-mccaul-77b2778/"]
+  }
+]
+</script>
+
+</div>
+</body>
+</html>

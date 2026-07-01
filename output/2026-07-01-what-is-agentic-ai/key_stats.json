@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "33%",
+      "label": "Of enterprise software will embed agentic AI by 2028, up from under 1% in 2024",
+      "source": "Gartner, October 2024"
+    },
+    {
+      "value": "23%",
+      "label": "Of UK businesses used AI in late September 2025, up from 9% in 2023",
+      "source": "ONS Business Insights, October 2025"
+    },
+    {
+      "value": ">40%",
+      "label": "Of agentic AI projects will be cancelled by the end of 2027",
+      "source": "Gartner, June 2025"
+    },
+    {
+      "value": "$52.62bn",
+      "label": "Projected AI agents market by 2030, from $7.84bn in 2025",
+      "source": "MarketsandMarkets, April 2025"
+    }
+  ]
+}

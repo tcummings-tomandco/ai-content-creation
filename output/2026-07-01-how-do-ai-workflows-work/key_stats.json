@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "5 patterns",
+      "label": "The core AI workflow building blocks: chaining, routing, parallelisation, orchestrator-workers, evaluator-optimizer",
+      "source": "Anthropic, Building Effective Agents, December 2024"
+    },
+    {
+      "value": "54%",
+      "label": "Of UK firms actively using AI in 2026, up from 35% in 2025",
+      "source": "BCC and University of Essex, March 2026"
+    },
+    {
+      "value": "+19pp",
+      "label": "Single-year jump in UK AI adoption to 2026, the biggest on record (Tom & Co analysis)",
+      "source": "Tom & Co analysis of BCC adoption series, 2023-2026"
+    },
+    {
+      "value": "2.8x",
+      "label": "AI high performers more likely to have fundamentally redesigned workflows (55% vs 20%)",
+      "source": "McKinsey State of AI 2025, November 2025"
+    }
+  ]
+}

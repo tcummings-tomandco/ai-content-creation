@@ -1,0 +1,25 @@
+{
+  "_note": "Layer 2 calculation from this article, for the central process to merge into data/stat_bank.json. This subagent does NOT edit data/stat_bank.json directly.",
+  "id": "stat_005",
+  "stat": "Share of all UK businesses using generative/text-generation AI vs agentic AI, derived from DSIT adoption rates",
+  "value": "13.6% vs 1.1%",
+  "unit": "percent of all UK businesses (approx. 12x gap)",
+  "date_calculated": "2026-07-01",
+  "applies_to": [
+    "topics: agentic-ai-vs-generative-ai, what-is-agentic-ai, what-are-ai-agents",
+    "clusters: Technical & Build; Tools & emerging vocabulary; Strategy & ROI"
+  ],
+  "method": "Recipe C — share-of-all-firms cut derived from a single primary snapshot (DSIT) that the source did not publish in this form",
+  "sources_used": [
+    {
+      "title": "AI Adoption Research",
+      "url": "https://www.gov.uk/government/publications/ai-adoption-research/ai-adoption-research",
+      "publisher": "Department for Science, Innovation and Technology (DSIT)",
+      "accessed": "2026-07-01"
+    }
+  ],
+  "workings": "DSIT (published 13 Feb 2026): 16% of all UK businesses use at least one AI technology; among adopters, 85% use text generation and 7% use agentic AI. Share of ALL UK businesses using text generation = 0.16 x 0.85 = 0.136 = 13.6%. Share using agentic AI = 0.16 x 0.07 = 0.0112 = ~1.1%. Ratio = 85/7 = ~12.1x (holds across all firms as the 16% base cancels). Result: generative/text-generation AI reaches ~13.6% of all UK businesses vs ~1.1% for agentic AI, a ~12x gap.",
+  "first_used_in": "agentic-ai-vs-generative-ai",
+  "first_used_date": "2026-07-01",
+  "layer": 2
+}

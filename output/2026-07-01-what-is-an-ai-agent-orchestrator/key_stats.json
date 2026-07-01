@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "90.2%",
+      "label": "Anthropic's orchestrator-worker system beat a single agent by this margin on its internal research eval",
+      "source": "Anthropic, multi-agent research system, June 2025"
+    },
+    {
+      "value": "~3.75x",
+      "label": "Orchestration cost premium over a single agent (Tom & Co analysis of Anthropic token figures)",
+      "source": "Tom & Co analysis of Anthropic published token figures, July 2026"
+    },
+    {
+      "value": "40%",
+      "label": "Of enterprise apps will feature task-specific AI agents by end of 2026, up from under 5% in 2025",
+      "source": "Gartner, August 2025"
+    },
+    {
+      "value": "7%",
+      "label": "Of UK businesses use agentic AI, the least adopted AI technology measured",
+      "source": "DSIT AI Adoption Research, fieldwork Feb-May 2025"
+    }
+  ]
+}

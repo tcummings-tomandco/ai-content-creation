@@ -1,0 +1,25 @@
+{
+  "_note": "Proposed Layer 2 entry for data/stat_bank.json. Written to the article output folder only; the central process merges it. This subagent does NOT edit data/stat_bank.json directly (per ad-hoc batch instructions).",
+  "id": "stat_005",
+  "stat": "Orchestration cost premium of a multi-agent orchestrated AI system over a single AI agent",
+  "value": "3.75",
+  "unit": "x (multiple of single-agent model spend)",
+  "date_calculated": "2026-07-01",
+  "applies_to": [
+    "topic: what-is-an-ai-agent-orchestrator",
+    "clusters: Technical & Build; Tools & emerging vocabulary"
+  ],
+  "method": "Recipe D — cost-per-outcome ratio derived from published Anthropic token multipliers",
+  "sources_used": [
+    {
+      "title": "How we built our multi-agent research system",
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "publisher": "Anthropic",
+      "accessed": "2026-07-01"
+    }
+  ],
+  "workings": "Anthropic reports a multi-agent system uses about 15x the tokens of a chat, and a single agent uses about 4x the tokens of a chat. Dividing isolates the orchestration premium: 15 / 4 = 3.75x. Illustrative sterling example: a request costing a single agent £100 in model spend runs to roughly £375 for an orchestrated multi-agent version. Caveat: token count is a proxy for model spend and assumes comparable per-token pricing; it is a coordination-cost indicator, not full TCO (excludes engineering, latency, observability).",
+  "first_used_in": "what-is-an-ai-agent-orchestrator",
+  "first_used_date": "2026-07-01",
+  "layer": 2
+}

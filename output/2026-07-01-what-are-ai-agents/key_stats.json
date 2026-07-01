@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "7%",
+      "label": "Of UK AI adopters use agentic AI, the least-adopted AI technology",
+      "source": "DSIT AI Adoption Research, survey Feb–May 2025"
+    },
+    {
+      "value": "89%",
+      "label": "Of UK & Ireland enterprises already deploy AI agents (~12 on average)",
+      "source": "Salesforce 2026 Connectivity Benchmark, via Computer Weekly"
+    },
+    {
+      "value": ">40%",
+      "label": "Of agentic AI projects to be cancelled by end of 2027",
+      "source": "Gartner press release, 25 June 2025"
+    },
+    {
+      "value": "9 mins",
+      "label": "Weekly time saving per person to break even on a business AI subscription",
+      "source": "Tom & Co analysis of ONS ASHE 2024 data"
+    }
+  ]
+}

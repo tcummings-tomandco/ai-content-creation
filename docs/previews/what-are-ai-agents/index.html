@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What are AI agents? A plain-English guide for UK businesses | Tom &amp; Co Preview</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
+  h1 { font-size: 2em; font-weight: 700; margin-bottom: 0.3em; }
+  h2 { font-size: 1.4em; font-weight: 700; margin-top: 2em; }
+  h3 { font-size: 1.15em; font-weight: 700; margin-top: 1.5em; color: #333; }
+  .meta { color: #666; font-size: 0.9em; margin-bottom: 1.5em; font-family: sans-serif; border-bottom: 1px solid #ddd; padding-bottom: 1em; }
+  .answer-para { background: #f5f5f5; border-left: 4px solid #0066cc; padding: 1em 1.2em; margin-bottom: 1.5em; font-weight: 500; }
+  table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-family: sans-serif; font-size: 0.88em; }
+  th { background: #0066cc; color: white; padding: 8px 10px; text-align: left; }
+  td { border: 1px solid #ddd; padding: 7px 10px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f9f9; }
+  blockquote { border-left: 3px solid #999; padding: 0.7em 1em; margin: 1.2em 0; color: #444; font-style: italic; }
+  a { color: #0066cc; }
+  ul, ol { padding-left: 1.5em; }
+  li { margin-bottom: 0.4em; }
+  .stat-tiles { display: flex; flex-wrap: wrap; gap: 12px; margin: 1em 0 2em 0; }
+  .stat-tile { background: #0066cc; color: white; border-radius: 6px; padding: 14px 18px; flex: 1 1 180px; font-family: sans-serif; }
+  .stat-tile .value { font-size: 1.8em; font-weight: 700; display: block; }
+  .stat-tile .label { font-size: 0.82em; opacity: 0.9; margin-top: 4px; }
+  .stat-tile .source { font-size: 0.72em; opacity: 0.75; margin-top: 6px; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 2em 0; }
+  .preview-banner { background: #fffbe6; border: 1px solid #f0c040; padding: 8px 14px; font-family: sans-serif; font-size: 0.85em; color: #7a5c00; margin-bottom: 20px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div style="background:#fff3cd;border-bottom:2px solid #c8a85a;padding:10px 20px;font-family:-apple-system,Helvetica,Arial,sans-serif;font-size:14px;color:#5c4a00;">
+<strong>Tom &amp; Co AI Content Engine — Phase 1 preview.</strong>
+This page is a draft for internal review only. Not crawled, not indexed, not yet on tomandco.co.uk.
+</div>
+
+<div class="preview-banner">&#9888; PREVIEW DRAFT &mdash; Not yet published. Date: 2026-07-01 | Slug: what-are-ai-agents | Cluster: Operations &amp; Efficiency | Format: Definition + benchmark table</div>
+<h1>What are AI agents? A plain-English guide for UK businesses</h1>
+<div class="meta">2026-07-01 &bull; 7 min read &bull; By Tom McCaul &bull; Category: AI</div>
+<div class="stat-tiles">
+<div class="stat-tile"><span class="value">7%</span><span class="label">Of UK AI adopters use agentic AI, the least-adopted AI technology</span><span class="source">DSIT AI Adoption Research, survey Feb–May 2025</span></div>
+<div class="stat-tile"><span class="value">89%</span><span class="label">Of UK & Ireland enterprises already deploy AI agents (~12 on average)</span><span class="source">Salesforce 2026 Connectivity Benchmark, via Computer Weekly</span></div>
+<div class="stat-tile"><span class="value">>40%</span><span class="label">Of agentic AI projects to be cancelled by end of 2027</span><span class="source">Gartner press release, 25 June 2025</span></div>
+<div class="stat-tile"><span class="value">9 mins</span><span class="label">Weekly time saving per person to break even on a business AI subscription</span><span class="source">Tom & Co analysis of ONS ASHE 2024 data</span></div>
+</div>
+<div class="answer-para"><p>An AI agent is software built around a large language model that pursues a goal with little step-by-step direction. Give it a task and it plans the steps, chooses tools like a search API or a database, takes an action, checks the result, and loops until it is done. Anthropic describes agents as LLMs that dynamically direct their own tool usage. That autonomy is the whole point, and it is what separates an agent from a chatbot.</p></div>
+
+<h2>What is an AI agent, exactly?</h2>
+
+<p>The vendors building agents agree on the core idea. <a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noopener noreferrer">OpenAI's Practical Guide to Building Agents</a> (April 2025) calls them "systems that independently accomplish tasks on your behalf." <a href="https://www.ibm.com/think/topics/ai-agents" target="_blank" rel="noopener noreferrer">IBM</a> defines an agent as a system "capable of autonomously performing tasks on behalf of a user by designing its workflow and utilising available tools."</p>
+
+<p>The common thread is autonomy over a workflow, not a single reply. A chatbot answers the question in front of it. An agent takes a goal, breaks it into steps, and works through them, deciding for itself which tool to reach for at each point.</p>
+
+<p>Three parts make that possible. First a model, the LLM that does the reasoning. Second a set of tools, the APIs, databases and functions it can call to gather information or act on the world. Third a memory, so it carries context from one step to the next rather than starting fresh each time.</p>
+
+<h2>How does an AI agent actually work?</h2>
+
+<p>Under the surface, an agent runs a simple cycle. <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Anthropic's engineering team</a> puts it plainly: agents "are typically just LLMs using tools based on environmental feedback in a loop." The model observes, decides on a step, acts, then reads the result and decides again.</p>
+
+<p>Say you ask an agent to reconcile last month's supplier invoices. It reads the inbox, pulls each PDF, calls an accounting API to match line items, flags three mismatches, drafts a query email for each, and reports back. No human picks the tools at each stage. The agent does.</p>
+
+<p>That feedback matters. Anthropic notes it is crucial for an agent to get "ground truth" from the environment at each step, such as a tool result or a code-execution output, so it can judge its own progress. Without that check, an agent drifts. With it, the agent can self-correct partway through a job.</p>
+
+<h3>Agents versus workflows</h3>
+
+<p>Not everything marketed as an agent is one. Anthropic draws a useful line: in a workflow, "LLMs and tools are orchestrated through predefined code paths." In an agent, the LLM "dynamically directs its own processes and tool usage." A fixed pipeline that always runs the same five steps is a workflow, however clever. An agent decides the steps as it goes.</p>
+
+<h2>How is an AI agent different from a chatbot or RPA?</h2>
+
+<p>This is where most confusion lives, so it helps to line the three up side by side. A chatbot responds. Robotic process automation (RPA) repeats a fixed script. An agent reasons about a goal and adapts. The table below shows where each fits.</p>
+
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Chatbot</th>
+<th>RPA (rule-based automation)</th>
+<th>AI agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What it does</td>
+<td>Answers a prompt or question</td>
+<td>Follows a fixed, pre-scripted sequence</td>
+<td>Pursues a goal, planning steps as it goes</td>
+</tr>
+<tr>
+<td>Handles the unexpected</td>
+<td>No, stays within its script</td>
+<td>No, breaks when the screen or data changes</td>
+<td>Yes, re-plans from environmental feedback</td>
+</tr>
+<tr>
+<td>Uses external tools</td>
+<td>Rarely, and only if wired in</td>
+<td>Yes, but only the ones scripted for it</td>
+<td>Yes, selects tools dynamically at each step</td>
+</tr>
+<tr>
+<td>Memory across steps</td>
+<td>Limited to the conversation</td>
+<td>None, each run is independent</td>
+<td>Yes, carries context through the task</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>FAQs, triage, drafting text</td>
+<td>High-volume, stable, repetitive tasks</td>
+<td>Multi-step tasks with unstructured inputs</td>
+</tr>
+<tr>
+<td>Fails when</td>
+<td>The question needs action, not an answer</td>
+<td>The process or interface changes</td>
+<td>The goal is vague or tools are unreliable</td>
+</tr>
+</tbody>
+</table>
+
+<p>The practical takeaway: RPA is the right tool when a process never changes and volume is high. Agents earn their keep when inputs are messy and the path to the answer is not fixed. Many real deployments now pair the two, with an agent deciding what to do and RPA doing the stable, repeatable clicks.</p>
+
+<h2>What can AI agents actually do in a business?</h2>
+
+<p>The useful cases in 2026 are narrow and specific, not the "autonomous digital employee" of the headlines. The agents delivering value handle bounded, repeatable work where a human still signs off on anything consequential.</p>
+
+<h3>Customer operations</h3>
+
+<p>An agent can read an incoming ticket, look up the order in your system, check the returns policy, and draft a resolution for an advisor to approve. It handles the fetching and drafting. The human keeps the judgement call and the final send.</p>
+
+<h3>Finance and back office</h3>
+
+<p>Invoice matching, expense checking and data reconciliation suit agents well. The inputs vary (every supplier formats a PDF differently) but the goal is fixed. An agent copes with the variation that would break a rigid RPA script.</p>
+
+<h3>Research and sales support</h3>
+
+<p>Agents can compile a prospect briefing by pulling from Companies House, recent news and your CRM, then produce a one-page summary before a call. It is grunt work that eats a rep's morning, and it is well within scope for a supervised agent.</p>
+
+<blockquote>
+<p>McKinsey's State of AI, published November 2025, found 62% of organisations are at least experimenting with AI agents and 23% are scaling them somewhere. Yet only about 6% qualify as AI high performers seeing significant value, and most report less than 5% of EBIT attributable to AI.</p>
+</blockquote>
+
+<h2>How many UK businesses actually use AI agents?</h2>
+
+<p>Fewer than the hype suggests, and it depends heavily on company size. The government's <a href="https://www.gov.uk/government/publications/ai-adoption-research/ai-adoption-research" target="_blank" rel="noopener noreferrer">AI Adoption Research from DSIT</a>, based on a survey of 3,500 UK businesses run between February and May 2025, found only 16% use any AI technology at all. Among those that do, agentic AI was the least adopted, used by just 7% of adopters.</p>
+
+<p>Even the businesses planning to adopt AI are cautious about agents. In the same DSIT study, only 13% of planned adopters intend to use agentic AI, and just a quarter of those expect to implement it within twelve months. So among UK businesses generally, hands-on agent use is still a small minority in 2026.</p>
+
+<p>The picture flips at the enterprise end. Salesforce's 2026 Connectivity Benchmark, surveyed with Vanson Bourne across October and November 2025 and reported by <a href="https://www.computerweekly.com/news/366638841/Governance-lags-agentic-AI-adoption-in-the-UK-says-Salesforce" target="_blank" rel="noopener noreferrer">Computer Weekly</a>, found 89% of UK and Ireland organisations already deploy AI agents, running about 12 on average. Large organisations are well ahead of the wider business base.</p>
+
+<p>Governance is the weak spot. That same benchmark found roughly half of those agents sit in silos rather than working as a connected system, and only 54% of organisations have a centralised governance framework overseeing them. Deployment is running ahead of control, which is exactly the pattern the failure data warns about.</p>
+
+<h2>Do AI agents work, or is it hype?</h2>
+
+<p>Both, honestly. The technology is real and improving fast, but the failure rate on ambitious projects is high. <a href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener noreferrer">Gartner predicts</a> that over 40% of agentic AI projects will be cancelled by the end of 2027, citing escalating costs, unclear business value and inadequate risk controls.</p>
+
+<p>Part of the problem is labelling. Gartner calls it "agent washing": vendors rebadging chatbots, assistants and old RPA as agentic without the underlying autonomy. Of the thousands of firms claiming agentic products, Gartner reckons only around 130 are the genuine article. So a good chunk of the market you are being sold is not agents at all.</p>
+
+<p>The direction of travel is still clear, though. Gartner expects at least 15% of day-to-day work decisions to be made autonomously through agentic AI by 2028, up from effectively zero in 2024. The honest read for 2026: real capability, real value in narrow cases, and a lot of noise to filter first.</p>
+
+<h2>How should a UK business start with AI agents?</h2>
+
+<p>Start small and pick a task you can measure. The agents that pay back are aimed at one bounded, high-frequency job, not a sprawling "automate the department" brief. Prove value on something narrow before you widen the scope.</p>
+
+<p>Keep a human in the loop on anything with consequences. Money moving, contracts, customer-facing decisions: the agent prepares, a person approves. That is the pattern in almost every deployment that survives contact with reality, and it maps directly to the governance gap the UK data keeps flagging.</p>
+
+<p>The economics are forgiving because the tooling is cheap relative to labour. Tom &amp; Co analysis of <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2024" target="_blank" rel="noopener noreferrer">ONS Annual Survey of Hours and Earnings 2024</a> data found a 10-person team on a roughly £1,900-a-year business AI subscription only needs each person to save about 9 minutes a week to break even. A working agent clears that bar easily.</p>
+
+<p>So the practical checklist is short. Choose one narrow task with a clear success measure. Insist on human approval for consequential actions. Buy from a vendor that can show real autonomy, not agent washing. Then measure the time saved against that low break-even bar before you scale.</p>
+
+<h3>About the author</h3>
+
+<p>Tom McCaul is the founder of Tom &amp; Co, a digital growth agency specialising in e-commerce, AI strategy and digital transformation for ambitious UK brands. With over 15 years in digital commerce and agency leadership, Tom writes on AI adoption, UK regulation, and the practical realities of implementing AI in growing businesses. <a href="https://www.linkedin.com/in/tom-mccaul-77b2778/" target="_blank" rel="noopener noreferrer">Connect with Tom on LinkedIn</a>.</p>
+
+<h3>Related Tom &amp; Co reading</h3>
+
+<ul>
+<li><a href="/ai-agency-consultancy/blog/what-is-agentic-ai">What is agentic AI?</a>. The umbrella idea behind agents, and how enterprises are actually deploying it.</li>
+<li><a href="/ai-agency-consultancy/blog/what-are-multi-agent-systems">What are multi-agent systems?</a>. What happens when several agents work together on a job rather than one working alone.</li>
+<li><a href="/ai-agency-consultancy/blog/what-are-agentic-workflows">What are agentic workflows?</a>. The difference between a fixed workflow and a true agent, explained with concrete examples.</li>
+<li><a href="/ai-agency-consultancy/blog/agentic-ai-use-cases-mid-market">Agentic AI use cases for mid-market businesses</a>. Where agents pay back first for UK firms below enterprise scale.</li>
+</ul>
+</body>
+</html>

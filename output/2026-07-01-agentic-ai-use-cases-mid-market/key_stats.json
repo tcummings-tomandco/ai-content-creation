@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "7%",
+      "label": "Of AI-using UK firms had adopted agentic AI (least-adopted AI technology)",
+      "source": "DSIT AI Adoption Research, survey February to May 2025"
+    },
+    {
+      "value": "~3%",
+      "label": "Of UK firms with 250+ staff were actually running agentic AI (Tom & Co analysis)",
+      "source": "Tom & Co analysis of ONS and DSIT data, mid-2025"
+    },
+    {
+      "value": ">40%",
+      "label": "Of agentic AI projects Gartner expects to be cancelled by end of 2027",
+      "source": "Gartner press release, 25 June 2025"
+    },
+    {
+      "value": "84%",
+      "label": "Of 380,000+ support conversations Salesforce Agentforce resolved without a human",
+      "source": "Salesforce Agentforce production data, 2025"
+    }
+  ]
+}

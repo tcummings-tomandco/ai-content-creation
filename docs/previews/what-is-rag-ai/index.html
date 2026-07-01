@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is RAG (retrieval-augmented generation) in plain English? | Tom &amp; Co Preview</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
+  h1 { font-size: 2em; font-weight: 700; margin-bottom: 0.3em; }
+  h2 { font-size: 1.4em; font-weight: 700; margin-top: 2em; }
+  h3 { font-size: 1.15em; font-weight: 700; margin-top: 1.5em; color: #333; }
+  .meta { color: #666; font-size: 0.9em; margin-bottom: 1.5em; font-family: sans-serif; border-bottom: 1px solid #ddd; padding-bottom: 1em; }
+  .answer-para { background: #f5f5f5; border-left: 4px solid #0066cc; padding: 1em 1.2em; margin-bottom: 1.5em; font-weight: 500; }
+  table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-family: sans-serif; font-size: 0.88em; }
+  th { background: #0066cc; color: white; padding: 8px 10px; text-align: left; }
+  td { border: 1px solid #ddd; padding: 7px 10px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f9f9; }
+  blockquote { border-left: 3px solid #999; padding: 0.7em 1em; margin: 1.2em 0; color: #444; font-style: italic; }
+  a { color: #0066cc; }
+  ul, ol { padding-left: 1.5em; }
+  li { margin-bottom: 0.4em; }
+  .stat-tiles { display: flex; flex-wrap: wrap; gap: 12px; margin: 1em 0 2em 0; }
+  .stat-tile { background: #0066cc; color: white; border-radius: 6px; padding: 14px 18px; flex: 1 1 180px; font-family: sans-serif; }
+  .stat-tile .value { font-size: 1.8em; font-weight: 700; display: block; }
+  .stat-tile .label { font-size: 0.82em; opacity: 0.9; margin-top: 4px; }
+  .stat-tile .source { font-size: 0.72em; opacity: 0.75; margin-top: 6px; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 2em 0; }
+  .preview-banner { background: #fffbe6; border: 1px solid #f0c040; padding: 8px 14px; font-family: sans-serif; font-size: 0.85em; color: #7a5c00; margin-bottom: 20px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div style="background:#fff3cd;border-bottom:2px solid #c8a85a;padding:10px 20px;font-family:-apple-system,Helvetica,Arial,sans-serif;font-size:14px;color:#5c4a00;">
+<strong>Tom &amp; Co AI Content Engine — Phase 1 preview.</strong>
+This page is a draft for internal review only. Not crawled, not indexed, not yet on tomandco.co.uk.
+</div>
+
+<div class="preview-banner">&#9888; PREVIEW DRAFT &mdash; Not yet published. Date: 2026-07-01 | Slug: what-is-rag-ai | Cluster: Technical &amp; Build | Batch: ad-hoc 2026-07-01</div>
+<h1>What is RAG (retrieval-augmented generation) in plain English?</h1>
+<div class="meta">2026-07-01 &bull; 7 min read &bull; By Tom McCaul &bull; Category: AI</div>
+<div class="stat-tiles">
+<div class="stat-tile"><span class="value">2020</span><span class="label">Year RAG was introduced by Lewis et al. at NeurIPS</span><span class="source">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, arXiv:2005.11401, NeurIPS 2020</span></div>
+<div class="stat-tile"><span class="value">25%</span><span class="label">Of UK businesses used AI in Dec 2025, up from ~10% in Sept 2023</span><span class="source">ONS Business Insights and Conditions Survey, 8 January 2026</span></div>
+<div class="stat-tile"><span class="value">44%</span><span class="label">Of UK firms with 250+ employees now use some form of AI</span><span class="source">ONS Business Insights and Conditions Survey, 8 January 2026</span></div>
+<div class="stat-tile"><span class="value">+6.7pp/yr</span><span class="label">UK AI adoption velocity, Sept 2023 to Dec 2025</span><span class="source">Tom & Co analysis of ONS BICS 2023 and 2025 figures</span></div>
+</div>
+<div class="answer-para"><p>Retrieval-augmented generation (RAG) is a technique that lets a large language model look things up before it answers. Instead of relying only on what it memorised during training, the model retrieves relevant text from a knowledge source you control (your documents, a database, a policy library), then writes its answer using that retrieved material as evidence. The result is more current, more specific, and easier to fact-check, because you can trace each answer back to a source.</p></div>
+
+
+
+<h2>What does RAG actually mean in plain English?</h2>
+
+<p>Think of a standard language model as a very well-read colleague answering from memory. They know a lot, but their knowledge is frozen at their training cut-off, and they will occasionally state something confidently that is simply wrong.</p>
+
+<p>RAG hands that colleague a filing cabinet. Before answering, they pull the relevant folder, read it, then reply based on what is actually in front of them. The model still writes the answer in its own words. It just grounds that answer in retrieved facts rather than memory alone.</p>
+
+<p>The term comes from a 2020 paper by Patrick Lewis and colleagues, <a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener noreferrer">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a>, presented at NeurIPS 2020. They paired a text-generating model with a retriever that searches a document index (a vector index of Wikipedia). The paper reported that RAG set the state of the art on three open-domain question-answering tasks and produced "more specific, diverse and factual language" than a generation-only model.</p>
+
+<h2>How does RAG work step by step?</h2>
+
+<p>Most production RAG systems in 2026 follow the same four stages. <a href="https://aws.amazon.com/what-is/retrieval-augmented-generation/" target="_blank" rel="noopener noreferrer">AWS sets these out clearly</a> in its RAG explainer, and the pattern is near-universal across vendors.</p>
+
+<h3>1. Prepare your data</h3>
+
+<p>Your source documents (contracts, product manuals, support tickets, past proposals) are split into chunks and converted into numerical representations called embeddings. These embeddings are stored in a vector database, which is built to find text by meaning rather than by exact keyword match.</p>
+
+<h3>2. Retrieve the relevant bits</h3>
+
+<p>When a user asks a question, that question is also turned into an embedding. The system searches the vector database for the chunks that sit closest to the question in meaning, and pulls back the top handful. This is the "retrieval" step, and it happens in milliseconds.</p>
+
+<h3>3. Augment the prompt</h3>
+
+<p>The retrieved chunks are bundled together with the original question into a single, larger prompt. In effect the model is told: "Here is the question, and here is the relevant material. Answer using this." That is the "augmented" part.</p>
+
+<h3>4. Generate the answer</h3>
+
+<p>The model writes its response using the supplied material as the primary evidence. Because the source chunks travelled with the prompt, a well-built system can cite exactly which document each claim came from, so a human can check it.</p>
+
+<h2>Why do businesses use RAG instead of just asking the model?</h2>
+
+<p>A plain language model answers from a fixed snapshot of training data. It cannot see your internal documents, and it has no knowledge of anything that happened after its cut-off. Ask it about your refund policy and it will invent something plausible. RAG closes that gap by putting your real, current information in front of the model at the moment it answers.</p>
+
+<p>The other draw is trust. Because RAG grounds answers in retrieved passages, the system can show its working and link back to the source. A 2025 peer-reviewed review of hallucination mitigation, <a href="https://www.mdpi.com/2227-7390/13/5/856" target="_blank" rel="noopener noreferrer">published in the journal Mathematics</a>, found that grounding responses in retrieved evidence is the leading practical method for reducing the rate at which language models fabricate facts.</p>
+
+<blockquote>
+<p>The original 2020 RAG model set the state of the art on three open-domain question-answering benchmarks and generated more factual language than a comparable generation-only model, according to Lewis et al., NeurIPS 2020.</p>
+</blockquote>
+
+<p>There is a cost angle too. Retraining a model on your own data is expensive and has to be repeated every time the data changes. RAG leaves the model untouched and simply updates the document index, so keeping the system current is a matter of re-indexing files, not retraining a neural network.</p>
+
+<h2>What is the difference between RAG, fine-tuning, and prompting?</h2>
+
+<p>These three approaches get confused constantly, and teams often reach for the wrong one. They are not rivals so much as different tools. Prompting changes how you ask. RAG changes what the model can see. Fine-tuning changes how the model behaves. Here is the practical comparison.</p>
+
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Prompt engineering</th>
+<th>RAG (retrieval-augmented generation)</th>
+<th>Fine-tuning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What it changes</td>
+<td>The instructions you give the model</td>
+<td>The information the model can draw on at answer time</td>
+<td>The model's own internal weights</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Formatting, tone, simple task framing</td>
+<td>Answering from private or fast-changing knowledge</td>
+<td>Durable behaviour: house style, strict output formats</td>
+</tr>
+<tr>
+<td>Handles current or private data</td>
+<td>Only what you paste into the prompt</td>
+<td>Yes, retrieved live from your sources</td>
+<td>No, only what was in the training set</td>
+</tr>
+<tr>
+<td>Can cite its sources</td>
+<td>No</td>
+<td>Yes, traceable to retrieved documents</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Relative cost to set up</td>
+<td>Lowest, no infrastructure</td>
+<td>Moderate: vector database plus retrieval pipeline</td>
+<td>Highest: compute, labelled data, ongoing retraining</td>
+</tr>
+<tr>
+<td>Effort to keep current</td>
+<td>Manual, per prompt</td>
+<td>Re-index the documents</td>
+<td>Retrain the model</td>
+</tr>
+</tbody>
+</table>
+
+<p>The order most teams settle on is layered, not either-or. Start with good prompting because it is free. Add RAG when answers need to be grounded in your own knowledge. Fine-tune only when you need the model to reliably behave a certain way that prompting cannot pin down. Plenty of production systems use all three at once: a fine-tuned model, fed retrieved context, driven by a carefully written prompt.</p>
+
+<h2>When should a UK business choose RAG?</h2>
+
+<p>RAG earns its keep whenever the useful answer lives in your documents rather than in the public internet the model was trained on. A few clear signals it is the right fit.</p>
+
+<p>Your knowledge changes often. Price lists, policies, product specs and support articles that update monthly are painful to fine-tune around but trivial to re-index. RAG keeps the answers current without touching the model.</p>
+
+<p>You need answers you can audit. In regulated UK sectors, an unverifiable answer is a liability. Because RAG can point to the exact source passage behind each claim, it suits financial services, legal and healthcare-adjacent work where the <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/" target="_blank" rel="noopener noreferrer">ICO's guidance on AI and data protection</a> expects you to explain and document automated outputs.</p>
+
+<p>Your data is sensitive or proprietary. RAG lets the knowledge stay in a store you control, retrieved only when needed, rather than being baked into a shared model. That is often the more defensible position for a data protection impact assessment.</p>
+
+<p>The picture matters at national scale too. Per the <a href="https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/bulletins/businessinsightsandimpactontheukeconomy/8january2026" target="_blank" rel="noopener noreferrer">ONS Business Insights and Conditions Survey</a>, 25% of UK businesses reported using some form of AI in late December 2025, up 15 percentage points from around 10% when the question was first asked in September 2023. Among firms with 250 or more employees, the figure reached 44%.</p>
+
+<p>That works out to an adoption velocity of roughly 6.7 percentage points a year (Tom &amp; Co analysis of the ONS 2023 and 2025 figures). Grounding techniques like RAG are the most common way those firms make general-purpose models safe to point at their own data.</p>
+
+<h2>What are the limits and risks of RAG?</h2>
+
+<p>RAG is powerful, but it is not a guarantee of correctness. It reduces hallucination, it does not abolish it. The model can still misread a retrieved passage, or the retrieval step can surface the wrong chunk and the answer will be confidently built on it.</p>
+
+<p>Retrieval quality is the whole ballgame. If your documents are messy, out of date, or poorly chunked, RAG will faithfully ground answers in bad source material. "Garbage in, grounded garbage out" is the failure mode teams underestimate most. The work of curating and maintaining the knowledge base is the real project, not the model itself.</p>
+
+<p>There is also an access-control dimension. A RAG system can only be as safe as the permissions on the documents it retrieves. If the index contains material a given user should not see, the model may surface it. Getting document-level permissions right in the vector store is a genuine security task, not an afterthought.</p>
+
+<h2>What should a UK leader do next?</h2>
+
+<p>Start small and concrete. Pick one high-volume question your team answers from documents (a support query, an internal policy lookup, a proposal-writing task) and prototype a RAG assistant against just that document set. You will learn more from one narrow working system than from a broad plan.</p>
+
+<p>Get the data house in order first. Decide which documents are the source of truth, who owns keeping them current, and who is allowed to see what. Those three answers determine whether a RAG project succeeds long before any model is chosen.</p>
+
+<p>Then measure it honestly. Track how often the assistant cites the right source and how often a human has to correct it, and compare that against the manual process it replaces. If it saves real time and the answers are traceable, expand it. If not, the problem is almost always the knowledge base, not the model.</p>
+
+<h3>About the author</h3>
+
+<p>Tom McCaul is the founder of Tom &amp; Co, a digital growth agency specialising in e-commerce, AI strategy and digital transformation for ambitious UK brands. With over 15 years in digital commerce and agency leadership, Tom writes on AI adoption, UK regulation, and the practical realities of implementing AI in growing businesses. <a href="https://www.linkedin.com/in/tom-mccaul-77b2778/" target="_blank" rel="noopener noreferrer">Connect with Tom on LinkedIn</a>.</p>
+
+<h3>Related Tom &amp; Co reading</h3>
+
+<ul>
+<li><a href="/ai-agency-consultancy/blog/what-are-ai-agents">What are AI agents?</a>. Once a model can retrieve knowledge, the next step is letting it take actions, and this explains how AI agents do that.</li>
+<li><a href="/ai-agency-consultancy/blog/how-do-ai-workflows-work">How do AI workflows work?</a>. RAG is often one stage in a larger automated pipeline, and this covers how those workflows are wired together.</li>
+<li><a href="/ai-agency-consultancy/blog/what-is-agentic-ai">What is agentic AI?</a>. Retrieval is a building block of the more autonomous agentic systems covered here.</li>
+</ul>
+</body>
+</html>
