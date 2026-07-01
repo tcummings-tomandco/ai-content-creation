@@ -48,6 +48,7 @@ Run `python3 scripts/voice_check.py output/2026-07-01-{slug}/article.json`. If a
 
 ## Do NOT
 
+- **Do NOT spawn subagents / use the Agent tool / use SendMessage.** You do ALL the research (WebSearch/WebFetch) and writing yourself, directly, in this one session. Delegating research to a child agent and waiting for it is a failure mode — it stalls the run. If you catch yourself about to delegate, stop and do the work yourself.
 - Do NOT run git add / commit / push.
 - Do NOT run push_to_storyblok.py or call Storyblok.
 - Do NOT edit any file outside your own `output/2026-07-01-{slug}/` folder (in particular, do not touch data/roadmap.json, data/stat_bank.json, or docs/ — the central process handles those).
