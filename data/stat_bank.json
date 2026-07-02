@@ -188,6 +188,42 @@
       "first_used_in": "what-is-an-ai-agent-orchestrator",
       "first_used_date": "2026-07-01",
       "layer": 2
+    },
+    {
+      "id": "stat_008",
+      "stat": "Estimated sterling saving per employee per year from applying McKinsey's reported 10-20% AI cost reduction (software engineering, IT and manufacturing functions) to the fully loaded cost of a median UK employee",
+      "value": "4500-9000",
+      "unit": "GBP per employee per year",
+      "date_calculated": "2026-07-02",
+      "applies_to": [
+        "topic IDs: 1, 2, 5, 47",
+        "clusters: Strategy & ROI; Technical & Build"
+      ],
+      "method": "Recipe A — sterling conversion applying a published cost-reduction percentage to ONS UK median employee cost data",
+      "sources_used": [
+        {
+          "title": "Employee earnings in the UK: 2025 (ASHE 2025 provisional results)",
+          "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2025",
+          "publisher": "Office for National Statistics",
+          "accessed": "2026-07-02"
+        },
+        {
+          "title": "Rates and thresholds for employers 2026 to 2027",
+          "url": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027",
+          "publisher": "HM Revenue & Customs / GOV.UK",
+          "accessed": "2026-07-02"
+        },
+        {
+          "title": "The state of AI: How organizations are rewiring to capture value",
+          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+          "publisher": "McKinsey & Company (QuantumBlack)",
+          "accessed": "2026-07-02"
+        }
+      ],
+      "workings": "ONS ASHE 2025: median gross annual earnings for full-time employees in post at least a year, April 2025 = GBP 39,039. Employer NI 2026/27: 15% on earnings above the GBP 5,000 secondary threshold = (39,039 - 5,000) x 0.15 = GBP 5,105.85. Employer minimum pension (3% on qualifying earnings band GBP 6,240-GBP 50,270, unchanged for 2026/27) = (39,039 - 6,240) x 0.03 = GBP 983.97. Fully loaded employer cost = 39,039 + 5,105.85 + 983.97 = GBP 45,128.82, rounded to GBP 45,100. Applying McKinsey's reported 10-20% cost reduction in software engineering, IT and manufacturing functions: low end 45,100 x 0.10 = GBP 4,510; high end 45,100 x 0.20 = GBP 9,020. Rounded to a GBP 4,500-GBP 9,000 per employee per year range.",
+      "first_used_in": "ai-roi-uk-business-2026-what-the-evidence-actually-shows",
+      "first_used_date": "2026-07-02",
+      "layer": 2
     }
   ]
 }

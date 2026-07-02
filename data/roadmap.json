@@ -14,10 +14,11 @@
       "Competition": "Med",
       "Suggested length": "1500-2200",
       "Quick win": "Y",
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-07-02",
+      "Notes": "slug: ai-roi-uk-business-2026-what-the-evidence-actually-shows",
+      "Slug": "ai-roi-uk-business-2026-what-the-evidence-actually-shows"
     },
     {
       "ID": 2,

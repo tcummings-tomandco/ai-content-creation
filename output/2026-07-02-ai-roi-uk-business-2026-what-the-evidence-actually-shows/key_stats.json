@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "54%",
+      "label": "Of UK firms use AI in 2026, up from 23% in 2023",
+      "source": "BCC and University of Essex, March 2026"
+    },
+    {
+      "value": "6%",
+      "label": "Of organisations see 5%+ enterprise EBIT impact from AI",
+      "source": "McKinsey State of AI research"
+    },
+    {
+      "value": "+71pp",
+      "label": "Net productivity gain current AI users expect over 12 months",
+      "source": "BCC and University of Essex, March 2026"
+    },
+    {
+      "value": "£4.5k-£9k",
+      "label": "Estimated saving per employee/year from a 10-20% AI cost cut",
+      "source": "Tom & Co analysis of ONS and McKinsey data, July 2026"
+    }
+  ]
+}
