@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "54%",
+      "label": "Of UK firms use AI in 2026, up from 23% in 2023",
+      "source": "BCC and University of Essex, March 2026"
+    },
+    {
+      "value": "33%",
+      "label": "Of SMEs have no plans to adopt AI at all, down from 43% in 2024",
+      "source": "British Chambers of Commerce, 2025"
+    },
+    {
+      "value": "£25k-£50k",
+      "label": "Innovate UK BridgeAI grant range for a 100%-funded SME AI pilot",
+      "source": "Innovate UK Business Connect, 2026"
+    },
+    {
+      "value": "£2.6bn",
+      "label": "In named UK government AI funding lines tracked to April 2026",
+      "source": "Tom & Co analysis of gov.uk data, 2026"
+    }
+  ]
+}

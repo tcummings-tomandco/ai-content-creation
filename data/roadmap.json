@@ -34,10 +34,11 @@
       "Competition": "Med",
       "Suggested length": "1800-2400",
       "Quick win": "Y",
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-07-07",
+      "Notes": "slug: how-to-build-an-ai-strategy-for-a-uk-sme",
+      "Slug": "how-to-build-an-ai-strategy-for-a-uk-sme"
     },
     {
       "ID": 3,
