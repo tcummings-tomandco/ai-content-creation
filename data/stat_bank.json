@@ -224,6 +224,42 @@
       "first_used_in": "ai-roi-uk-business-2026-what-the-evidence-actually-shows",
       "first_used_date": "2026-07-02",
       "layer": 2
+    },
+    {
+      "id": "stat_009",
+      "stat": "Sterling value of a Made Smarter-backed UK manufacturer's reported AI invoice-processing time saving, at ONS median admin/secretarial pay",
+      "value": "12200",
+      "unit": "GBP per year (approx)",
+      "date_calculated": "2026-07-09",
+      "applies_to": [
+        "topic IDs: 1, 2, 3, 5",
+        "clusters: Strategy & ROI"
+      ],
+      "method": "Recipe A (sterling conversion) — converting a reported hours-saved case study into a loaded sterling value using ONS pay data",
+      "sources_used": [
+        {
+          "title": "First wave of South East manufacturers geared for growth with Made Smarter",
+          "url": "https://www.madesmarter.uk/resources/news-first-wave-of-south-east-manufacturers-geared-for-growth-with-made-smarter/",
+          "publisher": "Made Smarter",
+          "accessed": "2026-07-09"
+        },
+        {
+          "title": "Employee earnings in the UK: 2025 (ASHE 2025)",
+          "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2025",
+          "publisher": "Office for National Statistics",
+          "accessed": "2026-07-09"
+        },
+        {
+          "title": "Rates and thresholds for employers 2026 to 2027",
+          "url": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027",
+          "publisher": "HM Revenue & Customs / GOV.UK",
+          "accessed": "2026-07-09"
+        }
+      ],
+      "workings": "Made Smarter case study: Nordell's AI-powered invoice processing is expected to save more than 60 hours of administration every month, i.e. 720 hours/year. ONS ASHE 2025: full-time median hourly pay for administrative and secretarial occupations = GBP 14.80. Grossed to an annual full-time-equivalent salary at 37.5 hours/week x 52 weeks: 14.80 x 37.5 x 52 = GBP 28,860. Employer NI 2026/27 (15% above the GBP 5,000 secondary threshold): (28,860 - 5,000) x 0.15 = GBP 3,579. Employer minimum auto-enrolment pension (3% on qualifying earnings above GBP 6,240): (28,860 - 6,240) x 0.03 = GBP 678.60. Fully loaded annual cost: 28,860 + 3,579 + 678.60 = GBP 33,117.60. Loaded hourly rate at 1,950 hours/year (37.5 x 52): 33,117.60 / 1,950 = GBP 16.98/hour. Value of 720 hours/year saved: 720 x 16.98 = GBP 12,225.60, rounded to approximately GBP 12,200/year. This values only the reclaimed staff time; it excludes the AI software's own subscription cost and any Made Smarter grant contribution, so it is a gross saving figure, not a net ROI.",
+      "first_used_in": "ai-use-cases-that-pay-back-in-year-one",
+      "first_used_date": "2026-07-09",
+      "layer": 2
     }
   ]
 }

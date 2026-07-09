@@ -54,10 +54,11 @@
       "Competition": "Med",
       "Suggested length": "1500-2000",
       "Quick win": "Y",
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-07-09",
+      "Notes": "slug: ai-use-cases-that-pay-back-in-year-one",
+      "Slug": "ai-use-cases-that-pay-back-in-year-one"
     },
     {
       "ID": 4,

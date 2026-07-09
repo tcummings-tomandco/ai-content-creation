@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "60+ hrs/mo",
+      "label": "Admin time a Made Smarter-backed UK manufacturer expects AI invoice processing to save",
+      "source": "Made Smarter South East, 2026"
+    },
+    {
+      "value": "£12,200/yr",
+      "label": "Sterling value of that saving at ONS's loaded median admin pay rate",
+      "source": "Tom & Co analysis of ONS ASHE 2025 data"
+    },
+    {
+      "value": "10-20%",
+      "label": "Cost reduction in software engineering, IT and manufacturing from scaled AI use",
+      "source": "McKinsey State of AI, 2025"
+    },
+    {
+      "value": "85%",
+      "label": "Of UK AI-adopting businesses use text generation, the most common application",
+      "source": "DSIT AI Adoption Research, Jan 2026"
+    }
+  ]
+}
