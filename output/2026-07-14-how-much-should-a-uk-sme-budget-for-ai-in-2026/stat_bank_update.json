@@ -1,0 +1,42 @@
+{
+  "id": "stat_010",
+  "stat": "Blended annual AI tooling budget range for a 10-seat UK team across five commonly cited subscription tiers",
+  "value": "1710-9000",
+  "unit": "GBP per year (10-seat team)",
+  "date_calculated": "2026-07-14",
+  "applies_to": [
+    "topic ID: 5",
+    "clusters: Strategy & ROI"
+  ],
+  "method": "Recipe D (cost-per-outcome ratio across vendors) — blending several vendors' published per-seat pricing into a single team-level annual budget range that no single vendor publishes",
+  "sources_used": [
+    {
+      "title": "GitHub Copilot Plans and pricing",
+      "url": "https://github.com/features/copilot/plans",
+      "publisher": "GitHub (Microsoft)",
+      "accessed": "2026-07-14"
+    },
+    {
+      "title": "ChatGPT Business pricing",
+      "url": "https://openai.com/business/chatgpt-pricing/",
+      "publisher": "OpenAI",
+      "accessed": "2026-07-14"
+    },
+    {
+      "title": "Claude pricing",
+      "url": "https://claude.com/pricing",
+      "publisher": "Anthropic",
+      "accessed": "2026-07-14"
+    },
+    {
+      "title": "Microsoft 365 Copilot pricing",
+      "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/pricing",
+      "publisher": "Microsoft",
+      "accessed": "2026-07-14"
+    }
+  ],
+  "workings": "Per-seat monthly list prices: GitHub Copilot Business $19, ChatGPT Business $20 (annual billing), Claude Team Standard $20 (annual billing), Microsoft 365 Copilot £30 (add-on), Claude Team Premium with Claude Code $100 (annual billing). Dollar prices converted at $1 = £0.75 (July 2026): $19 = £14.25, $20 = £15, $100 = £75. Each annualised for a 10-seat team (price x 10 x 12): GitHub Copilot Business £1,710; ChatGPT Business £1,800; Claude Team Standard £1,800; Microsoft 365 Copilot £3,600; Claude Team Premium £9,000. Range across all five tiers: £1,710 (lowest) to £9,000 (highest).",
+  "first_used_in": "how-much-should-a-uk-sme-budget-for-ai-in-2026",
+  "first_used_date": "2026-07-14",
+  "layer": 2
+}

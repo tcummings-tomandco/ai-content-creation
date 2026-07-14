@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "£1.7k-£9k",
+      "label": "Annual AI tooling cost for a 10-seat UK team, by tier",
+      "source": "Tom & Co analysis of published vendor pricing, July 2026"
+    },
+    {
+      "value": "65%",
+      "label": "Of UK organisations plan to increase their AI budget",
+      "source": "DSIT AI Adoption Research, 2025"
+    },
+    {
+      "value": "10 wks",
+      "label": "Longest possible ICO wait if a DPIA needs prior consultation",
+      "source": "ICO guidance, 2026"
+    },
+    {
+      "value": "£200k",
+      "label": "Max Innovate UK BridgeAI grant per approved SME project",
+      "source": "Innovate UK, 2026"
+    }
+  ]
+}

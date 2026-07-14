@@ -93,10 +93,11 @@
       "Competition": "Low",
       "Suggested length": "1800-2400",
       "Quick win": "Y",
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-07-14",
+      "Notes": "slug: how-much-should-a-uk-sme-budget-for-ai-in-2026",
+      "Slug": "how-much-should-a-uk-sme-budget-for-ai-in-2026"
     },
     {
       "ID": 6,
