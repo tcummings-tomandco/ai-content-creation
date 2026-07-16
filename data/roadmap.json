@@ -189,10 +189,11 @@
       "Competition": "Low",
       "Suggested length": "1500-2000",
       "Quick win": "Y",
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-07-16",
+      "Notes": "slug: what-should-you-ask-before-signing-an-ai-vendor-contract",
+      "Slug": "what-should-you-ask-before-signing-an-ai-vendor-contract"
     },
     {
       "ID": 11,

@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "£420m",
+      "label": "Break-even turnover above which the EU AI Act's fixed euro fine cap (not the % cap) applies",
+      "source": "Tom & Co analysis of EU AI Act Article 99 penalty tiers"
+    },
+    {
+      "value": "6 months",
+      "label": "Minimum log retention required of AI Act deployers for high-risk systems",
+      "source": "Regulation (EU) 2024/1689, Article 26"
+    },
+    {
+      "value": "5 Feb 2026",
+      "label": "Date the Data (Use and Access) Act 2025's new automated-decision rules took effect",
+      "source": "ICO, Data (Use and Access) Act 2025 guidance"
+    },
+    {
+      "value": "2 Aug 2026",
+      "label": "Enforcement date for EU AI Act high-risk deployer obligations",
+      "source": "Regulation (EU) 2024/1689"
+    }
+  ]
+}
