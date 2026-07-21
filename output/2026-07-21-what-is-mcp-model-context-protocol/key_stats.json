@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "25 Nov 2024",
+      "label": "Date Anthropic released MCP as an open standard",
+      "source": "Anthropic, November 2024"
+    },
+    {
+      "value": "54%",
+      "label": "Of UK SMEs using AI in some form by 2026 (up from 23% in 2023)",
+      "source": "BCC and University of Essex, March 2026"
+    },
+    {
+      "value": "~2.4m",
+      "label": "UK businesses using AI daily but not yet connected to their own systems",
+      "source": "Tom & Co analysis of BCC/Essex and gov.uk data, July 2026"
+    },
+    {
+      "value": "~2,000",
+      "label": "MCP servers listed in the public registry within a year of launch",
+      "source": "Model Context Protocol project, November 2025"
+    }
+  ]
+}

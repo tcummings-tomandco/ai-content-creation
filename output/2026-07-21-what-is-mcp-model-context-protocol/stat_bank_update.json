@@ -1,0 +1,30 @@
+{
+  "id": "stat_011",
+  "stat": "UK businesses using AI in some form but not yet integrated into their own systems (the 'shallow adoption' gap)",
+  "value": "2.4",
+  "unit": "GBP million businesses (approx.)",
+  "date_calculated": "2026-07-21",
+  "applies_to": [
+    "topic ID: 15, 49, 56",
+    "clusters: Operations & Efficiency; Technical & Build"
+  ],
+  "method": "Recipe B (sector/segment cut) — combining two figures from a single primary survey with a UK business population count the survey did not itself apply",
+  "sources_used": [
+    {
+      "title": "Future of Work: AI in the Workplace (press release: 'Half of SMEs using AI, with limited headcount impact so far')",
+      "url": "https://www.britishchambers.org.uk/news/2026/03/half-of-smes-using-ai-with-limited-headcount-impact-so-far/",
+      "publisher": "British Chambers of Commerce and University of Essex ESRC Centre for Micro-Social Change (MiSoC)",
+      "accessed": "2026-07-21"
+    },
+    {
+      "title": "Business population estimates for the UK and regions 2024: statistical release",
+      "url": "https://www.gov.uk/government/statistics/business-population-estimates-2024/business-population-estimates-for-the-uk-and-regions-2024-statistical-release",
+      "publisher": "Department for Business and Trade (gov.uk)",
+      "accessed": "2026-07-21"
+    }
+  ],
+  "workings": "BCC/Essex (March 2026): 54% of UK SMEs use AI in some form; ~11% have moved beyond generic tools (ChatGPT, Copilot) into deeper, bespoke integration with their own systems. Gap = 54% - 11% = 43 percentage points using AI without deep integration. Applied to gov.uk's 5,499,000 UK private-sector businesses (start of 2024): 0.43 x 5,499,000 = 2,364,570, rounded to approximately 2.4 million. Caveat: the BCC/Essex sample is SMEs specifically, while the gov.uk figure covers all UK private-sector businesses; since SMEs are the large majority of that population by count, the two are treated as broadly comparable, but this is an order-of-magnitude estimate, not an exact calculation. Neither source publishes the combined figure.",
+  "first_used_in": "what-is-mcp-model-context-protocol",
+  "first_used_date": "2026-07-21",
+  "layer": 2
+}

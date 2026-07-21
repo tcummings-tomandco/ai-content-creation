@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is MCP (Model Context Protocol) in plain English? | Tom &amp; Co Preview</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
+  h1 { font-size: 2em; font-weight: 700; margin-bottom: 0.3em; }
+  h2 { font-size: 1.4em; font-weight: 700; margin-top: 2em; }
+  h3 { font-size: 1.15em; font-weight: 700; margin-top: 1.5em; color: #333; }
+  .meta { color: #666; font-size: 0.9em; margin-bottom: 1.5em; font-family: sans-serif; border-bottom: 1px solid #ddd; padding-bottom: 1em; }
+  .answer-para { background: #f5f5f5; border-left: 4px solid #0066cc; padding: 1em 1.2em; margin-bottom: 1.5em; font-weight: 500; }
+  table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-family: sans-serif; font-size: 0.88em; }
+  th { background: #0066cc; color: white; padding: 8px 10px; text-align: left; }
+  td { border: 1px solid #ddd; padding: 7px 10px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f9f9; }
+  blockquote { border-left: 3px solid #999; padding: 0.7em 1em; margin: 1.2em 0; color: #444; font-style: italic; }
+  a { color: #0066cc; }
+  ul, ol { padding-left: 1.5em; }
+  li { margin-bottom: 0.4em; }
+  .stat-tiles { display: flex; flex-wrap: wrap; gap: 12px; margin: 1em 0 2em 0; }
+  .stat-tile { background: #0066cc; color: white; border-radius: 6px; padding: 14px 18px; flex: 1 1 180px; font-family: sans-serif; }
+  .stat-tile .value { font-size: 1.8em; font-weight: 700; display: block; }
+  .stat-tile .label { font-size: 0.82em; opacity: 0.9; margin-top: 4px; }
+  .stat-tile .source { font-size: 0.72em; opacity: 0.75; margin-top: 6px; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 2em 0; }
+  .preview-banner { background: #fffbe6; border: 1px solid #f0c040; padding: 8px 14px; font-family: sans-serif; font-size: 0.85em; color: #7a5c00; margin-bottom: 20px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="preview-banner">&#9888; PREVIEW DRAFT &mdash; Not yet published. Date: 2026-07-21 | Slug: what-is-mcp-model-context-protocol | Cluster: Operations &amp; Efficiency | Batch: routine 2026-07-21</div>
+<h1>What is MCP (Model Context Protocol) in plain English?</h1>
+<div class="meta">2026-07-21 &bull; 8 min read &bull; By Tom McCaul &bull; Category: AI</div>
+<div class="stat-tiles">
+<div class="stat-tile"><span class="value">25 Nov 2024</span><span class="label">Date Anthropic released MCP as an open standard</span><span class="source">Anthropic, November 2024</span></div>
+<div class="stat-tile"><span class="value">54%</span><span class="label">Of UK SMEs using AI in some form by 2026 (up from 23% in 2023)</span><span class="source">BCC and University of Essex, March 2026</span></div>
+<div class="stat-tile"><span class="value">~2.4m</span><span class="label">UK businesses using AI daily but not yet connected to their own systems</span><span class="source">Tom & Co analysis of BCC/Essex and gov.uk data, July 2026</span></div>
+<div class="stat-tile"><span class="value">~2,000</span><span class="label">MCP servers listed in the public registry within a year of launch</span><span class="source">Model Context Protocol project, November 2025</span></div>
+</div>
+<div class="answer-para"><p>MCP (Model Context Protocol) is an open standard, released by Anthropic on 25 November 2024, that lets an AI model connect to your business tools and data through one common interface instead of a custom integration for every pairing. OpenAI, Google and Microsoft have all adopted it, and in December 2025 it moved to neutral governance under the Linux Foundation's new Agentic AI Foundation.</p></div>
+
+
+
+<h2>What problem does MCP actually solve?</h2>
+
+<p>Before MCP, every AI application needed a bespoke connector for every tool or database it touched, and every tool needed separate work for each AI app that wanted to use it. Three AI apps talking to four business systems meant twelve custom connections, each built and maintained on its own.</p>
+
+<p>Developers call this the "M times N" problem: M applications times N tools equals a lot of one-off wiring. <a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener noreferrer">Anthropic's original announcement</a>, published on 25 November 2024, described MCP as a way to replace that fragmented wiring with a single, open protocol that any AI application and any tool can both speak.</p>
+
+<p>Think of it less as a clever new feature and more as plumbing. Once a tool "speaks" MCP, any MCP-compatible AI application can use it without a developer writing a new adapter first (the unglamorous kind of infrastructure that quietly saves months of engineering time).</p>
+
+<h2>How fast has MCP been adopted since November 2024?</h2>
+
+<p>MCP shipped from Anthropic as one company's proposal. It didn't stay that way for long.</p>
+
+<p>OpenAI added support in its Agents SDK within four months, and by early 2026 Google DeepMind and Microsoft had done the same. In December 2025, Anthropic handed governance of the protocol to a new neutral body, the <a href="https://openai.com/index/agentic-ai-foundation/" target="_blank" rel="noopener noreferrer">Agentic AI Foundation, under the Linux Foundation</a>, co-founded with OpenAI, Google, Microsoft, AWS and Block.</p>
+
+<p>The protocol's own ecosystem grew just as fast. By its <a href="https://blog.modelcontextprotocol.io/posts/2025-11-25-first-mcp-anniversary/" target="_blank" rel="noopener noreferrer">first anniversary in November 2025</a>, the public MCP registry held close to 2,000 listed servers, tended by a community of more than 2,900 contributors. That's not a niche developer curiosity any more, it's rapidly becoming the plumbing everyone assumes is there.</p>
+
+<h2>How does MCP work, in plain English?</h2>
+
+<p>MCP has three moving parts, and once you can name them, the rest of the jargon stops being scary.</p>
+
+<h3>The host</h3>
+
+<p>The host is the AI application itself, the tool your team actually opens: a chat assistant, a coding tool, a customer service console. It's what asks the questions.</p>
+
+<h3>The client</h3>
+
+<p>The client lives inside the host and manages one live connection to one server. If your AI assistant talks to three separate systems, it's running three clients behind the scenes, one per connection.</p>
+
+<h3>The server</h3>
+
+<p>The server is the piece that exposes a specific tool or dataset (your CRM, your finance system, your document store) in a format MCP understands. Whoever owns that system builds or installs an MCP server for it once, and every compatible AI app can then use it.</p>
+
+<p>The analogy that sticks: think of MCP like a standard wall socket. Once an appliance has the right plug, it works with any socket built to that standard, rather than needing a different plug for every wall.</p>
+
+<h2>Why does MCP matter if you're not a developer?</h2>
+
+<p>Most UK businesses have already tried the generic version of AI: a chat assistant answering from general knowledge. Far fewer have connected that assistant to their actual operational data, the systems where the real decisions get made.</p>
+
+<p>According to the <a href="https://www.britishchambers.org.uk/news/2026/03/half-of-smes-using-ai-with-limited-headcount-impact-so-far/" target="_blank" rel="noopener noreferrer">British Chambers of Commerce and University of Essex's Future of Work: AI in the Workplace report</a>, published March 2026, 54% of UK SMEs were using AI in some form by 2026, up from 35% in 2025, 25% in 2024 and 23% in 2023. Only around 11% had gone beyond generic tools like ChatGPT and Copilot into deeper, bespoke integration with their own systems.</p>
+
+<blockquote>
+<p>Tom &amp; Co analysis: combining the BCC and University of Essex's 2026 figures (54% using AI in some form, 11% integrated deeply) with <a href="https://www.gov.uk/government/statistics/business-population-estimates-2024/business-population-estimates-for-the-uk-and-regions-2024-statistical-release" target="_blank" rel="noopener noreferrer">gov.uk's Business Population Estimates 2024</a> (5,499,000 UK private-sector businesses) suggests roughly 2.4 million UK businesses sit in that gap, using AI day to day but not yet connected to the systems that would make it count.</p>
+</blockquote>
+
+<p>That gap is exactly the space MCP is built for. It's the plumbing that turns "we use ChatGPT" into "our AI assistant can actually see our stock levels, our invoices, our support tickets."</p>
+
+<p>Picture a 40-person UK accountancy practice. Every partner already has a ChatGPT or Copilot licence, and everyone uses it for drafting emails and summarising documents. None of that touches the practice management system where client records, deadlines and billing actually live. An MCP server built once for that system lets the same assistant check a filing deadline or a client's outstanding balance without a single line of custom code per employee.</p>
+
+<h2>What's the difference between MCP and the AI tools you already have?</h2>
+
+<p>Most teams are already using some kind of AI integration, whether that's a vendor-built plugin or a custom API script a developer wrote last year. MCP doesn't replace those overnight, but it changes the economics of building the next one.</p>
+
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Custom point-to-point integration</th>
+<th>Vendor-specific plugin</th>
+<th>MCP server</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Who builds it</td>
+<td>Your developer or a contractor, from scratch</td>
+<td>The software vendor, for their product only</td>
+<td>Anyone, once, for any MCP-compatible AI app</td>
+</tr>
+<tr>
+<td>Works with which AI apps</td>
+<td>Only the one it was written for</td>
+<td>Only that vendor's assistant</td>
+<td>Any MCP-compatible app: ChatGPT, Claude, Copilot, Gemini and others</td>
+</tr>
+<tr>
+<td>Effort to add a new AI app</td>
+<td>Build a new integration from scratch</td>
+<td>Wait for the vendor to support it</td>
+<td>None, if a server already exists</td>
+</tr>
+<tr>
+<td>Who maintains it</td>
+<td>Your team, indefinitely</td>
+<td>The vendor</td>
+<td>Whoever hosts the server: you, a vendor, or the community</td>
+</tr>
+<tr>
+<td>Governance since December 2025</td>
+<td>None, informal</td>
+<td>Vendor's own terms</td>
+<td>Agentic AI Foundation, under the Linux Foundation</td>
+</tr>
+</tbody>
+</table>
+
+<p>The practical upshot: a business that adopts MCP-compatible tools spends less time waiting for a specific vendor to build a specific connector, and more time deciding which of its systems are worth connecting first.</p>
+
+<h2>What are the risks and governance considerations of adopting MCP?</h2>
+
+<p>Standardising how AI reaches your systems doesn't remove the need to think about security, it just moves where that thinking has to happen. <a href="https://media.defense.gov/2026/Jun/02/2003943289/-1/-1/0/CSI_MCP_SECURITY.PDF" target="_blank" rel="noopener noreferrer">The US National Security Agency's May 2026 guidance on MCP</a> flags prompt injection and unauthorised "confused deputy" access as the two risks to design around from day one.</p>
+
+<p>In plain terms: an MCP server should only be given the permissions it genuinely needs (read-only access to a reporting database, say, rather than full write access to your finance system), and every connection should be logged so an unusual request stands out.</p>
+
+<p>There's a UK-specific angle too. Where an MCP server passes personal data between a model and your systems, that's a processing activity the <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/" target="_blank" rel="noopener noreferrer">ICO's guidance on AI and data protection</a> expects you to document and be able to explain, the same as any other automated process.</p>
+
+<p>None of this means MCP is riskier than what you're doing today. Most businesses already have AI tools with some access to internal data, just without a consistent way to see or control it. MCP makes that access visible and standard, which is what makes it governable in the first place.</p>
+
+<p>Where the server runs also matters. An MCP server can sit inside your own network, in a UK or EU data centre you control, or on infrastructure hosted by a vendor. For anything touching client or employee personal data, treat "where does this server run, and who can see the traffic" as a procurement question, not an afterthought to raise once the contract is signed.</p>
+
+<h2>What should a UK leader do about MCP this quarter?</h2>
+
+<p>You don't need to understand the protocol's internals to make a sensible call on it. Four practical steps get you started.</p>
+
+<ul>
+<li><strong>Audit what's already connected.</strong> List every AI tool your teams use and what, if anything, it's plugged into today. Most leaders are surprised how little is actually connected.</li>
+<li><strong>Pick one system to connect first.</strong> Choose a single, well-understood dataset (a CRM, a ticketing system, a finance report) rather than trying to connect everything at once.</li>
+<li><strong>Ask vendors the direct question.</strong> "Do you offer an MCP server, and what permissions does it request?" is now a fair procurement question for any AI tool you're evaluating.</li>
+<li><strong>Set the permission model before you switch anything on.</strong> Decide who can read what, and who can write what, before the first server goes live, not after.</li>
+</ul>
+
+<p>The businesses getting genuine value from AI in 2026 aren't the ones with the most subscriptions. They're the ones whose AI can actually see the data that matters, safely. MCP is the standard that makes that connection cheaper to build and easier to govern.</p>
+
+<h3>About the author</h3>
+
+<p>Tom McCaul is the founder of Tom &amp; Co, a digital growth agency specialising in e-commerce, AI strategy and digital transformation for ambitious UK brands. With over 15 years in digital commerce and agency leadership, Tom writes on AI adoption, UK regulation, and the practical realities of implementing AI in growing businesses. <a href="https://www.linkedin.com/in/tom-mccaul-77b2778/" target="_blank" rel="noopener noreferrer">Connect with Tom on LinkedIn</a>.</p>
+
+<h3>Related Tom &amp; Co reading</h3>
+
+<ul>
+<li><a href="/ai-agency-consultancy/blog/what-is-agentic-ai">What is agentic AI and how does it work?</a>. Agentic AI needs to reach real tools and data to act on its own, and MCP is the connection layer that lets it do that.</li>
+<li><a href="/ai-agency-consultancy/blog/what-are-ai-agents">What are AI agents? A plain-English guide for UK businesses</a>. AI agents pick and use tools to get a job done, and MCP is how they reach those tools safely.</li>
+<li><a href="/ai-agency-consultancy/blog/agentic-ai-use-cases-mid-market">What are the best agentic AI use cases for mid-market firms?</a>. Once a business connects its systems through a protocol like MCP, these are the use cases that tend to pay back first.</li>
+</ul>
+</body>
+</html>
