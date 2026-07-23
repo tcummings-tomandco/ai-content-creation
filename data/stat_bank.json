@@ -332,6 +332,36 @@
       "first_used_in": "what-is-mcp-model-context-protocol",
       "first_used_date": "2026-07-21",
       "layer": 2
+    },
+    {
+      "id": "stat_012",
+      "stat": "UK businesses now using AI for marketing or content work",
+      "value": "2.1",
+      "unit": "million UK businesses",
+      "date_calculated": "2026-07-23",
+      "applies_to": [
+        "topic IDs: 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 73",
+        "clusters: Marketing & Sales"
+      ],
+      "method": "Recipe B (combination cut) — combining BCC/Essex SME AI adoption and marketing-use-case share with gov.uk's UK business population estimate",
+      "sources_used": [
+        {
+          "title": "Half of SMEs using AI, with limited headcount impact so far (BCC and University of Essex, with Atos, March 2026)",
+          "url": "https://www.britishchambers.org.uk/news/2026/03/half-of-smes-using-ai-with-limited-headcount-impact-so-far/",
+          "publisher": "British Chambers of Commerce",
+          "accessed": "2026-07-23"
+        },
+        {
+          "title": "Business population estimates for the UK and regions 2024: statistical release",
+          "url": "https://www.gov.uk/government/statistics/business-population-estimates-2024/business-population-estimates-for-the-uk-and-regions-2024-statistical-release",
+          "publisher": "Department for Business and Trade",
+          "accessed": "2026-07-23"
+        }
+      ],
+      "workings": "BCC/Essex/Atos March 2026 survey: 54% of UK SMEs use AI in some form; of AI-using SMEs, marketing is a joint-top use case at 72% (tied with admin). 0.54 x 0.72 = 0.3888, i.e. 38.88% of the UK private-sector business population. Applied to gov.uk's 5,499,000 UK private-sector businesses (2024 estimate): 0.3888 x 5,499,000 = 2,138,011, rounded to 'roughly 2.1 million'.",
+      "first_used_in": "what-is-geo-vs-seo",
+      "first_used_date": "2026-07-23",
+      "layer": 2
     }
   ]
 }

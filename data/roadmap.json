@@ -400,10 +400,11 @@
       "Competition": "Med",
       "Suggested length": "2000-2800",
       "Quick win": "Y",
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-07-23",
+      "Notes": "slug: what-is-geo-vs-seo",
+      "Slug": "what-is-geo-vs-seo"
     },
     {
       "ID": 22,
