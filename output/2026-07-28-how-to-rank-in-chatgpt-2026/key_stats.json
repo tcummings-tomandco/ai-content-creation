@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "87%",
+      "label": "Of ChatGPT citations match Bing's top 10 organic results",
+      "source": "Profound citation-pattern analysis, 2026"
+    },
+    {
+      "value": "4.9x",
+      "label": "YoY growth in UK ChatGPT web visits, 2024 to 2025",
+      "source": "Tom & Co analysis of Ofcom data, July 2026"
+    },
+    {
+      "value": "18%",
+      "label": "Of ChatGPT conversations trigger a live web search",
+      "source": "Profound, Q4 2025 analysis"
+    },
+    {
+      "value": "1.8bn",
+      "label": "UK web visits to ChatGPT in the first 8 months of 2025",
+      "source": "Ofcom, 2025"
+    }
+  ]
+}

@@ -362,6 +362,30 @@
       "first_used_in": "what-is-geo-vs-seo",
       "first_used_date": "2026-07-23",
       "layer": 2
+    },
+    {
+      "id": "stat_013",
+      "stat": "Year-on-year growth multiple in UK web visits to ChatGPT, first eight months of 2024 vs first eight months of 2025",
+      "value": "4.9",
+      "unit": "x (multiple of prior-year UK web visits, approx. 389% growth)",
+      "date_calculated": "2026-07-28",
+      "applies_to": [
+        "topic ID: 22",
+        "clusters: Marketing & Sales; Generative Engine Optimization"
+      ],
+      "method": "Recipe C (year-on-year delta) — growth multiple derived from two snapshot totals in a single primary Ofcom publication",
+      "sources_used": [
+        {
+          "title": "From apps to AI search: how the UK goes online in 2025",
+          "url": "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025",
+          "publisher": "Ofcom",
+          "accessed": "2026-07-28"
+        }
+      ],
+      "workings": "Ofcom reports ChatGPT UK web visits of 1.8 billion across the first eight months of 2025, up from 368 million in the same period of 2024. Growth multiple: 1,800,000,000 / 368,000,000 = 4.891... rounded to 4.9x (approximately 389% growth). Ofcom's page states both absolute totals but does not publish the growth multiple or percentage itself.",
+      "first_used_in": "how-to-rank-in-chatgpt-2026",
+      "first_used_date": "2026-07-28",
+      "layer": 2
     }
   ]
 }
