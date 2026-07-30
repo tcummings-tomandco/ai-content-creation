@@ -554,10 +554,11 @@
       "Competition": "Low",
       "Suggested length": "2000-2800",
       "Quick win": "Y",
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-07-30",
+      "Notes": "slug: how-to-measure-ai-brand-visibility",
+      "Slug": "how-to-measure-ai-brand-visibility"
     },
     {
       "ID": 30,

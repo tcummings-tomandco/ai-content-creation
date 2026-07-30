@@ -1,0 +1,36 @@
+{
+  "id": "stat_014",
+  "stat": "Cost per tracked AI-visibility prompt per month across three named UK-available vendors' entry and growth tiers",
+  "value": "1.42-3.01",
+  "unit": "GBP per tracked prompt per month",
+  "date_calculated": "2026-07-30",
+  "applies_to": [
+    "topic ID: 29",
+    "clusters: Marketing & Sales"
+  ],
+  "method": "Recipe D (cost-per-outcome ratio across vendors) — dividing each vendor's published monthly price by its included prompt count, after sterling conversion",
+  "sources_used": [
+    {
+      "title": "OtterlyAI Pricing",
+      "url": "https://otterly.ai/pricing",
+      "publisher": "Otterly.AI",
+      "accessed": "2026-07-30"
+    },
+    {
+      "title": "Pricing for Peec AI",
+      "url": "https://peec.ai/pricing",
+      "publisher": "Peec AI",
+      "accessed": "2026-07-30"
+    },
+    {
+      "title": "AI Visibility Toolkit Pricing",
+      "url": "https://www.semrush.com/pricing/ai/",
+      "publisher": "Semrush",
+      "accessed": "2026-07-30"
+    }
+  ],
+  "workings": "Sterling conversion at approximate July 2026 FX rates ($1 = £0.75, EUR1 = £0.845, consistent with prior stat_bank entries). Otterly Lite $29/mo / 15 prompts = £21.75 / 15 = £1.45 per prompt/month. Otterly Standard $189/mo / 100 prompts = £141.75 / 100 = £1.42. Semrush AI Visibility Toolkit $99/mo add-on / 25 prompts = £74.25 / 25 = £2.97. Peec AI Starter EUR89/mo / 25 prompts = £75.21 / 25 = £3.01. Peec AI Pro EUR199/mo / 100 prompts = £168.16 / 100 = £1.68. Range across all five tiers: £1.42 (cheapest, Otterly Standard) to £3.01 (priciest, Peec Starter). None of the three vendors publish this per-prompt figure themselves.",
+  "first_used_in": "how-to-measure-ai-brand-visibility",
+  "first_used_date": "2026-07-30",
+  "layer": 2
+}
