@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "£2,000 x2",
+      "label": "Wasted costs ordered against a solicitor and barrister for 5 fake AI citations",
+      "source": "Ayinde v Haringey, High Court, April 2025"
+    },
+    {
+      "value": "18 of 45",
+      "label": "Case citations found to be fictitious in an £89.4m High Court damages claim",
+      "source": "Al-Haroun v Qatar National Bank, June 2025"
+    },
+    {
+      "value": "£800",
+      "label": "Direct wasted costs per fabricated citation in the Ayinde ruling",
+      "source": "Tom & Co analysis, August 2026"
+    },
+    {
+      "value": "31 Oct 2025",
+      "label": "Date the judiciary's own AI guidance was updated to expand on hallucination risk",
+      "source": "Courts and Tribunals Judiciary, 2025"
+    }
+  ]
+}

@@ -422,6 +422,30 @@
       "first_used_in": "how-to-measure-ai-brand-visibility",
       "first_used_date": "2026-07-30",
       "layer": 2
+    },
+    {
+      "id": "stat_015",
+      "stat": "Direct wasted costs ordered per AI-fabricated case citation in Ayinde v Haringey",
+      "value": "800",
+      "unit": "GBP per fabricated citation",
+      "date_calculated": "2026-08-04",
+      "applies_to": [
+        "topic ID: 37",
+        "clusters: Risk, Governance & Legal; UK Industry Verticals"
+      ],
+      "method": "Recipe A (sterling derivation from a single primary source) — direct division of a court-ordered wasted costs figure by the number of fabricated citations it addressed",
+      "sources_used": [
+        {
+          "title": "Ayinde, R (On the Application Of) v The London Borough of Haringey [2025] EWHC 1040 (Admin)",
+          "url": "https://www.judiciary.uk/wp-content/uploads/2025/05/Ayinde-v-LB-Haringey-Judgment-Ritchie-J-03.04.25-HD-2.pdf",
+          "publisher": "Courts and Tribunals Judiciary",
+          "accessed": "2026-08-04"
+        }
+      ],
+      "workings": "Mr Justice Ritchie ordered the claimant's solicitor and barrister to each pay the London Borough of Haringey £2,000 in wasted costs, a combined £4,000. Five fabricated case citations, including a fake Court of Appeal decision, were identified in the claimant's pleadings. £4,000 / 5 = £800 in direct wasted costs per fabricated citation. This counts only the costs the judge quantified; it excludes the council's own legal team's time spent identifying and investigating the fake citations, the SRA and Bar Standards Board referral process, and any reputational cost, all of which sit on top of this figure. Read as an illustrative floor for a single case, not an average across the wider pattern of UK AI-citation cases.",
+      "first_used_in": "ai-hallucination-risk-uk-businesses",
+      "first_used_date": "2026-08-04",
+      "layer": 2
     }
   ]
 }

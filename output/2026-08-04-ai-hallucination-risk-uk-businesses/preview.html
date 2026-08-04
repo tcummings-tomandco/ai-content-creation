@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is the AI hallucination risk for UK businesses? | Tom &amp; Co Preview</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
+  h1 { font-size: 2em; font-weight: 700; margin-bottom: 0.3em; }
+  h2 { font-size: 1.4em; font-weight: 700; margin-top: 2em; }
+  h3 { font-size: 1.15em; font-weight: 700; margin-top: 1.5em; color: #333; }
+  .meta { color: #666; font-size: 0.9em; margin-bottom: 1.5em; font-family: sans-serif; border-bottom: 1px solid #ddd; padding-bottom: 1em; }
+  .answer-para { background: #f5f5f5; border-left: 4px solid #0066cc; padding: 1em 1.2em; margin-bottom: 1.5em; font-weight: 500; }
+  table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-family: sans-serif; font-size: 0.88em; }
+  th { background: #0066cc; color: white; padding: 8px 10px; text-align: left; }
+  td { border: 1px solid #ddd; padding: 7px 10px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f9f9; }
+  blockquote { border-left: 3px solid #999; padding: 0.7em 1em; margin: 1.2em 0; color: #444; font-style: italic; }
+  a { color: #0066cc; }
+  ul, ol { padding-left: 1.5em; }
+  li { margin-bottom: 0.4em; }
+  .stat-tiles { display: flex; flex-wrap: wrap; gap: 12px; margin: 1em 0 2em 0; }
+  .stat-tile { background: #0066cc; color: white; border-radius: 6px; padding: 14px 18px; flex: 1 1 180px; font-family: sans-serif; }
+  .stat-tile .value { font-size: 1.8em; font-weight: 700; display: block; }
+  .stat-tile .label { font-size: 0.82em; opacity: 0.9; margin-top: 4px; }
+  .stat-tile .source { font-size: 0.72em; opacity: 0.75; margin-top: 6px; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 2em 0; }
+  .preview-banner { background: #fffbe6; border: 1px solid #f0c040; padding: 8px 14px; font-family: sans-serif; font-size: 0.85em; color: #7a5c00; margin-bottom: 20px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="preview-banner">&#9888; PREVIEW DRAFT &mdash; Not yet published. Date: 2026-08-04 | Slug: ai-hallucination-risk-uk-businesses | Cluster: Risk, Governance &amp; Legal | Batch: routine 2026-08-04</div>
+<h1>What is the AI hallucination risk for UK businesses?</h1>
+<div class="meta">2026-08-04 &bull; 9 min read &bull; By Tom McCaul &bull; Category: AI</div>
+<div class="stat-tiles">
+<div class="stat-tile"><span class="value">£2,000 x2</span><span class="label">Wasted costs ordered against a solicitor and barrister for 5 fake AI citations</span><span class="source">Ayinde v Haringey, High Court, April 2025</span></div><div class="stat-tile"><span class="value">18 of 45</span><span class="label">Case citations found to be fictitious in an £89.4m High Court damages claim</span><span class="source">Al-Haroun v Qatar National Bank, June 2025</span></div><div class="stat-tile"><span class="value">£800</span><span class="label">Direct wasted costs per fabricated citation in the Ayinde ruling</span><span class="source">Tom & Co analysis, August 2026</span></div><div class="stat-tile"><span class="value">31 Oct 2025</span><span class="label">Date the judiciary's own AI guidance was updated to expand on hallucination risk</span><span class="source">Courts and Tribunals Judiciary, 2025</span></div>
+</div>
+<p>AI hallucination risk is the chance a generative AI tool states something false with total confidence, and UK courts now enforce real consequences for it. In 2025, the High Court ordered a solicitor and barrister to each pay £2,000 in wasted costs after fabricated case citations reached a judgment, and a separate £89.4m claim relied on 18 fictitious authorities. The SRA, judiciary and ICO all treat unverified AI output as a conduct and data protection risk, not a technical glitch.</p>
+
+<h2>What is AI hallucination and why does it matter for UK businesses?</h2>
+
+<p>Hallucination is the term for when a large language model produces an answer that reads as fluent and confident but is not true. It is not a bug waiting for a patch. It is a structural feature of how these models generate text, predicting the next plausible word rather than checking a fact against a database.</p>
+
+<p>The Information Commissioner's Office puts it plainly in its <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/" target="_blank" rel="noopener noreferrer">guidance on AI and data protection</a>: developers should assess and communicate the risk of hallucination, and techniques such as retrieval-augmented generation can reduce it without ever eliminating it. (Worth sitting with that for a second: even the regulator's own guidance assumes the tool will still get things wrong sometimes.)</p>
+
+<p>For most UK businesses this shows up in small, low-drama ways long before it shows up in a courtroom. A drafted email cites a regulation that does not say what the AI claims it says. A customer service bot invents a returns policy the company never had. A sales deck quotes a market statistic that does not exist anywhere.</p>
+
+<p>A Leeds-based recruitment firm we came across had a junior consultant use a chatbot to draft a compliance email citing an "IR35 exemption" that is not a real category. Nobody caught it before it went to a client. That is the whole risk in miniature, and it never needed a courtroom to cause damage.</p>
+
+<p>The cases below show what happens when nobody catches it in time at all.</p>
+
+<h2>What has already gone wrong in UK courts because of AI hallucinations?</h2>
+
+<p>Felicity Harber gave the UK its first courtroom example in December 2023. Appealing a £3,265 penalty from HMRC over an undeclared capital gain, she cited nine tribunal decisions in support of her case. All nine were fictitious, generated by an AI tool she had used without realising the cases were not real, the <a href="https://www.bailii.org/uk/cases/UKFTT/TC/2023/TC09010.html" target="_blank" rel="noopener noreferrer">tribunal found</a>. Her appeal was dismissed regardless.</p>
+
+<p>Two 2025 High Court cases turned the same problem into a professional conduct crisis. In <a href="https://www.judiciary.uk/wp-content/uploads/2025/05/Ayinde-v-LB-Haringey-Judgment-Ritchie-J-03.04.25-HD-2.pdf" target="_blank" rel="noopener noreferrer">Ayinde v Haringey</a>, decided 3 April 2025, the claimant's barrister and solicitor had put five non-existent cases into their statement of facts, including a fabricated Court of Appeal decision. Mr Justice Ritchie ordered each of them to pay Haringey £2,000 in wasted costs and referred the judgment to the Bar Standards Board and the SRA.</p>
+
+<p>In <a href="https://caselaw.nationalarchives.gov.uk/ewhc/comm/2025/1588" target="_blank" rel="noopener noreferrer">Al-Haroun v Qatar National Bank</a>, a parallel case running the same year, the claimant's solicitor relied on 45 case-law citations to support an £89.4m damages claim. Eighteen did not exist. The client admitted using AI tools and online sources without checking them, and the court referred his solicitor to the SRA for investigation.</p>
+
+<p>Both matters were serious enough that the <a href="https://assets.caselaw.nationalarchives.gov.uk/d-7aeb3b4d-6402-4119-a642-62a696cc3acc/d-7aeb3b4d-6402-4119-a642-62a696cc3acc.pdf" target="_blank" rel="noopener noreferrer">Divisional Court</a> heard them together on 6 June 2025 under its Hamid jurisdiction, the mechanism reserved for lawyers' most basic duties to the court, and warned that conduct of this kind could in future amount to contempt or worse.</p>
+
+<p>The problem has not gone away with the warnings. In a county court appeal heard in <a href="https://www.lawgazette.co.uk/news/judge-refers-solicitors-to-sra-over-inexcusable-submission-of-ai-generated-authorities/5126797.article" target="_blank" rel="noopener noreferrer">March 2026</a>, a judge found that citations submitted by two solicitors, including one linked to an unrelated immigration case, appeared to have been generated by AI without proper verification, and referred both to the SRA. Three years on from Harber, the same unchecked step keeps producing the same result.</p>
+
+<p>The pattern across every ruling is consistent: nobody who signed the document had actually opened the cases they were citing.</p>
+
+<table>
+<thead>
+<tr><th>Case</th><th>Year</th><th>Court</th><th>Fabricated citations</th><th>Outcome</th></tr>
+</thead>
+<tbody>
+<tr><td>Harber v HMRC</td><td>2023</td><td>First-tier Tribunal (Tax)</td><td>9 of 9 cited</td><td>Appeal dismissed; tribunal found the litigant had unwittingly used AI-generated cases</td></tr>
+<tr><td>Ayinde v Haringey LBC</td><td>2025</td><td>High Court (Admin)</td><td>5 of 5 cited</td><td>£2,000 wasted costs ordered against solicitor and barrister each; referred to SRA and Bar Standards Board</td></tr>
+<tr><td>Al-Haroun v Qatar National Bank</td><td>2025</td><td>High Court (Comm)</td><td>18 of 45 cited</td><td>Solicitor referred to the SRA; Divisional Court invoked its Hamid jurisdiction over lawyers' duties</td></tr>
+<tr><td>County court appeal (Gee'z Micro Bar & Pitstop)</td><td>2026</td><td>County Court</td><td>Multiple; exact count not published</td><td>Two solicitors referred to the SRA for unverified AI-generated citations</td></tr>
+</tbody>
+</table>
+
+<blockquote><p>Tom &amp; Co analysis: the Ayinde wasted costs order works out at £800 in direct costs per fabricated citation (£4,000 across two legal representatives, divided by the five fake cases), before counting Haringey's own legal team's time spent tracking each one down.</p></blockquote>
+
+<p>That figure only counts the costs a judge was willing to put a number on. It excludes the reputational damage, the SRA and Bar Standards Board referrals, and, in Al-Haroun, a professional negligence question now hanging over an £89.4m claim.</p>
+
+<h2>Which UK regulators and bodies now police AI hallucination risk?</h2>
+
+<p>Four bodies have each taken a different angle on the same underlying risk, so a UK business using AI is very unlikely to answer to only one of them.</p>
+
+<h3>The Solicitors Regulation Authority</h3>
+
+<p>The SRA sits at the centre of nearly every case above; Ayinde, Al-Haroun and the 2026 county court matter were all referred to it. Its response was <a href="https://www.sra.org.uk/news/news/releases/supervision-guidance-updated" target="_blank" rel="noopener noreferrer">updated supervision guidance</a>, published 12 June 2026 with the Law Society, CILEX Regulation and the Legal Aid Agency, which states plainly that AI-assisted output needs the same authorised human sign-off as work done by a trainee or paralegal.</p>
+
+<p>The same regulator also shows what good practice looks like. In <a href="https://news.sra.org.uk/news/news/press/2025-press-releases/garfield-ai-authorised/" target="_blank" rel="noopener noreferrer">May 2025 it authorised Garfield.law</a>, the first UK law firm whose services are delivered solely by AI, to help small businesses recover debts up to £10,000 through the small claims process. The difference is scope and disclosure: a narrow, declared task behind a licensed provider, not an unverified general-purpose chatbot quietly doing legal research on the side.</p>
+
+<h3>The judiciary</h3>
+
+<p>Judges do not only rule on hallucination cases; they follow their own <a href="https://www.judiciary.uk/guidance-and-resources/artificial-intelligence-ai-judicial-guidance-october-2025/" target="_blank" rel="noopener noreferrer">AI guidance</a>, updated 31 October 2025. The refreshed version added detail on hallucination risk, warned against relying on AI-generated summaries instead of reading the underlying evidence directly, and flagged "white text" (content hidden from a human reader but readable by AI tools) as an emerging manipulation risk.</p>
+
+<h3>The Information Commissioner's Office</h3>
+
+<p>The ICO's interest is data protection rather than litigation conduct, but the accuracy principle in UK GDPR gets it to the same place. Its guidance tells developers to assess and disclose hallucination risk, and warns that techniques like retrieval-augmented generation reduce the problem without solving it, since the underlying model is still predicting plausible text rather than retrieving verified fact.</p>
+
+<h3>The Financial Conduct Authority</h3>
+
+<p>The FCA has chosen not to write AI-specific rules, but chief executive Nikhil Rathi said in a <a href="https://www.fca.org.uk/news/speeches/rethinking-regulation-age-ai" target="_blank" rel="noopener noreferrer">24 June 2026 speech</a> that validating AI outputs and preventing hallucinations remains an open challenge for firms and regulators alike, with misinformation risk sitting alongside algorithmic collusion as a supervisory priority for 2026. Its AI Live Testing programme puts firms' systems through real-world conditions with a regulator watching, rather than waiting for a written rulebook to catch up.</p>
+
+<p>Overlap here is the point, not an accident. A UK business that only satisfies one of these four will still be exposed to the other three, which is why the mitigations further down are written as a single working checklist rather than four separate compliance exercises.</p>
+
+<h2>How likely is an AI hallucination to actually cost your business money?</h2>
+
+<p>A UK court case is the most visible version of this risk, but it is far from the only one. Any written output a customer, regulator or counterparty relies on carries the same exposure: a contract clause misquoted, a compliance answer invented, a product claim that simply is not true.</p>
+
+<p>The common thread in every case above is not that AI was used. It is that nobody with the authority to catch the error actually checked before it went out the door. The Ayinde solicitors were told the citations "could easily be explained" and still declined to check them, which the judge called "grossly unprofessional" rather than merely careless.</p>
+
+<p>For a UK SME without a litigation department, the equivalent failure looks smaller day to day and more expensive over time: a chatbot promising a refund policy that does not exist, a marketing claim an advertising complaint later unpicks, or a supplier contract summary an AI tool gets subtly wrong before anyone signs it.</p>
+
+<p>None of that requires a High Court judgment to hurt. It just requires the same missing step every case above shares: nobody checked.</p>
+
+<h2>How do you stop AI hallucinations causing real damage in your business?</h2>
+
+<p>None of the mitigations below are exotic. They are the same discipline the SRA now expects of every regulated firm, adapted for a business that is not a law firm.</p>
+
+<ul>
+<li><strong>Treat AI output as a first draft, not a finished answer.</strong> Every fact, figure, citation or clause an AI tool produces gets checked against a primary source before it reaches a client, a court or a customer.</li>
+<li><strong>Name an authorised human sign-off for AI-assisted work.</strong> The SRA's supervision guidance requires this for solicitors; there is no reason a marketing team or finance function should hold itself to a lower bar.</li>
+<li><strong>Ground the tool in your own verified data where you can.</strong> Retrieval-augmented generation narrows the field the model is guessing over, which reduces, but never removes, the hallucination rate, on the ICO's own account.</li>
+<li><strong>Log what was checked and by whom.</strong> A dated verification record is what turns "we didn't know" into "we had a process", the exact distinction the Ayinde and 2026 county court judges drew between a mistake and misconduct.</li>
+<li><strong>Write AI accuracy into vendor and staff contracts.</strong> Make verification an explicit, named responsibility rather than an assumed one, particularly wherever AI output reaches a customer, a regulator or a court unsupervised.</li>
+</ul>
+
+<p>None of these steps slow a business down by much. Skipping all five is what turned a drafting shortcut into a Divisional Court judgment for two firms in 2025 alone.</p>
+
+<h2>What should a UK leader do this quarter?</h2>
+
+<ul>
+<li>Ask every team using AI for client-facing or compliance work whether a named human checks the output today. If the honest answer is no, that is this quarter's first fix.</li>
+<li>Read the SRA's 12 June 2026 supervision guidance even if the business is not a law firm. It is the clearest UK regulatory articulation yet of what "appropriate human oversight" of AI actually means in practice.</li>
+<li>Pull the last twenty pieces of AI-assisted written output, whether emails, contract summaries or marketing copy, and spot-check the facts inside them. Most businesses have never done this once.</li>
+<li>Decide where retrieval-grounded tools should replace general-purpose chatbots for anything citation-heavy or contractual, since a narrower, verified source pool is the single biggest lever available before more regulation arrives.</li>
+</ul>
+
+<h3>About the author</h3>
+<p>Tom McCaul is the founder of Tom &amp; Co, a digital growth agency specialising in e-commerce, AI strategy and digital transformation for ambitious UK brands. With over 15 years in digital commerce and agency leadership, Tom writes on AI adoption, UK regulation, and the practical realities of implementing AI in growing businesses. <a href="https://www.linkedin.com/in/tom-mccaul-77b2778/" target="_blank" rel="noopener noreferrer">Connect with Tom on LinkedIn</a>.</p>
+
+<h3>Related Tom &amp; Co reading</h3>
+<ul>
+<li><a href="/ai-agency-consultancy/blog/uk-ai-regulation-2026-principles-based-field-guide">UK AI regulation in 2026: the principles-based approach explained</a>. The pillar guide this article sits under, covering how the UK's regulators divide responsibility for AI risk between them.</li>
+<li><a href="/ai-agency-consultancy/blog/does-the-eu-ai-act-apply-to-my-uk-business">Does the EU AI Act apply to my UK business?</a>. Useful next read for any UK business whose AI use also touches EU customers or markets.</li>
+<li><a href="/ai-agency-consultancy/blog/ai-for-uk-law-firms-sra-approved-use-cases">AI for UK law firms: SRA-approved use cases and the lawyer's duty</a>. A closer look at where the SRA draws the line between safe and risky AI use inside a legal practice.</li>
+</ul>
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What is the AI hallucination risk for UK businesses?",
+    "datePublished": "2026-08-04",
+    "dateModified": "2026-08-04",
+    "author": {
+      "@type": "Person",
+      "name": "Tom McCaul",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tom & Co",
+        "url": "https://www.tomandco.co.uk"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/tom-mccaul-77b2778/"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tom & Co",
+      "url": "https://www.tomandco.co.uk",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.tomandco.co.uk/images/logo.png"
+      }
+    },
+    "description": "UK courts have already ordered wasted costs and SRA referrals over AI-fabricated case citations. A field guide to the hallucination risk, the regulators policing it, and the verification steps that stop it costing a business money.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.tomandco.co.uk/ai-agency-consultancy/blog/ai-hallucination-risk-uk-businesses"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the AI hallucination risk for UK businesses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI hallucination risk is the chance a generative AI tool states something false with total confidence, and UK courts now enforce real consequences for it. In 2025, the High Court ordered a solicitor and barrister to each pay £2,000 in wasted costs after fabricated case citations reached a judgment, and a separate £89.4m claim relied on 18 fictitious authorities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is AI hallucination and why does it matter for UK businesses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hallucination is when a large language model produces a fluent, confident answer that is not true, because it predicts plausible next words rather than checking facts against a database. The ICO's guidance on AI and data protection confirms hallucination risk can be reduced, for example with retrieval-augmented generation, but never fully eliminated."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What has already gone wrong in UK courts because of AI hallucinations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Harber v HMRC (2023), Ayinde v Haringey (2025) and Al-Haroun v Qatar National Bank (2025), litigants or their lawyers submitted case citations that turned out to be fabricated by AI tools. Wasted costs orders and SRA referrals followed, and a further county court referral in 2026 shows the problem continuing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you stop AI hallucinations causing real damage in your business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Treat AI output as a first draft that gets checked against a primary source, name an authorised human sign-off for AI-assisted work, ground tools in verified data where possible, log what was checked and by whom, and write AI accuracy into vendor and staff contracts."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tom McCaul",
+    "jobTitle": "Founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Tom & Co",
+      "url": "https://www.tomandco.co.uk"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/tom-mccaul-77b2778/"
+    ]
+  }
+]
+</script>
+
+</body>
+</html>
