@@ -1,0 +1,24 @@
+{
+  "id": "stat_016",
+  "stat": "Reduction in the number of integrations to build when a UK enterprise connects AI tools to its core systems via MCP instead of point-to-point APIs",
+  "value": "86",
+  "unit": "percent fewer integrations (15 vs 105, for a 15-system enterprise stack)",
+  "date_calculated": "2026-08-06",
+  "applies_to": [
+    "topic IDs: 49, 56, 51, 15",
+    "clusters: Technical & Build"
+  ],
+  "method": "Recipe A (adapted) — mathematical derivation applying the standard M x N vs M + N integration-complexity formula (as described in MCP's own architecture rationale) to a concrete worked example",
+  "sources_used": [
+    {
+      "title": "MCP 2026-07-28 specification update",
+      "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "publisher": "Model Context Protocol maintainers (Linux Foundation)",
+      "accessed": "2026-08-06"
+    }
+  ],
+  "workings": "For N systems needing full pairwise connectivity, point-to-point integration requires N(N-1)/2 unique connections. For N=15: 15 x 14 / 2 = 105 connections. Under MCP, each of the 15 systems exposes one MCP server, so the AI side needs only N=15 connections regardless of how many AI tools are added later. Reduction: (105-15)/105 = 90/105 = 0.857, rounded to 86%. This is an illustrative worked example using a stated assumption of 15 core systems, not a claimed average across UK enterprises; the underlying formula and its direction (M x N collapsing to M + N) is standard integration-architecture reasoning that MCP's own documentation uses to explain the protocol's purpose.",
+  "first_used_in": "what-is-mcp-enterprise-ai-integration",
+  "first_used_date": "2026-08-06",
+  "layer": 2
+}

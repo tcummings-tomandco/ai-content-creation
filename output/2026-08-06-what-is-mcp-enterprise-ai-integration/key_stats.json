@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "86%",
+      "label": "Fewer integrations to build: 15 MCP servers vs 105 point-to-point connections",
+      "source": "Tom & Co worked example, August 2026"
+    },
+    {
+      "value": "49%",
+      "label": "Of UK businesses with 250+ staff used AI in June 2026, up 13pp on the year",
+      "source": "ONS, Artificial intelligence in UK businesses, June 2026"
+    },
+    {
+      "value": "Nov 2024",
+      "label": "When Anthropic released MCP as an open integration standard",
+      "source": "Anthropic, 2026"
+    },
+    {
+      "value": "80%+",
+      "label": "Of UK financial services firms already using or adopting AI",
+      "source": "FCA, Nikhil Rathi speech, 24 June 2026"
+    }
+  ]
+}

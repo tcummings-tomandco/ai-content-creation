@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is MCP and how does it change enterprise AI integration? | Tom &amp; Co Preview</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
+  h1 { font-size: 2em; font-weight: 700; margin-bottom: 0.3em; }
+  h2 { font-size: 1.4em; font-weight: 700; margin-top: 2em; }
+  h3 { font-size: 1.15em; font-weight: 700; margin-top: 1.5em; color: #333; }
+  .meta { color: #666; font-size: 0.9em; margin-bottom: 1.5em; font-family: sans-serif; border-bottom: 1px solid #ddd; padding-bottom: 1em; }
+  .answer-para { background: #f5f5f5; border-left: 4px solid #0066cc; padding: 1em 1.2em; margin-bottom: 1.5em; font-weight: 500; }
+  table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-family: sans-serif; font-size: 0.88em; }
+  th { background: #0066cc; color: white; padding: 8px 10px; text-align: left; }
+  td { border: 1px solid #ddd; padding: 7px 10px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f9f9; }
+  blockquote { border-left: 3px solid #999; padding: 0.7em 1em; margin: 1.2em 0; color: #444; font-style: italic; }
+  a { color: #0066cc; }
+  ul, ol { padding-left: 1.5em; }
+  li { margin-bottom: 0.4em; }
+  .stat-tiles { display: flex; flex-wrap: wrap; gap: 12px; margin: 1em 0 2em 0; }
+  .stat-tile { background: #0066cc; color: white; border-radius: 6px; padding: 14px 18px; flex: 1 1 180px; font-family: sans-serif; }
+  .stat-tile .value { font-size: 1.8em; font-weight: 700; display: block; }
+  .stat-tile .label { font-size: 0.82em; opacity: 0.9; margin-top: 4px; }
+  .stat-tile .source { font-size: 0.72em; opacity: 0.75; margin-top: 6px; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 2em 0; }
+  .preview-banner { background: #fffbe6; border: 1px solid #f0c040; padding: 8px 14px; font-family: sans-serif; font-size: 0.85em; color: #7a5c00; margin-bottom: 20px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div style="background:#fff3cd;border-bottom:2px solid #c8a85a;padding:10px 20px;font-family:-apple-system,Helvetica,Arial,sans-serif;font-size:14px;color:#5c4a00;">
+<strong>Tom &amp; Co AI Content Engine — Phase 1 preview.</strong>
+This page is a draft for internal review only. Not crawled, not indexed, not yet on tomandco.co.uk.
+</div>
+
+<div class="preview-banner">&#9888; PREVIEW DRAFT &mdash; Not yet published. Date: 2026-08-06 | Slug: what-is-mcp-enterprise-ai-integration | Cluster: Technical &amp; Build | Batch: routine 2026-08-06</div>
+<h1>What is MCP and how does it change enterprise AI integration?</h1>
+<div class="meta">2026-08-06 &bull; 8 min read &bull; By Tom McCaul &bull; Category: AI</div>
+<div class="stat-tiles">
+<div class="stat-tile"><span class="value">86%</span><span class="label">Fewer integrations to build: 15 MCP servers vs 105 point-to-point connections</span><span class="source">Tom & Co worked example, August 2026</span></div><div class="stat-tile"><span class="value">49%</span><span class="label">Of UK businesses with 250+ staff used AI in June 2026, up 13pp on the year</span><span class="source">ONS, Artificial intelligence in UK businesses, June 2026</span></div><div class="stat-tile"><span class="value">Nov 2024</span><span class="label">When Anthropic released MCP as an open integration standard</span><span class="source">Anthropic, 2026</span></div><div class="stat-tile"><span class="value">80%+</span><span class="label">Of UK financial services firms already using or adopting AI</span><span class="source">FCA, Nikhil Rathi speech, 24 June 2026</span></div>
+</div>
+<p>MCP (Model Context Protocol) is the open standard, donated by Anthropic to the Linux Foundation's new Agentic AI Foundation in 2026, that lets an AI system connect to any number of business tools and data sources through one shared interface instead of a custom integration for every pairing. For an enterprise wiring up 15 core systems, that turns 105 hand-built connections into 15.</p>
+
+<h2>What problem does MCP actually solve for enterprise integration?</h2>
+
+<p>Before MCP, every AI tool that needed live data from a CRM, a data warehouse or a ticketing system needed its own custom connector. Wire five AI tools to ten business systems by hand and that is fifty separate integrations to build, test and keep working as each side changes its API.</p>
+
+<p>That is the classic M times N integration problem: M tools, N systems, M times N connections to maintain. (Anyone who has watched a Zapier account fill up with broken zaps already knows this pain without the maths.)</p>
+
+<p>MCP turns that into M plus N. Each AI tool speaks MCP once. Each system exposes one MCP server. Any tool can then reach any system through the same interface, with no new connector needed every time a pairing gets added.</p>
+
+<p>Picture a UK insurance broker running a policy admin system, a CRM, a claims platform and a document store. Wired up by hand, an AI assistant needs four custom connectors before a fifth tool even joins the stack, and every one of them needs its own fix whenever an upstream API changes. Under MCP, the broker builds four servers once and any AI tool the business adds afterwards reuses them without touching a line of the original integration code.</p>
+
+<blockquote><p>Tom &amp; Co worked example: a business connecting 15 core systems (ERP, CRM, marketing automation, a data warehouse, a helpdesk and so on) to AI tools needs 105 unique point-to-point integrations built by hand. The same 15 systems each exposing one MCP server needs 15 connections, an 86% cut in the number of integrations to build and maintain.</p></blockquote>
+
+<h2>How does MCP's architecture work under the hood?</h2>
+
+<p>MCP borrows its shape from the Language Server Protocol that standardised how code editors talk to language tools. Three parts make up every MCP setup, and each one has a clearly separated job, which keeps the protocol simple enough to extend without breaking existing integrations.</p>
+
+<h3>The host</h3>
+
+<p>The host is the AI application itself: a chatbot, an IDE assistant or an internal agent platform. It holds the conversation with the user and decides when a task needs outside data or an outside action, then asks an MCP client to fetch it.</p>
+
+<h3>The client</h3>
+
+<p>The client lives inside the host and speaks MCP to exactly one server at a time. It handles the JSON-RPC 2.0 messages back and forth and keeps each server's session separate from the others.</p>
+
+<p>Two ways exist to move those messages. A local server on the same machine as the host talks over standard input and output, the way most developers first try MCP on a laptop. An enterprise server usually sits behind the network instead, reachable by many hosts over HTTP, the transport the July 2026 update reworked to be stateless.</p>
+
+<h3>The server</h3>
+
+<p>The server is the thin wrapper a system owner builds once, exposing that system's data or actions (a customer record, a stock check, a ticket update) through the same MCP interface. A large enterprise might run dozens of these, one per business system, built once and reused by every AI tool that needs it.</p>
+
+<p>Underneath host, client and server sits a second layer: what a server can actually offer. MCP defines three primitives, tools an AI model can call to take an action, resources it can read for context, and prompts a system owner can package as ready-made instructions.</p>
+
+<p>A CRM server might expose a "create contact" tool, a "customer record" resource and a "draft follow-up" prompt, all through one connection. A new AI tool inherits all three the moment it connects, rather than needing each built separately.</p>
+
+<p>The protocol itself keeps changing. The <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/" target="_blank" rel="noopener noreferrer">28 July 2026 specification update</a> moved MCP from a stateful, session-based connection to a stateless request and response model for HTTP transport, and tightened authentication with OAuth 2.1 and RFC 9207 issuer checks, both aimed squarely at enterprise deployments rather than a single developer's laptop.</p>
+
+<h2>How does MCP compare with point-to-point APIs and iPaaS?</h2>
+
+<p>Enterprises already had two ways to wire systems together before MCP arrived. The table below sets all three side by side, using the same 15-system example from above so the integration count lines up.</p>
+
+<table>
+<thead>
+<tr><th>Approach</th><th>Integrations for 15 systems</th><th>Where the logic sits</th><th>Auth model (2026)</th><th>Best for</th></tr>
+</thead>
+<tbody>
+<tr><td>Point-to-point API</td><td>105 hand-built connections</td><td>Hard-coded per pair</td><td>Separate API keys or OAuth per pair, no shared audit trail</td><td>One or two fixed integrations that rarely change</td></tr>
+<tr><td>iPaaS / ESB</td><td>15 connector configs into one bus</td><td>Centralised in the integration platform</td><td>Platform-managed OAuth, one shared log</td><td>Scheduled batch sync between core business systems</td></tr>
+<tr><td>MCP</td><td>15 server connections</td><td>Distributed at each server, called live by the AI client</td><td>OAuth 2.1 with RFC 9207 issuer validation</td><td>AI agents that need live, two-way access to changing data</td></tr>
+</tbody>
+</table>
+
+<p>The connection count looks similar between iPaaS and MCP because both are hub-based rather than point-to-point. The difference is who is on the other end: iPaaS mostly moves data on a schedule, while MCP is built for an AI model asking a live question and taking a live action in the same exchange.</p>
+
+<p>Maintenance load splits the same way. When an upstream CRM changes its API, point-to-point integration means finding and fixing every hand-built connector that touches it. Under MCP, that same change is a fix to one server, not to every tool that happens to call it, which is the whole of the M plus N argument showing up again at update time rather than at build time.</p>
+
+<h2>How fast is enterprise MCP adoption running in 2026?</h2>
+
+<p>MCP's own maintainers reported <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/" target="_blank" rel="noopener noreferrer">close to half a billion downloads a month</a> across its main software development kits by July 2026, with the TypeScript and Python versions each passing one billion downloads in total since Anthropic <a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" target="_blank" rel="noopener noreferrer">released the protocol as an open standard</a> in November 2024.</p>
+
+<p>UK adoption is climbing from a much smaller base. Only <a href="https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026" target="_blank" rel="noopener noreferrer">29% of UK businesses</a> reported using at least one AI technology in June 2026, an increase of eight percentage points on the year, rising to 49% among businesses with 250 or more staff, up 13 percentage points on the year.</p>
+
+<p>The bigger UK theme is not AI adoption itself but what comes after it. <a href="https://www.techuk.org/resource/uk-tech-in-2025-and-what-comes-next-for-2026.html" target="_blank" rel="noopener noreferrer">techUK's own account</a> of the year put it plainly: 2023 and 2024 were about generative AI hype, and 2025 became the year integration had to catch up, since agentic AI risks becoming what techUK calls a "side project" without real connection into existing enterprise systems, a theme it expects to carry into 2026.</p>
+
+<p>The same source points to a practical shift already under way alongside MCP: low-code and no-code integration tooling is pulling more of this work away from specialist developers and into the hands of business users who know the systems best, which lowers the bar for who inside a UK enterprise can actually stand up a new MCP server.</p>
+
+<h2>What security and governance risks come with adopting MCP?</h2>
+
+<p>Every new MCP server is a new door into a business system, so the question for enterprise IT is not whether to build a server but who is allowed to call it, with what permissions, and for how long. The <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/" target="_blank" rel="noopener noreferrer">July 2026 specification's move to OAuth 2.1</a> and RFC 9207 issuer checks was written to answer exactly that.</p>
+
+<p>UK financial services already sits closest to this pressure. <a href="https://www.fca.org.uk/news/speeches/rethinking-regulation-age-ai" target="_blank" rel="noopener noreferrer">More than 80% of financial services firms</a> are already using or adopting AI, Financial Conduct Authority chief executive Nikhil Rathi said in a speech on 24 June 2026, with human oversight and audit trails named as live, unresolved questions rather than settled ones.</p>
+
+<p>Legacy systems make this harder in practice, not just in theory. The <a href="https://www.computerweekly.com/news/252459385/Bank-of-Englands-large-IT-spend-partly-due-to-use-of-manual-processes-and-legacy-systems" target="_blank" rel="noopener noreferrer">Bank of England's own IT spend</a> has been driven up by manual processes and older systems, and integrating the Prudential Regulation Authority's applications duplicated work that is still being unwound.</p>
+
+<p>There is a second risk that has nothing to do with legacy systems: provenance. Anyone can publish an MCP server, and an AI agent instructed to call one that has never been checked can be tricked into leaking data or taking an action nobody asked for, the same prompt injection problem security researchers have raised since MCP's earliest months. (Treat an unreviewed third-party server the way you would treat unreviewed third-party code, because that is exactly what it is.)</p>
+
+<p>None of that is a reason to avoid MCP. It is a reason to treat every MCP server exactly like the API it is: reviewed, permissioned, logged, and owned by someone who can be asked what it does when an auditor turns up.</p>
+
+<h2>What should a UK enterprise IT team do before rolling out MCP?</h2>
+
+<p>None of the steps below are exotic. They are the same discipline any new class of integration earns before it touches production data, adapted for what is genuinely new about MCP.</p>
+
+<ul>
+<li><strong>Inventory the systems you would actually connect.</strong> List the ones an AI tool would realistically need live access to this year, not a wish list of everything in the company.</li>
+<li><strong>Pick the auth model before the first server ships.</strong> OAuth 2.1 with issuer validation is the direction MCP itself has taken; match it rather than bolting on something weaker later.</li>
+<li><strong>Name an owner for every MCP server.</strong> The Bank of England's experience shows what duplicated, unowned integrations cost to unwind years later.</li>
+<li><strong>Log every call an AI client makes through a server.</strong> The FCA's open questions on audit trails and human oversight are exactly what a logging layer needs to answer.</li>
+<li><strong>Start with one system, not fifteen.</strong> The M plus N maths only pays off once several systems and tools are involved; a single pilot server proves the pattern without betting the whole integration estate on it.</li>
+</ul>
+
+<p>One more UK-specific factor is worth naming plainly. Government's own <a href="https://gds.blog.gov.uk/2026/01/20/our-roadmap-for-modern-digital-government/" target="_blank" rel="noopener noreferrer">roadmap for modern digital government</a>, published January 2026, calls for public services to adopt a standard set of APIs and events for new services. A supplier building an MCP server for a public sector client should expect that standard, not a bespoke one, to be the one it gets measured against.</p>
+
+<h3>About the author</h3>
+<p>Tom McCaul is the founder of Tom &amp; Co, a digital growth agency specialising in e-commerce, AI strategy and digital transformation for ambitious UK brands. With over 15 years in digital commerce and agency leadership, Tom writes on AI adoption, UK regulation, and the practical realities of implementing AI in growing businesses. <a href="https://www.linkedin.com/in/tom-mccaul-77b2778/" target="_blank" rel="noopener noreferrer">Connect with Tom on LinkedIn</a>.</p>
+
+<h3>Related Tom &amp; Co reading</h3>
+<ul>
+<li><a href="/ai-agency-consultancy/blog/what-is-mcp-model-context-protocol">What is MCP (Model Context Protocol) in plain English?</a>. The non-technical companion piece for anyone briefing a board on what MCP actually is.</li>
+<li><a href="/ai-agency-consultancy/blog/what-is-an-ai-agent-orchestrator">What is an AI agent orchestrator?</a>. How MCP's tool access fits into the wider agent architecture running on top of it.</li>
+<li><a href="/ai-agency-consultancy/blog/how-to-build-an-ai-strategy-for-a-uk-sme">How do you build an AI strategy for a UK SME?</a>. Where integration decisions like this one sit inside a wider AI roadmap.</li>
+</ul>
+
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What is MCP and how does it change enterprise AI integration?",
+    "datePublished": "2026-08-06",
+    "dateModified": "2026-08-06",
+    "author": {
+      "@type": "Person",
+      "name": "Tom McCaul",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tom & Co",
+        "url": "https://www.tomandco.co.uk"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/tom-mccaul-77b2778/"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tom & Co",
+      "url": "https://www.tomandco.co.uk",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.tomandco.co.uk/images/logo.png"
+      }
+    },
+    "description": "MCP replaces custom point-to-point AI integrations with one shared protocol. What it is, how its architecture works, how it compares with iPaaS, and what a UK enterprise IT team should check before rolling it out.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.tomandco.co.uk/ai-agency-consultancy/blog/what-is-mcp-enterprise-ai-integration"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is MCP and how does it change enterprise AI integration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MCP (Model Context Protocol) is the open standard, donated by Anthropic to the Linux Foundation's new Agentic AI Foundation in 2026, that lets an AI system connect to any number of business tools and data sources through one shared interface instead of a custom integration for every pairing. For an enterprise wiring up 15 core systems, that turns 105 hand-built connections into 15."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What problem does MCP actually solve for enterprise integration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Before MCP, every AI tool needing live data from a business system needed its own custom connector, creating an M times N problem where M tools and N systems require M times N integrations. MCP turns that into M plus N: each tool speaks MCP once, each system exposes one MCP server, and any tool can reach any system through the same interface."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does MCP compare with point-to-point APIs and iPaaS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Point-to-point APIs need a hand-built connection for every pair of systems, with no shared audit trail. iPaaS platforms centralise integrations but mostly move data on a schedule. MCP also centralises the connection count but is built for an AI model to ask a live question and take a live action in the same exchange, using OAuth 2.1 with RFC 9207 issuer validation as of the July 2026 specification."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What security and governance risks come with adopting MCP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every MCP server is a new access point into a business system, so enterprises need to control who can call it and with what permissions. Provenance is a further risk: anyone can publish an MCP server, and unreviewed third-party servers carry prompt injection and data exfiltration risk. More than 80% of UK financial services firms are already using or adopting AI, per the FCA, making audit trails and human oversight live regulatory questions rather than settled ones."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tom McCaul",
+    "jobTitle": "Founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Tom & Co",
+      "url": "https://www.tomandco.co.uk"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/tom-mccaul-77b2778/"
+    ]
+  }
+]
+</script>
+
+</body>
+</html>
