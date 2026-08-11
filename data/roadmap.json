@@ -1226,10 +1226,11 @@
       "Competition": "Low",
       "Suggested length": "2000-2800",
       "Quick win": "Y",
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-08-11",
+      "Notes": "slug: ai-in-uk-creative-and-media-agencies",
+      "Slug": "ai-in-uk-creative-and-media-agencies"
     },
     {
       "ID": 65,

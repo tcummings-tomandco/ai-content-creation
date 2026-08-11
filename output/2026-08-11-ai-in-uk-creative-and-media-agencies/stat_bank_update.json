@@ -1,0 +1,30 @@
+{
+  "id": "stat_017",
+  "stat": "Share of the UK creative industries' 2023 GVA that sits within its highest-AI-adoption sub-sector (IT, software and computer services)",
+  "value": "40",
+  "unit": "percent (£49.1bn of £124bn total creative industries GVA)",
+  "date_calculated": "2026-08-11",
+  "applies_to": [
+    "topic IDs: 64",
+    "clusters: UK Industry Verticals"
+  ],
+  "method": "Recipe B (sector cut) — cross-referencing a DCMS monetary dataset (GVA by sub-sector) against a DSIT behavioural dataset (AI adoption rate by sub-sector) to produce a derived observation neither source publishes alone",
+  "sources_used": [
+    {
+      "title": "DCMS Economic Estimates: GVA 2023 (provisional)",
+      "url": "https://www.gov.uk/government/statistics/dcms-economic-estimates-gva-2023-provisional-data-tables-only",
+      "publisher": "Department for Culture, Media and Sport (DCMS)",
+      "accessed": "2026-08-11"
+    },
+    {
+      "title": "AI Adoption Plan: Creative Industries",
+      "url": "https://www.gov.uk/government/publications/ai-champions-ai-adoption-plans/ai-adoption-plan-creative-industries",
+      "publisher": "Department for Science, Innovation and Technology (DSIT)",
+      "accessed": "2026-08-11"
+    }
+  ],
+  "workings": "IT, software and computer services GVA (2023): £49.1bn. Total UK creative industries GVA (2023): £124bn. £49.1bn / £124bn = 0.396, rounded to 'nearly 40%'. Separately, the AI Adoption Plan for the Creative Industries (DSIT, June 2026) reports 60% AI adoption for the same IT/software/computer-services sub-sector, the highest of any creative-industries sub-sector measured (vs 53% design, 44% film/TV, 22% music/performing arts). The two figures are not contemporaneous (2023 GVA vs 2026 adoption); presented as a directional/structural observation about where AI adoption concentrates by economic value, not a causal claim.",
+  "first_used_in": "ai-in-uk-creative-and-media-agencies",
+  "first_used_date": "2026-08-11",
+  "layer": 2
+}
