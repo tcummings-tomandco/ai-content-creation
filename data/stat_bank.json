@@ -500,6 +500,30 @@
       "first_used_in": "ai-in-uk-creative-and-media-agencies",
       "first_used_date": "2026-08-11",
       "layer": 2
+    },
+    {
+      "id": "stat_018",
+      "stat": "Ratio by which UK AI adoption breadth grew faster than depth of use, 2023-2026",
+      "value": "2.5",
+      "unit": "ratio (breadth growth multiple ÷ depth growth multiple)",
+      "date_calculated": "2026-08-13",
+      "applies_to": [
+        "topic ID: 7",
+        "clusters: Strategy & ROI"
+      ],
+      "method": "Recipe C (year-on-year delta) — derived ratio from two time-series figures in a single ONS release",
+      "sources_used": [
+        {
+          "title": "Artificial intelligence in UK businesses: 2023 to 2026",
+          "url": "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026",
+          "publisher": "Office for National Statistics",
+          "accessed": "2026-08-13"
+        }
+      ],
+      "workings": "ONS reports self-reported AI adoption among UK businesses with 10+ employees rose from ~12% (late 2023) to ~35% (2026): a growth multiple of 35/12 = 2.917x. The same release reports the average number of AI technologies used per adopting business rose from ~1.4 to ~1.6 over the same period: a growth multiple of 1.6/1.4 = 1.143x. Ratio of the two growth multiples: 2.917 / 1.143 = 2.552, rounded to 2.5x. This quantifies that the breadth of adoption (how many businesses use AI) grew roughly 2.5 times faster than the depth of adoption (how many tools each adopting business uses), the same 'wide but shallow' pattern MIT's GenAI Divide report describes globally, expressed as a single UK-specific ratio derived from ONS's own published figures.",
+      "first_used_in": "why-do-most-ai-projects-fail",
+      "first_used_date": "2026-08-13",
+      "layer": 2
     }
   ]
 }
