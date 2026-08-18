@@ -1,0 +1,24 @@
+{
+  "id": "stat_019",
+  "stat": "Share of AI-using UK SMEs that use AI to automate operations extensively, rather than lightly assist",
+  "value": "20",
+  "unit": "percent (approx. 1 in 5)",
+  "date_calculated": "2026-08-18",
+  "applies_to": [
+    "topic ID: 11",
+    "clusters: Operations & Efficiency; Strategy & ROI"
+  ],
+  "method": "Derived ratio of two published figures from the same survey (closest fit: Recipe B/C style aggregate cut, not a named recipe verbatim)",
+  "sources_used": [
+    {
+      "title": "Half of SMEs using AI, with limited headcount impact so far (Future of Work: AI in the Workplace survey)",
+      "url": "https://www.britishchambers.org.uk/news/2026/03/half-of-smes-using-ai-with-limited-headcount-impact-so-far/",
+      "publisher": "British Chambers of Commerce, with Atos and the University of Essex",
+      "accessed": "2026-08-18"
+    }
+  ],
+  "workings": "BCC/Atos survey (March 2026 wave) reports 54% of UK SMEs use AI in some form, and separately that 11% of SMEs use AI extensively to automate operations. 11 / 54 = 0.2037, approx 20%, i.e. roughly 1 in 5 AI-using SMEs are using AI for deep automation rather than lighter assistance. The source publishes both figures but never states the ratio between them.",
+  "first_used_in": "ai-agents-vs-rpa-vs-traditional-automation",
+  "first_used_date": "2026-08-18",
+  "layer": 2
+}

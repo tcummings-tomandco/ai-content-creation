@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI agents vs RPA vs traditional automation: what's the difference? | Tom &amp; Co Preview</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
+  h1 { font-size: 2em; font-weight: 700; margin-bottom: 0.3em; }
+  h2 { font-size: 1.4em; font-weight: 700; margin-top: 2em; }
+  h3 { font-size: 1.15em; font-weight: 700; margin-top: 1.5em; color: #333; }
+  .meta { color: #666; font-size: 0.9em; margin-bottom: 1.5em; font-family: sans-serif; border-bottom: 1px solid #ddd; padding-bottom: 1em; }
+  .answer-para { background: #f5f5f5; border-left: 4px solid #0066cc; padding: 1em 1.2em; margin-bottom: 1.5em; font-weight: 500; }
+  table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-family: sans-serif; font-size: 0.88em; }
+  th { background: #0066cc; color: white; padding: 8px 10px; text-align: left; }
+  td { border: 1px solid #ddd; padding: 7px 10px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f9f9; }
+  blockquote { border-left: 3px solid #999; padding: 0.7em 1em; margin: 1.2em 0; color: #444; font-style: italic; }
+  a { color: #0066cc; }
+  ul, ol { padding-left: 1.5em; }
+  li { margin-bottom: 0.4em; }
+  .stat-tiles { display: flex; flex-wrap: wrap; gap: 12px; margin: 1em 0 2em 0; }
+  .stat-tile { background: #0066cc; color: white; border-radius: 6px; padding: 14px 18px; flex: 1 1 180px; font-family: sans-serif; }
+  .stat-tile .value { font-size: 1.8em; font-weight: 700; display: block; }
+  .stat-tile .label { font-size: 0.82em; opacity: 0.9; margin-top: 4px; }
+  .stat-tile .source { font-size: 0.72em; opacity: 0.75; margin-top: 6px; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 2em 0; }
+  .preview-banner { background: #fffbe6; border: 1px solid #f0c040; padding: 8px 14px; font-family: sans-serif; font-size: 0.85em; color: #7a5c00; margin-bottom: 20px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div style="background:#fff3cd;border-bottom:2px solid #c8a85a;padding:10px 20px;font-family:-apple-system,Helvetica,Arial,sans-serif;font-size:14px;color:#5c4a00;">
+<strong>Tom &amp; Co AI Content Engine — Phase 1 preview.</strong>
+This page is a draft for internal review only. Not crawled, not indexed, not yet on tomandco.co.uk.
+</div>
+
+<div class="preview-banner">&#9888; PREVIEW DRAFT &mdash; Not yet published. Date: 2026-08-18 | Slug: ai-agents-vs-rpa-vs-traditional-automation | Cluster: Operations &amp; Efficiency | Batch: routine 2026-08-18</div>
+<h1>AI agents vs RPA vs traditional automation: what's the difference?</h1>
+<div class="meta">2026-08-18 &bull; 8 min read &bull; By Tom McCaul &bull; Category: AI</div>
+<div class="stat-tiles">
+<div class="stat-tile"><span class="value">54%</span><span class="label">UK SMEs now using AI, up from 23% in 2023</span><span class="source">BCC and Atos Future of Work survey, March 2026</span></div><div class="stat-tile"><span class="value">1 in 5</span><span class="label">AI-using UK SMEs automate operations extensively, not just assist</span><span class="source">Tom & Co analysis of BCC/Atos data, Aug 2026</span></div><div class="stat-tile"><span class="value">28%</span><span class="label">UK businesses already running RPA bots</span><span class="source">techUK, citing Abbyy research</span></div><div class="stat-tile"><span class="value">88%</span><span class="label">Of AI agent pilots never reach production</span><span class="source">McKinsey agentic AI research, 2026</span></div>
+</div>
+<p>Traditional automation follows fixed rules with no judgement calls. Robotic process automation (RPA), used by 28% of UK businesses according to techUK, scripts repetitive clicks and data entry across existing software. AI agents use large language models to interpret unstructured requests and decide what to do next, but McKinsey found only 23% of organisations have any agentic system running at scale in 2026, so most "agentic" deployments today are still pilots, not replacements for RPA.</p>
+
+<p>That gap between trying and scaling shows up in the UK's own numbers too. Business adoption of AI overall rose from around 12% in late 2023 to around 35% in 2026, according to the <a href="https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026" target="_blank" rel="noopener noreferrer">Office for National Statistics</a>. The average number of AI technologies a business actually runs, though, crept from just 1.4 to 1.6 over the same period.</p>
+
+<p>Breadth is winning. Depth, where agents actually replace a workflow rather than sitting next to it, is still rare.</p>
+
+<h2>What are AI agents, RPA and traditional automation?</h2>
+
+<p>All three sit on the same spectrum, from fixed rules to genuine judgement. The difference is how much interpretation happens before an action fires, and that difference decides what each one can safely be trusted with.</p>
+
+<h3>Traditional automation</h3>
+
+<p>Traditional automation means fixed if-then logic: a scheduled script, a spreadsheet macro, a rule in an email filter. It does exactly what it's told and nothing else. A UK bookkeeping practice running a macro to flag any invoice over £10,000 for manual review is traditional automation in its purest form. It has never needed patching, has no idea what a scanned PDF is, and never will.</p>
+
+<p>There's no interpretation involved, which makes it cheap, predictable and easy to audit, but brittle the moment an input changes shape. Rename a column header and the macro either breaks or, worse, silently does the wrong thing.</p>
+
+<h3>Robotic process automation (RPA)</h3>
+
+<p>RPA software robots mimic a person's clicks, keystrokes and copy-paste across existing screens and systems, without needing new APIs. <a href="https://www.techuk.org/resource/robotic-process-automation-industry-adoption-trends-and-benefits.html" target="_blank" rel="noopener noreferrer">TechUK, citing Abbyy's research</a>, puts UK uptake at 28% of businesses already running RPA and 34% planning to start, with 64% now using process mining first to find where to point it.</p>
+
+<p>A retail finance team using a bot to copy nightly sales totals from an ERP screen into a reconciliation spreadsheet is a textbook case: repetitive, rule-based, and running on a system with no API to plug into directly. It is still fundamentally rule-based, though. Change the screen layout and the bot breaks, exactly like the macro does, just with more moving parts to fix.</p>
+
+<h3>AI agents</h3>
+
+<p>AI agents are different in kind, not just degree. The <a href="https://www.gov.uk/government/publications/ai-insights/ai-insights-agentic-ai-html" target="_blank" rel="noopener noreferrer">government's own definition</a> treats an AI agent as a small, specialised piece of software that can make decisions, and agentic AI as a system of agents that behave and interact autonomously, without a human approving every step.</p>
+
+<p>A UK law firm's agent that reads an incoming client email, checks it against the case file, and drafts a first response for a solicitor to approve is the agentic version of a job neither RPA nor a macro could attempt, because the input is never phrased the same way twice. That autonomy is the whole point, and also the whole risk.</p>
+
+<h2>How do AI agents, RPA and traditional automation actually compare?</h2>
+
+<p>Here's the same three approaches, side by side, based on how they behave in a working UK business rather than how the vendors pitch them.</p>
+
+<table>
+<thead>
+<tr><th>Approach</th><th>Best for</th><th>Handles unstructured input?</th><th>Typical cost pattern</th><th>Maintenance load</th></tr>
+</thead>
+<tbody>
+<tr><td>Traditional automation</td><td>Fixed, high-volume, single-format tasks (invoice matching, scheduled reports)</td><td>No</td><td>Built into existing tools (email rules, spreadsheet macros, workflow add-ons), near-zero marginal cost</td><td>Low, but breaks silently the moment a format changes</td></tr>
+<tr><td>RPA</td><td>Repetitive, multi-system tasks across legacy screens (data entry, reconciliations)</td><td>No, needs a structured screen</td><td>Bot or licence-based, usually quote-only, scales with bot count</td><td>Medium to high, bots break when a UI changes</td></tr>
+<tr><td>AI agents</td><td>Judgement-based, unstructured or conversational work (triaging enquiries, first-draft research)</td><td>Yes, that's the point</td><td>Per-seat SaaS subscription, from around £16/user/month for a business-tier assistant</td><td>Needs evaluation and guardrails, not UI fixes</td></tr>
+</tbody>
+</table>
+
+<p>Read across a row and the pattern holds: the more unstructured the task, the more the cost shifts from one-off engineering to ongoing oversight. None of the three is simply "better". Each one is cheapest and safest on a different kind of task.</p>
+
+<h2>Which one wins on handling messy, unstructured work?</h2>
+
+<p>On messy input, there's no contest. Traditional automation can't cope with a request that doesn't match its rule, and RPA collapses the moment a screen layout shifts. AI agents are built to read an unfamiliar email, a scanned invoice, or a customer's own words, and decide what to do with it.</p>
+
+<p>A customer service inbox is the clearest example. Sorting emails by a fixed subject-line keyword is traditional automation. Copying a ticket's details into a CRM screen is RPA. Reading the actual complaint, checking the order history, and drafting a reply that addresses what the customer actually said is agentic, and it is the piece the other two have never been able to do.</p>
+
+<p>The catch is production reliability. McKinsey's 2026 research on agentic AI found 88% of agent pilots never make it to production, with evaluation gaps, governance friction and unreliable outputs the top three blockers cited by leaders. Capability isn't the constraint. Trusting the agent enough to leave it running unsupervised is.</p>
+
+<h2>Which one wins on cost and speed to deploy?</h2>
+
+<p>Traditional automation wins on speed almost every time, because it's usually a feature already sitting inside a tool a UK business already pays for. RPA needs the most upfront integration work, since every bot has to be built and tested against a specific screen before it does anything useful. AI agents sit in between: fast to switch on, slower to trust with anything that matters.</p>
+
+<p>Picture a 10-person operations team. The fixed-rule work is likely already covered by workflow features bundled into Microsoft 365 or Google Workspace, at close to no extra cost. Automating one legacy system properly with RPA can run to several thousand pounds in licensing and setup before the first bot does anything.</p>
+
+<p>Layering an AI agent on top adds a further per-seat fee, plus the evaluation work needed before anyone trusts its output on a live customer.</p>
+
+<p><a href="https://bankunderground.co.uk/2026/08/06/is-artificial-intelligence-making-us-more-productive-what-the-uk-industry-data-show/" target="_blank" rel="noopener noreferrer">Bank of England staff research</a>, published in August 2026, found the productivity gains from AI so far sit almost entirely in the sectors building the technology, not the sectors deploying it. Software and IT consultancy's contribution to UK productivity growth rose roughly tenfold against the pre-pandemic decade, adding around 0.1 percentage points between 2023 and 2025.</p>
+
+<p>Most businesses adopting automation of any kind haven't banked a measurable productivity return yet, whichever approach they picked.</p>
+
+<h2>Which one wins on governance and regulatory risk?</h2>
+
+<p>Regulators are already treating agents differently to RPA. In January 2026 the government <a href="https://www.gov.uk/government/publications/ai-champions-ai-adoption-plans-interim-government-response/interim-government-response-to-the-ai-champions-ai-adoption-plans" target="_blank" rel="noopener noreferrer">wrote to 19 regulators</a>, covering sectors including financial services, life sciences and law, asking each to publish how it will let AI-powered innovation happen safely.</p>
+
+<p>The <a href="https://www.gov.uk/government/publications/ai-adoption-plan-financial-services/financial-services-ai-adoption-plan" target="_blank" rel="noopener noreferrer">Financial Services AI Adoption Plan</a> goes further, setting out "Know Your Agent" protocols and legal liability rules for autonomous agentic payments, a governance layer no RPA bot has ever needed.</p>
+
+<p>None of this replaces existing UK data protection law either. An agent handling personal data still sits inside the UK GDPR rules the ICO enforces, and one making a decision with a material effect on a customer still needs a lawful basis and, in most cases, a human review point. RPA rarely raises the same question, because it isn't deciding anything.</p>
+
+<p>Government's own pilots show a similar maturity gap. The National Audit Office found <a href="https://publications.parliament.uk/pa/cm5901/cmselect/cmpubacc/356/report.html" target="_blank" rel="noopener noreferrer">70% of government bodies were piloting or planning AI use</a> by March 2024, but the Public Accounts Committee's follow-up report blamed poor-quality data locked in legacy IT systems for stalling the move from pilot to production, precisely the step most RPA rollouts skip straight past.</p>
+
+<h2>Can you combine RPA and AI agents in the same workflow?</h2>
+
+<p>Increasingly, yes, and for a lot of UK businesses that's the realistic next step rather than replacing a working RPA estate outright. A common pattern wraps an existing RPA bot as a tool an AI agent can call: the agent handles the judgement call of what needs doing and why, while the bot still does the mechanical clicking it was already built for.</p>
+
+<p>The plumbing for that pattern increasingly runs through the Model Context Protocol (MCP), an open standard that lets an AI agent discover and call external tools, including an existing RPA bot, without a bespoke integration for each one. Combining tools rather than picking one winner is already the norm, not the exception: the ONS figure above, an average of 1.6 AI technologies per adopting business, says as much on its own.</p>
+
+<h2>Which is right for a UK SME right now?</h2>
+
+<p>For most UK SMEs, the honest starting point is traditional automation for anything genuinely rule-based, RPA for repetitive multi-system tasks that don't yet justify custom integration, and AI agents for the judgement-heavy work nothing else can touch. Treating all three as one "AI transformation" project is how most budgets get blown.</p>
+
+<blockquote><p>Tom &amp; Co analysis of the <a href="https://www.britishchambers.org.uk/news/2026/03/half-of-smes-using-ai-with-limited-headcount-impact-so-far/" target="_blank" rel="noopener noreferrer">BCC and Atos Future of Work survey</a>: only around 1 in 5 AI-using UK SMEs (11 of the 54 percentage points reporting AI use) say they use it to automate operations extensively. The rest are still at the assistant stage, not the agent stage.</p></blockquote>
+
+<p>A short decision list for choosing between them:</p>
+
+<ol>
+<li><strong>Start with the task, not the technology.</strong> Map what's genuinely rule-based (an RPA or traditional automation candidate) against what needs judgement (an agent candidate) before picking a vendor.</li>
+<li><strong>Keep a human checking the output until you've measured it.</strong> An agent left fully unsupervised on a task you haven't benchmarked is how the 88% pilot-to-production failure rate happens.</li>
+<li><strong>Budget for governance, not just licences.</strong> Evaluation, guardrails and a named owner cost more than the subscription itself, and skipping them is the fastest route to a stalled pilot.</li>
+<li><strong>Ask what happens when it's wrong.</strong> RPA fails loudly, since the bot simply stops. Agents can fail quietly, producing a plausible but wrong answer, so build in a check before anything customer-facing goes live.</li>
+</ol>
+
+<h3>About the author</h3>
+<p>Tom McCaul is the founder of Tom &amp; Co, a digital growth agency specialising in e-commerce, AI strategy and digital transformation for ambitious UK brands. With over 15 years in digital commerce and agency leadership, Tom writes on AI adoption, UK regulation, and the practical realities of implementing AI in growing businesses. <a href="https://www.linkedin.com/in/tom-mccaul-77b2778/" target="_blank" rel="noopener noreferrer">Connect with Tom on LinkedIn</a>.</p>
+
+<h3>Related Tom &amp; Co reading</h3>
+<ul>
+<li><a href="/ai-agency-consultancy/blog/what-are-ai-agents">What are AI agents? A plain-English guide for UK businesses</a>. The fuller explainer behind the "AI agents" side of this comparison, for anyone starting from zero.</li>
+<li><a href="/ai-agency-consultancy/blog/why-do-most-ai-projects-fail">Why do most AI projects fail, and is 95% actually true?</a>. The wider pilot-to-production data behind the 88% agent failure rate cited above.</li>
+<li><a href="/ai-agency-consultancy/blog/what-should-you-ask-before-signing-an-ai-vendor-contract">What should you ask before signing an AI vendor contract?</a>. The buy-versus-build questions that follow once you've picked RPA or an agent platform.</li>
+<li><a href="/ai-agency-consultancy/blog/what-is-mcp-model-context-protocol">What is MCP (Model Context Protocol) in plain English?</a>. The technical layer that lets AI agents actually plug into the systems RPA already automates.</li>
+</ul>
+</body>
+</html>
