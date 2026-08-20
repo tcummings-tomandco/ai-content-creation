@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "3%",
+      "label": "Of UK enterprises actually run agentic AI today, not just pilot it",
+      "source": "Tom & Co analysis of ONS and DSIT data, Feb 2026"
+    },
+    {
+      "value": "21m+",
+      "label": "Customer accounts covered by Lloyds' new agentic financial assistant",
+      "source": "Lloyds Banking Group, 2026"
+    },
+    {
+      "value": "~79m hrs",
+      "label": "Staff time a year if NHS Copilot's saving scales to 500,000 staff",
+      "source": "Tom & Co analysis of NHS England data, 2026"
+    },
+    {
+      "value": "Oct 2026",
+      "label": "NHS England's target date for AI agent tools to reach 500,000 staff",
+      "source": "NHS England, July 2026"
+    }
+  ]
+}

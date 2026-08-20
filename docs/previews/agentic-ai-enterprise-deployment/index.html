@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is agentic AI and how do enterprises deploy it? | Tom &amp; Co Preview</title>
+<style>
+  body { font-family: Georgia, serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
+  h1 { font-size: 2em; font-weight: 700; margin-bottom: 0.3em; }
+  h2 { font-size: 1.4em; font-weight: 700; margin-top: 2em; }
+  h3 { font-size: 1.15em; font-weight: 700; margin-top: 1.5em; color: #333; }
+  .meta { color: #666; font-size: 0.9em; margin-bottom: 1.5em; font-family: sans-serif; border-bottom: 1px solid #ddd; padding-bottom: 1em; }
+  .answer-para { background: #f5f5f5; border-left: 4px solid #0066cc; padding: 1em 1.2em; margin-bottom: 1.5em; font-weight: 500; }
+  table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-family: sans-serif; font-size: 0.88em; }
+  th { background: #0066cc; color: white; padding: 8px 10px; text-align: left; }
+  td { border: 1px solid #ddd; padding: 7px 10px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f9f9; }
+  blockquote { border-left: 3px solid #999; padding: 0.7em 1em; margin: 1.2em 0; color: #444; font-style: italic; }
+  a { color: #0066cc; }
+  ul, ol { padding-left: 1.5em; }
+  li { margin-bottom: 0.4em; }
+  .stat-tiles { display: flex; flex-wrap: wrap; gap: 12px; margin: 1em 0 2em 0; }
+  .stat-tile { background: #0066cc; color: white; border-radius: 6px; padding: 14px 18px; flex: 1 1 180px; font-family: sans-serif; }
+  .stat-tile .value { font-size: 1.8em; font-weight: 700; display: block; }
+  .stat-tile .label { font-size: 0.82em; opacity: 0.9; margin-top: 4px; }
+  .stat-tile .source { font-size: 0.72em; opacity: 0.75; margin-top: 6px; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 2em 0; }
+  .preview-banner { background: #fffbe6; border: 1px solid #f0c040; padding: 8px 14px; font-family: sans-serif; font-size: 0.85em; color: #7a5c00; margin-bottom: 20px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div style="background:#fff3cd;border-bottom:2px solid #c8a85a;padding:10px 20px;font-family:-apple-system,Helvetica,Arial,sans-serif;font-size:14px;color:#5c4a00;">
+<strong>Tom &amp; Co AI Content Engine — Phase 1 preview.</strong>
+This page is a draft for internal review only. Not crawled, not indexed, not yet on tomandco.co.uk.
+</div>
+
+<div class="preview-banner">&#9888; PREVIEW DRAFT &mdash; Not yet published. Date: 2026-08-20 | Slug: agentic-ai-enterprise-deployment | Cluster: Operations &amp; Efficiency | Batch: routine 2026-08-20</div>
+<h1>What is agentic AI and how do enterprises deploy it?</h1>
+<div class="meta">2026-08-20 &bull; 9 min read &bull; By Tom McCaul &bull; Category: AI</div>
+<div class="stat-tiles">
+<div class="stat-tile"><span class="value">3%</span><span class="label">Of UK enterprises actually run agentic AI today, not just pilot it</span><span class="source">Tom & Co analysis of ONS and DSIT data, Feb 2026</span></div><div class="stat-tile"><span class="value">21m+</span><span class="label">Customer accounts covered by Lloyds' new agentic financial assistant</span><span class="source">Lloyds Banking Group, 2026</span></div><div class="stat-tile"><span class="value">~79m hrs</span><span class="label">Staff time a year if NHS Copilot's saving scales to 500,000 staff</span><span class="source">Tom & Co analysis of NHS England data, 2026</span></div><div class="stat-tile"><span class="value">Oct 2026</span><span class="label">NHS England's target date for AI agent tools to reach 500,000 staff</span><span class="source">NHS England, July 2026</span></div>
+</div>
+<p>Agentic AI is software that plans a task, acts through digital tools, checks its own results, and adjusts until the job is done, largely without step-by-step supervision. Just 7% of AI-using UK firms had adopted it by early 2025, DSIT found, and Tom &amp; Co analysis puts real usage at only around 3% of firms with 250 or more staff. Enterprises that succeed start with one narrow, human-supervised workflow before scaling it.</p>
+
+<h2>What makes agentic AI different from a chatbot or basic automation?</h2>
+
+<p>A chatbot answers a question. A workflow tool follows a fixed script. Agentic AI does neither: it takes a goal, breaks it into steps, calls tools such as a CRM, a database or an email system to act on each one, checks whether the result actually worked, and adjusts if it didn't. <a href="/ai-agency-consultancy/blog/what-is-agentic-ai" target="_blank" rel="noopener noreferrer">What is agentic AI and how does it work?</a> covers the reason-act-observe loop in full. This piece focuses on what UK enterprises are actually doing with it.</p>
+
+<p>The distinction matters for deployment, not just definition. A chatbot or workflow tool fails safely: it stops, or it does the wrong small thing once. An agent handed too much autonomy can act on a wrong assumption several steps down the line before anyone notices, which is why every deployment below still keeps a person in the loop somewhere. For where agentic AI sits next to older automation, see <a href="/ai-agency-consultancy/blog/ai-agents-vs-rpa-vs-traditional-automation" target="_blank" rel="noopener noreferrer">AI agents vs RPA vs traditional automation</a>.</p>
+
+<p>Picture an agent handling a mortgage enquiry. It reads the request, checks affordability against live account data, and drafts a response, three separate judgement calls chained together. Get the first one slightly wrong and the other two inherit the error, which is exactly the scenario UK enterprises are now building oversight around rather than automating away.</p>
+
+<h2>How many UK enterprises are actually running agentic AI in 2026?</h2>
+
+<p>Enterprise interest in agentic AI is real, but usage lags a long way behind the pitch decks. 44% of UK businesses with 250 or more staff use AI in some form, according to the Office for National Statistics' <a href="https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/bulletins/businessinsightsandimpactontheukeconomy/8january2026" target="_blank" rel="noopener noreferrer">January 2026 Business Insights and Conditions Survey bulletin</a>. Among AI-adopting businesses of every size, though, the Department for Science, Innovation and Technology's <a href="https://www.gov.uk/government/publications/ai-adoption-research/ai-adoption-research" target="_blank" rel="noopener noreferrer">AI Adoption Research</a>, published 13 February 2026, found agentic AI is used by just 7% of them, the least-adopted AI category it tracks.</p>
+
+<blockquote><p>Tom &amp; Co analysis of ONS and DSIT data: multiplying the 44% AI-adoption rate among large UK firms by the 7% share of adopters using agentic AI puts real agentic AI usage at roughly 3% of UK enterprises, an order-of-magnitude estimate neither survey publishes directly.</p></blockquote>
+
+<p>That gap is why most of what gets called agentic AI in 2026 is still a pilot on one workflow, not a company-wide rollout. The five examples below are the ones far enough along to say what they actually do, not just what they're aiming for.</p>
+
+<h2>How do enterprises actually deploy agentic AI, in practice?</h2>
+
+<p>Every enterprise deployment below follows a broadly similar shape, whatever the sector. Pick one workflow that's genuinely painful, wire the agent to a small number of tools, keep a person checking its output, and only widen its remit once that's proven. The UK government's own approach makes the pattern explicit.</p>
+
+<p>DSIT and Anthropic are building the GOV.UK Agentic AI Companion under a "Scan, Pilot, Scale" framework, according to the <a href="https://www.gov.uk/government/news/top-british-ai-expertise-to-help-spark-renewal-of-public-services-and-bolster-national-security" target="_blank" rel="noopener noreferrer">government's own announcement</a>. A 2025/26 pilot is limited to employment, education and career guidance for 16 to 34 year olds, before any move to a fully integrated GOV.UK Chat service targeted for 2026/27. Nothing goes live for every citizen on day one.</p>
+
+<p>BT is running the same logic at industrial scale. Its <a href="https://newsroom.bt.com/bt-business-collaborates-with-accenture-to-supercharge-ai-deployment/" target="_blank" rel="noopener noreferrer">AI-Ops programme with Accenture and ServiceNow</a> lets agents autonomously analyse and, under strict control, self-heal network faults. BT's own newsroom still puts full agentic embedding across networks, IT and customer operations at least two years out. Governance comes before scale, not after.</p>
+
+<p>NHS England followed the identical shape on a longer clock. A 90-organisation trial with just over 30,000 staff ran first, the results were measured in minutes saved per person per day, and only then did the trust commit to a 500,000-staff target with a fixed October 2026 date. No enterprise in this article skipped the measurement step to get to scale faster.</p>
+
+<h2>What are 5 examples of agentic AI in UK enterprises right now?</h2>
+
+<p>Sector, function and maturity all vary, but each of these is a named, sourced deployment rather than a vendor pitch.</p>
+
+<h3>Customer-facing financial guidance: Lloyds Banking Group</h3>
+
+<p>Lloyds Banking Group is <a href="https://www.lloydsbankinggroup.com/insights/2026-the-year-of-agentic-ai-and-a-new-era-for-finance.html" target="_blank" rel="noopener noreferrer">rolling out an agentic financial assistant</a> across more than 21 million customer accounts from early 2026, the bank's first large-scale agentic deployment. The system reads a customer's spending, savings and investment data and acts on natural-language requests directly, rather than routing them to a static FAQ page. Lloyds plans to extend the same framework into mortgages, vehicle finance and insurance through 2026 and beyond.</p>
+
+<h3>Citizen-facing government services: the GOV.UK Agentic AI Companion</h3>
+
+<p>DSIT selected Anthropic in early 2026 to build a Claude-powered assistant for GOV.UK that actively guides a citizen through a process step by step, rather than just answering a single question, per the government's own release cited above. It holds context across a session, routes people to the right service, and explains eligibility for support, starting with employment and career-guidance journeys for young adults.</p>
+
+<h3>Back-office healthcare operations: NHS England</h3>
+
+<p>NHS England's Microsoft 365 Copilot trial, covering 90 organisations and more than 30,000 staff, <a href="https://www.england.nhs.uk/2026/06/500000-nhs-staff-to-get-new-artificial-intelligence-tools-to-help-free-up-more-time-for-patients/" target="_blank" rel="noopener noreferrer">saved an average of at least 43 minutes per person per day</a>, largely on clinical correspondence and meeting notes. Alongside the assistant, Copilot Studio lets NHS teams build their own agents for bed management, discharge planning and rota scheduling, governed through Microsoft's Agent 365, ahead of a <a href="https://www.england.nhs.uk/2026/07/nhs-accelerates-artificial-intelligence-rollout-to-cut-waiting-times-and-improve-care-for-millions/" target="_blank" rel="noopener noreferrer">rollout targeted at 500,000 staff by October 2026</a>.</p>
+
+<h3>Retail customer service: Ocado</h3>
+
+<p>Ocado introduced an agentic AI chatbot to handle website customer queries in February 2026, initially to around 10% of shoppers as a trial ahead of a wider rollout, following a rebuild of its core tech stack, <a href="https://www.thegrocer.co.uk/news/ocado-to-ramp-up-use-of-game-changing-ai-to-improve-shopper-experience/715759.article" target="_blank" rel="noopener noreferrer">as reported by trade title The Grocer</a>. Ocado's e-commerce director described the move as central to how the retailer plans to cut waste and improve product availability.</p>
+
+<h3>IT operations and network security: BT</h3>
+
+<p>BT's AI-Ops programme, run with Accenture and built on its existing ServiceNow partnership, gives network and security agents the ability to diagnose and, under strict human-set controls, self-heal faults at machine speed. The initial focus is UK enterprise and public-sector customers, with cyber-security threat detection named as an early use case.</p>
+
+<table>
+<thead>
+<tr><th>Sector</th><th>Enterprise / programme</th><th>What the agent does</th><th>Deployment stage (Aug 2026)</th></tr>
+</thead>
+<tbody>
+<tr><td>Financial services</td><td>Lloyds Banking Group</td><td>Reads account data, acts on natural-language spending, savings and investment requests</td><td>Live, 21m+ accounts, expanding to mortgages and insurance</td></tr>
+<tr><td>Central government</td><td>GOV.UK Agentic AI Companion (DSIT + Anthropic)</td><td>Guides citizens step by step through employment, education and career services</td><td>Pilot (2025/26), scale targeted 2026/27</td></tr>
+<tr><td>Healthcare</td><td>NHS England</td><td>Builds agents for bed management, discharge planning and scheduling via Copilot Studio</td><td>Rolling out, 500,000-staff target by Oct 2026</td></tr>
+<tr><td>Retail</td><td>Ocado</td><td>Agentic chatbot handles website customer queries</td><td>Trial, roughly 10% of users, expanding</td></tr>
+<tr><td>Telecoms and IT</td><td>BT (with Accenture, ServiceNow)</td><td>Diagnoses and self-heals network and security faults under human-set controls</td><td>Early programme, full embedding targeted about two years out</td></tr>
+</tbody>
+</table>
+
+<blockquote><p>Tom &amp; Co analysis of NHS England's own trial figures: scaling the 43-minutes-a-day saving across the 500,000 staff targeted for the full Microsoft 365 Copilot rollout, over a standard 220-day NHS working year, comes to roughly 79 million hours of staff time a year, a total NHS England's own releases don't add up themselves.</p></blockquote>
+
+<h2>What governance does enterprise-scale agentic AI need?</h2>
+
+<p>None of the five examples above run unsupervised. Lloyds, the NHS and BT each keep a named human check somewhere in the loop, and financial regulators are already building that requirement into policy rather than leaving it to individual firms.</p>
+
+<p>The Bank of England and FCA's third joint AI survey, using data collected in 2024, found 55% of AI use cases in UK financial services already involve some form of autonomous decision-making, but only 2% are fully autonomous. Both regulators now expect agentic AI to move into core decisions such as credit underwriting and portfolio management, and the Financial Policy Committee has asked them to do further work specifically on agentic AI in payments and markets, per the <a href="https://www.bankofengland.co.uk/report/2024/artificial-intelligence-in-uk-financial-services-2024" target="_blank" rel="noopener noreferrer">Bank of England's own report</a>.</p>
+
+<p>Data protection law doesn't pause for agentic AI either. An agent handling customer data still sits inside UK GDPR, and the <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/" target="_blank" rel="noopener noreferrer">ICO's guidance on AI and data protection</a> is explicit that a decision with a legal or similarly significant effect on someone still needs a lawful basis and, in most cases, meaningful human review, whatever the technology behind it. None of the enterprises above are treating an agent's output as final without a person checking it first.</p>
+
+<p>The risk isn't hypothetical. Gartner expects more than 40% of agentic AI projects to be cancelled before the end of 2027, citing unclear ROI and weak risk controls as the leading causes, the same failure pattern covered in full in <a href="/ai-agency-consultancy/blog/risks-of-agentic-ai" target="_blank" rel="noopener noreferrer">What are the risks of agentic AI?</a></p>
+
+<h2>How should a UK enterprise get started with agentic AI?</h2>
+
+<p>The five deployments above share a sequence worth copying, not just admiring from a distance.</p>
+
+<ol>
+<li><strong>Pick one workflow with a measurable, painful cost today.</strong> Lloyds started with financial guidance, not its whole product range; the NHS started with correspondence and notes, not diagnosis.</li>
+<li><strong>Keep a named human checking the output for months, not weeks.</strong> Every example above still has a person in the loop somewhere, even the ones furthest along.</li>
+<li><strong>Wire the agent to as few tools as the task genuinely needs.</strong> More tool access means more ways for a wrong assumption to compound before anyone notices.</li>
+<li><strong>Set the scale gate before you start, not after.</strong> DSIT's "Scan, Pilot, Scale" framework works because the criteria for moving to the next stage are agreed up front.</li>
+<li><strong>Budget for oversight, not just the licence.</strong> Evaluation, guardrails and a named owner are what separate the enterprises above from the roughly 40% of agentic projects Gartner expects to be cancelled by 2027.</li>
+</ol>
+
+<h3>About the author</h3>
+<p>Tom McCaul is the founder of Tom &amp; Co, a digital growth agency specialising in e-commerce, AI strategy and digital transformation for ambitious UK brands. With over 15 years in digital commerce and agency leadership, Tom writes on AI adoption, UK regulation, and the practical realities of implementing AI in growing businesses. <a href="https://www.linkedin.com/in/tom-mccaul-77b2778/" target="_blank" rel="noopener noreferrer">Connect with Tom on LinkedIn</a>.</p>
+
+<h3>Related Tom &amp; Co reading</h3>
+<ul>
+<li><a href="/ai-agency-consultancy/blog/what-is-agentic-ai">What is agentic AI and how does it work?</a>. The fuller mechanics explainer behind the reason-act-observe loop referenced above.</li>
+<li><a href="/ai-agency-consultancy/blog/agentic-ai-use-cases-mid-market">What are the best agentic AI use cases for mid-market firms?</a>. The equivalent picture one size down, for businesses under 250 staff.</li>
+<li><a href="/ai-agency-consultancy/blog/ai-agents-vs-rpa-vs-traditional-automation">AI agents vs RPA vs traditional automation: what's the difference?</a>. Where agentic AI sits next to the automation most enterprises already run.</li>
+<li><a href="/ai-agency-consultancy/blog/risks-of-agentic-ai">What are the risks of agentic AI?</a>. The governance failures behind Gartner's 40% cancellation forecast, covered in full.</li>
+</ul>
+</body>
+</html>

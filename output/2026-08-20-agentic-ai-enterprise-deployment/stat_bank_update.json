@@ -1,0 +1,30 @@
+{
+  "id": "stat_020",
+  "stat": "Annual staff-hours saving implied by scaling NHS England's Microsoft 365 Copilot trial time-saving to the full 500,000-staff rollout",
+  "value": "79",
+  "unit": "million hours per year (approx)",
+  "date_calculated": "2026-08-20",
+  "applies_to": [
+    "topic ID: 12",
+    "clusters: Operations & Efficiency; UK Industry Verticals"
+  ],
+  "method": "Recipe A-style scaling — multiplying a published per-person time-saving figure by a published rollout headcount and a standard working-year assumption, a total the source did not publish itself",
+  "sources_used": [
+    {
+      "title": "500,000 NHS staff to get new artificial intelligence tools to help free up more time for patients",
+      "url": "https://www.england.nhs.uk/2026/06/500000-nhs-staff-to-get-new-artificial-intelligence-tools-to-help-free-up-more-time-for-patients/",
+      "publisher": "NHS England",
+      "accessed": "2026-08-20"
+    },
+    {
+      "title": "NHS accelerates artificial intelligence rollout to cut waiting times and improve care for millions",
+      "url": "https://www.england.nhs.uk/2026/07/nhs-accelerates-artificial-intelligence-rollout-to-cut-waiting-times-and-improve-care-for-millions/",
+      "publisher": "NHS England",
+      "accessed": "2026-08-20"
+    }
+  ],
+  "workings": "NHS England's Microsoft 365 Copilot trial (90 organisations, 30,000+ staff) found an average saving of at least 43 minutes of staff time per person per day. Scaled to the 500,000 staff targeted for the full rollout by October 2026: 43 minutes x 500,000 staff = 21,500,000 minutes/day = 358,333 hours/day. Applying a standard assumed 220-day NHS working year (a Tom & Co assumption, not an NHS-published figure): 358,333 x 220 = approximately 78,833,333 hours/year, rounded to roughly 79 million hours a year. NHS England has not published this national annualised total itself.",
+  "first_used_in": "agentic-ai-enterprise-deployment",
+  "first_used_date": "2026-08-20",
+  "layer": 2
+}

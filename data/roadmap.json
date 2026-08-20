@@ -230,10 +230,11 @@
       "Competition": "Med",
       "Suggested length": "1800-2400",
       "Quick win": null,
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-08-20",
+      "Notes": "slug: agentic-ai-enterprise-deployment",
+      "Slug": "agentic-ai-enterprise-deployment"
     },
     {
       "ID": 13,
