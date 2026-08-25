@@ -1,0 +1,24 @@
+{
+  "id": "stat_021",
+  "stat": "Share of the whole UK adult population within reach of an AI-generated answer at least sometimes",
+  "value": "71",
+  "unit": "percent (approx) of all UK adults aged 16+",
+  "date_calculated": "2026-08-25",
+  "applies_to": [
+    "topic IDs: 22, 29, 30, 31",
+    "clusters: Marketing & Sales; Generative Engine Optimization"
+  ],
+  "method": "Recipe B (combination cut) — multiplying two rates published separately in a single primary Ofcom survey to derive a population-wide share the source does not state directly",
+  "sources_used": [
+    {
+      "title": "Passive social media use, AI companionship, and online side hustles: UK adults' media and online lives revealed (Adults' Media Use and Attitudes 2026)",
+      "url": "https://www.ofcom.org.uk/media-use-and-attitudes/media-habits-adults/passive-social-media-use-ai-companionship-and-online-side-hustles-uk-adults-media-and-online-lives-revealed",
+      "publisher": "Ofcom",
+      "accessed": "2026-08-25"
+    }
+  ],
+  "workings": "Ofcom's 2026 Adults' Media Use and Attitudes research (survey of 7,533 UK adults 16+, fieldwork Sep-Nov 2025, published 2 April 2026) reports two rates separately: 94% of UK adults have home internet access, and 75% of online adults read AI-generated search summaries at least sometimes. Multiplying the two published rates gives the share of the WHOLE UK adult population (online or not) likely exposed to an AI-generated summary at least sometimes: 0.94 x 0.75 = 0.705, rounded to approximately 71%. Ofcom does not publish this combined population-wide figure itself.",
+  "first_used_in": "category-authority-for-ai-retrieval",
+  "first_used_date": "2026-08-25",
+  "layer": 2
+}

@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "71%",
+      "label": "Of all UK adults are within reach of an AI-generated answer at least sometimes",
+      "source": "Tom & Co analysis of Ofcom data, 2026"
+    },
+    {
+      "value": "54%",
+      "label": "Of UK adults now use an AI tool such as ChatGPT, up from 31%",
+      "source": "Ofcom Adults' Media Use and Attitudes, Apr 2026"
+    },
+    {
+      "value": "40%",
+      "label": "Maximum citation-rate lift from GEO content tactics in controlled testing",
+      "source": "Princeton/IIT Delhi GEO study, KDD 2024"
+    },
+    {
+      "value": "2.1m",
+      "label": "UK businesses now using AI for marketing or content work",
+      "source": "Tom & Co analysis of BCC and gov.uk data, 2026"
+    }
+  ]
+}
