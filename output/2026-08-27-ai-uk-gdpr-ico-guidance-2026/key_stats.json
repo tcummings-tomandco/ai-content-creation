@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "5 Feb 2026",
+      "label": "Section 80 of the Data (Use and Access) Act 2025 replaced Article 22 UK GDPR",
+      "source": "legislation.gov.uk, Data (Use and Access) Act 2025"
+    },
+    {
+      "value": "231 days",
+      "label": "Between DUAA royal assent and Section 80 actually taking effect",
+      "source": "Tom & Co analysis of legislation.gov.uk dates, 2026"
+    },
+    {
+      "value": "£17.5m/4%",
+      "label": "ICO's maximum UK GDPR fine: £17.5m or 4% of global turnover, whichever is higher",
+      "source": "ICO data protection fining guidance"
+    },
+    {
+      "value": "11",
+      "label": "Major AI foundation model developers the ICO is directly engaging with",
+      "source": "ICO AI and biometrics strategy, updated Mar 2026"
+    }
+  ]
+}

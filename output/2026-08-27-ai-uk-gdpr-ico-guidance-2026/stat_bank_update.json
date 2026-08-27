@@ -1,0 +1,30 @@
+{
+  "id": "stat_022",
+  "stat": "Calendar-day gap between the Data (Use and Access) Act 2025 receiving royal assent and Section 80 (replacing UK GDPR Article 22) actually coming into force",
+  "value": "231",
+  "unit": "days",
+  "date_calculated": "2026-08-27",
+  "applies_to": [
+    "topic ID: 35",
+    "clusters: Risk, Governance & Legal"
+  ],
+  "method": "Recipe F (time-to-comply estimate) — calendar-day delta between two dates published separately on legislation.gov.uk, neither of which the source states as a single elapsed figure",
+  "sources_used": [
+    {
+      "title": "Data (Use and Access) Act 2025 (royal assent)",
+      "url": "https://www.legislation.gov.uk/ukpga/2025/18/contents/enacted",
+      "publisher": "legislation.gov.uk (The National Archives)",
+      "accessed": "2026-08-27"
+    },
+    {
+      "title": "Data (Use and Access) Act 2025, Section 80",
+      "url": "https://www.legislation.gov.uk/ukpga/2025/18/section/80",
+      "publisher": "legislation.gov.uk (The National Archives)",
+      "accessed": "2026-08-27"
+    }
+  ],
+  "workings": "Royal assent: 19 June 2025. Section 80 (automated decision-making, replacing UK GDPR Article 22) commencement: 5 February 2026. Days remaining in June after the 19th: 11. Plus full months July (31) + August (31) + September (30) + October (31) + November (30) + December (31) + January (31) = 215. Plus 5 days in February to reach commencement. Total: 11 + 215 + 5 = 231 days.",
+  "first_used_in": "ai-uk-gdpr-ico-guidance-2026",
+  "first_used_date": "2026-08-27",
+  "layer": 2
+}
