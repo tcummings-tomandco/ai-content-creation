@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "13",
+      "label": "Types of processing that trigger a mandatory UK GDPR DPIA, including AI",
+      "source": "ICO, examples of processing likely to result in high risk"
+    },
+    {
+      "value": "£247,590",
+      "label": "ICO fine for MediaLab.AI (Imgur), 4 Feb 2026, partly for no DPIA",
+      "source": "ICO penalty notice, 4 February 2026"
+    },
+    {
+      "value": "Up to 14 weeks",
+      "label": "Maximum ICO response time for prior consultation on high-risk DPIAs",
+      "source": "ICO, do we need to consult the ICO?"
+    },
+    {
+      "value": "29%",
+      "label": "Of UK businesses used at least one AI technology in June 2026",
+      "source": "ONS Business Insights and Conditions Survey, June 2026"
+    }
+  ]
+}
