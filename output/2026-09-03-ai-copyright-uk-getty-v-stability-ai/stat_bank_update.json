@@ -1,0 +1,36 @@
+{
+  "id": "stat_024",
+  "stat": "Margin by which the UK government's statutory Report on Copyright and Artificial Intelligence beat its own 9-month deadline under the Data (Use and Access) Act 2025",
+  "value": "1",
+  "unit": "day",
+  "date_calculated": "2026-09-03",
+  "applies_to": [
+    "topic ID: 39",
+    "clusters: Risk, Governance & Legal"
+  ],
+  "method": "Recipe F (time-to-comply / deadline analysis) — calendar-day delta between the Act's royal assent date and the report's actual publication date, neither of which the sources state as a single elapsed or margin figure",
+  "sources_used": [
+    {
+      "title": "Data (Use and Access) Act 2025 (royal assent)",
+      "url": "https://www.legislation.gov.uk/ukpga/2025/18/contents/enacted",
+      "publisher": "legislation.gov.uk (The National Archives)",
+      "accessed": "2026-09-03"
+    },
+    {
+      "title": "Data (Use and Access) Act 2025, Part 7, ss.135-136 (copyright works and artificial intelligence systems)",
+      "url": "https://www.legislation.gov.uk/ukpga/2025/18/part/7/crossheading/copyright-works-and-artificial-intelligence-systems",
+      "publisher": "legislation.gov.uk (The National Archives)",
+      "accessed": "2026-09-03"
+    },
+    {
+      "title": "Report on Copyright and Artificial Intelligence",
+      "url": "https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence",
+      "publisher": "Department for Science, Innovation and Technology (DSIT), Department for Culture, Media and Sport (DCMS), Intellectual Property Office (IPO)",
+      "accessed": "2026-09-03"
+    }
+  ],
+  "workings": "Royal assent of the Data (Use and Access) Act 2025: 19 June 2025. Sections 135 and 136 require the report and impact assessment to be published within 9 months of that date, a deadline falling on 19 March 2026. The report was in fact published on 18 March 2026. 19 March 2026 minus 18 March 2026 = 1 calendar day of margin before the statutory deadline would have been missed.",
+  "first_used_in": "ai-copyright-uk-getty-v-stability-ai",
+  "first_used_date": "2026-09-03",
+  "layer": 2
+}
