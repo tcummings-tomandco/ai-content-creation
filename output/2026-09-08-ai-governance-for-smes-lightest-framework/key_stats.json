@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "54%",
+      "label": "Of UK firms were actively using AI by March 2026, up from 23% in 2023",
+      "source": "British Chambers of Commerce and Atos, March 2026"
+    },
+    {
+      "value": "£2.6bn",
+      "label": "Direct UK government AI funding across the Action Plan's first year",
+      "source": "Tom & Co analysis of gov.uk's AI Opportunities Action Plan: One Year On"
+    },
+    {
+      "value": "Dec 2025",
+      "label": "DSIT shelved its one-size-fits-all AI Management Essentials tool",
+      "source": "gov.uk, AI Management Essentials tool: government response"
+    },
+    {
+      "value": "75% vs 30%",
+      "label": "Largest UK law firms using AI vs small firms still exploring it",
+      "source": "SRA data cited by the Law Society"
+    }
+  ]
+}

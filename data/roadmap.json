@@ -812,10 +812,11 @@
       "Competition": "Low",
       "Suggested length": "2000-2800",
       "Quick win": null,
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-09-08",
+      "Notes": "slug: ai-governance-for-smes-lightest-framework",
+      "Slug": "ai-governance-for-smes-lightest-framework"
     },
     {
       "ID": 43,
