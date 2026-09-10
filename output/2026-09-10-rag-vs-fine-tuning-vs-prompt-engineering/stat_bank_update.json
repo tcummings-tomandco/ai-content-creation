@@ -1,0 +1,30 @@
+{
+  "id": "stat_025",
+  "stat": "Sterling cost of fine-tuning OpenAI's GPT-4.1/GPT-4o and the o4-mini reinforcement fine-tuning training rate, converted from OpenAI's published USD pricing",
+  "value": "18.50 / 74",
+  "unit": "GBP per 1M training tokens (GPT-4.1/4o) / GBP per hour of training compute (o4-mini RFT)",
+  "date_calculated": "2026-09-10",
+  "applies_to": [
+    "topic ID: 45",
+    "clusters: Technical & Build"
+  ],
+  "method": "Recipe A (sterling conversion of a foreign benchmark) — OpenAI's own published USD fine-tuning pricing converted at an approximate September 2026 GBP/USD market rate",
+  "sources_used": [
+    {
+      "title": "Pricing",
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "publisher": "OpenAI",
+      "accessed": "2026-09-10"
+    },
+    {
+      "title": "Deprecations",
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "publisher": "OpenAI",
+      "accessed": "2026-09-10"
+    }
+  ],
+  "workings": "OpenAI's published fine-tuning price list: standard supervised fine-tuning for GPT-4.1 and GPT-4o costs $25 per 1M training tokens; the reinforcement fine-tuning route for o4-mini bills training compute at $100 per hour of wall-clock core-training-loop time. Converted at an approximate GBP/USD market rate of 1.35 for the week of 8 September 2026 (multiple financial data sources placed the pair between 1.33 and 1.36 that week; this is an approximate market rate, not a same-day Bank of England reference rate pulled directly, consistent with the conversion methodology used in stat_002). $25 / 1.35 = £18.52/1M tokens, rounded to £18.50. $100 / 1.35 = £74.07/hour, rounded to £74/hour. Note: OpenAI began winding down this fine-tuning platform to new customers from 7 May 2026, so this cost figure has a shrinking pool of UK businesses who can actually access it as new customers.",
+  "first_used_in": "rag-vs-fine-tuning-vs-prompt-engineering",
+  "first_used_date": "2026-09-10",
+  "layer": 2
+}

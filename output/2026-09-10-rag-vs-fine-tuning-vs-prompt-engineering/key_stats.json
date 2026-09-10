@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "£18.50",
+      "label": "Cost to fine-tune GPT-4.1/4o per 1M training tokens (sterling)",
+      "source": "Tom & Co analysis of OpenAI pricing, Sept 2026"
+    },
+    {
+      "value": "7 May 2026",
+      "label": "Date OpenAI closed its fine-tuning platform to new starters",
+      "source": "OpenAI API deprecations, developers.openai.com"
+    },
+    {
+      "value": "85% vs 7%",
+      "label": "UK AI-adopters using text generation vs agentic AI",
+      "source": "DSIT AI Adoption Research, 2026"
+    },
+    {
+      "value": "12x",
+      "label": "More UK firms use generative AI than agentic AI",
+      "source": "Tom & Co analysis of DSIT adoption data"
+    }
+  ]
+}

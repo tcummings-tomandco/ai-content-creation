@@ -870,10 +870,11 @@
       "Competition": "High",
       "Suggested length": "2000-2800",
       "Quick win": null,
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-09-10",
+      "Notes": "slug: rag-vs-fine-tuning-vs-prompt-engineering",
+      "Slug": "rag-vs-fine-tuning-vs-prompt-engineering"
     },
     {
       "ID": 46,
