@@ -1,727 +1,757 @@
 {
-  "_note": "Tom & Co original calculations and proprietary stats. Each Layer 2 article appends an entry. Each Layer 3 datapoint (survey, anonymised client outcome) is added manually by Tom with `layer: 3`. See .claude/skills/tomandco-article/stat-sourcing.md for the schema.",
-  "stats": [
-    {
-      "id": "stat_001",
-      "stat": "UK government direct AI funding announced or detailed across the twelve months covered by the AI Opportunities Action Plan: One Year On",
-      "value": "2.6",
-      "unit": "GBP billion",
-      "date_calculated": "2026-04-29",
-      "applies_to": [
-        "topic IDs: 1, 2, 5, 33, 34, 35, 42, 47",
-        "clusters: Strategy & ROI; Risk, Governance & Legal"
-      ],
-      "method": "Recipe E (funding maths) — aggregation of named funding lines from a single primary government document",
-      "sources_used": [
+    "_note": "Tom & Co original calculations and proprietary stats. Each Layer 2 article appends an entry. Each Layer 3 datapoint (survey, anonymised client outcome) is added manually by Tom with `layer: 3`. See .claude/skills/tomandco-article/stat-sourcing.md for the schema.",
+    "stats": [
         {
-          "title": "AI Opportunities Action Plan: One Year On",
-          "url": "https://www.gov.uk/government/publications/ai-opportunities-action-plan-one-year-on/ai-opportunities-action-plan-one-year-on",
-          "publisher": "Department for Science, Innovation and Technology (DSIT)",
-          "accessed": "2026-04-29"
-        }
-      ],
-      "workings": "AISI 240 + AIRR 250 + Edinburgh supercomputer 750 + Sovereign AI Unit 500 + TechFirst 187 + Modern Industrial Strategy AI 150 + HDRS gov contribution 400 (of 600 total) + NDL 100 + Robotics/Made Smarter 40 + Smart Data 36 + AI Growth Zones direct 25 + AI Assurance Innovation Fund 11 + Regulators' Pioneer Fund 8.9 + TechLocal AI Accelerator 7.8 + AI Capability Fund 3.6 = 2,709.3 GBP million ≈ 2.6 GBP billion (rounded down conservatively). Excludes the £28.2bn private investment the AI Growth Zones programme is reported to have generated.",
-      "first_used_in": "uk-ai-regulation-2026-principles-based-field-guide",
-      "first_used_date": "2026-04-29",
-      "layer": 2
-    },
-    {
-      "id": "stat_002",
-      "stat": "Annual turnover threshold below which EU AI Act percentage-of-turnover fines are always the operative (lower) cap rather than the fixed euro amount",
-      "value": "420",
-      "unit": "GBP million",
-      "date_calculated": "2026-06-23",
-      "applies_to": [
-        "topic ID: 33",
-        "clusters: Risk, Governance & Legal"
-      ],
-      "method": "Recipe A — sterling conversion and break-even calculation of EU AI Act Article 99 penalty thresholds",
-      "sources_used": [
-        {
-          "title": "EU AI Act Article 99 — Penalties",
-          "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-99",
-          "publisher": "European Commission EU AI Act Service Desk",
-          "accessed": "2026-06-23"
+            "id": "stat_001",
+            "stat": "UK government direct AI funding announced or detailed across the twelve months covered by the AI Opportunities Action Plan: One Year On",
+            "value": "2.6",
+            "unit": "GBP billion",
+            "date_calculated": "2026-04-29",
+            "applies_to": [
+                "topic IDs: 1, 2, 5, 33, 34, 35, 42, 47",
+                "clusters: Strategy & ROI; Risk, Governance & Legal"
+            ],
+            "method": "Recipe E (funding maths) — aggregation of named funding lines from a single primary government document",
+            "sources_used": [
+                {
+                    "title": "AI Opportunities Action Plan: One Year On",
+                    "url": "https://www.gov.uk/government/publications/ai-opportunities-action-plan-one-year-on/ai-opportunities-action-plan-one-year-on",
+                    "publisher": "Department for Science, Innovation and Technology (DSIT)",
+                    "accessed": "2026-04-29"
+                }
+            ],
+            "workings": "AISI 240 + AIRR 250 + Edinburgh supercomputer 750 + Sovereign AI Unit 500 + TechFirst 187 + Modern Industrial Strategy AI 150 + HDRS gov contribution 400 (of 600 total) + NDL 100 + Robotics/Made Smarter 40 + Smart Data 36 + AI Growth Zones direct 25 + AI Assurance Innovation Fund 11 + Regulators' Pioneer Fund 8.9 + TechLocal AI Accelerator 7.8 + AI Capability Fund 3.6 = 2,709.3 GBP million ≈ 2.6 GBP billion (rounded down conservatively). Excludes the £28.2bn private investment the AI Growth Zones programme is reported to have generated.",
+            "first_used_in": "uk-ai-regulation-2026-principles-based-field-guide",
+            "first_used_date": "2026-04-29",
+            "layer": 2
         },
         {
-          "title": "EU AI Act full text (Regulation (EU) 2024/1689)",
-          "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
-          "publisher": "Official Journal of the European Union",
-          "accessed": "2026-06-23"
-        }
-      ],
-      "workings": "Tier 1 (prohibited AI): fixed cap €35m ÷ 7% = €500m break-even turnover. Tier 2 (high-risk and transparency): €15m ÷ 3% = €500m break-even. Tiers 1 and 2 share the same €500m break-even. EUR/GBP conversion at 0.845 (approximate June 2026 market rate): €500m × 0.845 = £422.5m, rounded conservatively to £420m. Below £420m annual global turnover, the % cap always produces the smaller fine in Tiers 1 and 2. Above £420m, the fixed euro cap is the binding limit. Virtually all UK SMEs and most UK mid-caps are below this threshold.",
-      "first_used_in": "does-the-eu-ai-act-apply-to-my-uk-business",
-      "first_used_date": "2026-06-23",
-      "layer": 2
-    },
-    {
-      "id": "stat_003",
-      "stat": "Break-even productivity saving for a 10-person UK knowledge-worker team on a business AI subscription (~£1,900/year)",
-      "value": "9",
-      "unit": "minutes per person per week",
-      "date_calculated": "2026-06-25",
-      "applies_to": [
-        "topic ID: 47",
-        "clusters: Technical & Build; Strategy & ROI"
-      ],
-      "method": "Recipe D — cost-per-outcome ratio using ONS median earnings data and published vendor pricing",
-      "sources_used": [
-        {
-          "title": "Annual Survey of Hours and Earnings (ASHE) 2024",
-          "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2024",
-          "publisher": "Office for National Statistics",
-          "accessed": "2026-06-25"
+            "id": "stat_002",
+            "stat": "Annual turnover threshold below which EU AI Act percentage-of-turnover fines are always the operative (lower) cap rather than the fixed euro amount",
+            "value": "420",
+            "unit": "GBP million",
+            "date_calculated": "2026-06-23",
+            "applies_to": [
+                "topic ID: 33",
+                "clusters: Risk, Governance & Legal"
+            ],
+            "method": "Recipe A — sterling conversion and break-even calculation of EU AI Act Article 99 penalty thresholds",
+            "sources_used": [
+                {
+                    "title": "EU AI Act Article 99 — Penalties",
+                    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-99",
+                    "publisher": "European Commission EU AI Act Service Desk",
+                    "accessed": "2026-06-23"
+                },
+                {
+                    "title": "EU AI Act full text (Regulation (EU) 2024/1689)",
+                    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+                    "publisher": "Official Journal of the European Union",
+                    "accessed": "2026-06-23"
+                }
+            ],
+            "workings": "Tier 1 (prohibited AI): fixed cap €35m ÷ 7% = €500m break-even turnover. Tier 2 (high-risk and transparency): €15m ÷ 3% = €500m break-even. Tiers 1 and 2 share the same €500m break-even. EUR/GBP conversion at 0.845 (approximate June 2026 market rate): €500m × 0.845 = £422.5m, rounded conservatively to £420m. Below £420m annual global turnover, the % cap always produces the smaller fine in Tiers 1 and 2. Above £420m, the fixed euro cap is the binding limit. Virtually all UK SMEs and most UK mid-caps are below this threshold.",
+            "first_used_in": "does-the-eu-ai-act-apply-to-my-uk-business",
+            "first_used_date": "2026-06-23",
+            "layer": 2
         },
         {
-          "title": "ChatGPT Plans and Pricing",
-          "url": "https://chatgpt.com/pricing/",
-          "publisher": "OpenAI",
-          "accessed": "2026-06-25"
-        }
-      ],
-      "workings": "ONS ASHE 2024: median full-time weekly earnings £728 × 52 = £37,856/year gross. Employer NI (13.8% above £9,100 secondary threshold): (£37,856 − £9,100) × 0.138 = £3,968. Employer pension 3% minimum (on qualifying earnings above £6,240): (£37,856 − £6,240) × 0.03 = £948. Total employer cost: £37,856 + £3,968 + £948 = £42,772/year ≈ £42,800/year. Hourly rate at 1,800 productive hours/year: £42,800 / 1,800 = £23.78/hour. ChatGPT Business annual at ~£16/user/month: 10 × £16 × 12 = £1,920/year. Per-person annual cost: £192. Hours to break even per person: £192 / £23.78 = 8.07 hours/year. Minutes per week: (8.07 × 60) / 52 = 9.3 min/person/week ≈ under 10 minutes.",
-      "first_used_in": "chatgpt-vs-claude-vs-gemini-for-business",
-      "first_used_date": "2026-06-25",
-      "layer": 2
-    },
-    {
-      "id": "stat_004",
-      "stat": "AI adoption velocity among the UK's largest solicitors' firms, 2020-2023",
-      "value": "12",
-      "unit": "percentage points per year",
-      "date_calculated": "2026-06-30",
-      "applies_to": [
-        "topic ID: 60",
-        "clusters: UK Industry Verticals; Risk, Governance & Legal"
-      ],
-      "method": "Recipe C — year-on-year delta derived from SRA Risk Outlook Report (November 2023) data",
-      "sources_used": [
-        {
-          "title": "SRA Risk Outlook report: The use of artificial intelligence in the legal market",
-          "url": "https://www.sra.org.uk/sra/research-publications/artificial-intelligence-legal-market/",
-          "publisher": "Solicitors Regulation Authority",
-          "accessed": "2026-06-30"
-        }
-      ],
-      "workings": "SRA Risk Outlook (November 2023) states that 75% of the largest solicitors' firms were using AI, 'nearly twice the number from just three years ago.' Implied baseline (November 2020): 75% / ~2 = approximately 37.5%. Change over 3 years: 75% minus 37.5% = 37.5 percentage points. Annual adoption velocity: 37.5pp / 3 years = 12.5pp per year, rounded conservatively to 12pp. This calculation was completed before ChatGPT's mainstream availability (November 2022), so actual post-2022 velocity is likely higher.",
-      "first_used_in": "ai-for-uk-law-firms-sra-approved-use-cases",
-      "first_used_date": "2026-06-30",
-      "layer": 2
-    },
-    {
-      "id": "stat_005",
-      "stat": "Implied share of UK firms with 250 or more staff actually running agentic AI, mid-2025",
-      "value": "3",
-      "unit": "percent (approx)",
-      "date_calculated": "2026-07-01",
-      "applies_to": [
-        "topic: agentic AI use cases for mid-market businesses",
-        "clusters: Strategy & ROI; Operations & Efficiency"
-      ],
-      "method": "Recipe C / cross-source derivation — combining two published UK adoption figures the sources did not multiply together",
-      "sources_used": [
-        {
-          "title": "Business insights and impact on the UK economy (Business Insights and Conditions Survey), bulletin 8 January 2026",
-          "url": "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/bulletins/businessinsightsandimpactontheukeconomy/8january2026",
-          "publisher": "Office for National Statistics",
-          "accessed": "2026-07-01"
+            "id": "stat_003",
+            "stat": "Break-even productivity saving for a 10-person UK knowledge-worker team on a business AI subscription (~£1,900/year)",
+            "value": "9",
+            "unit": "minutes per person per week",
+            "date_calculated": "2026-06-25",
+            "applies_to": [
+                "topic ID: 47",
+                "clusters: Technical & Build; Strategy & ROI"
+            ],
+            "method": "Recipe D — cost-per-outcome ratio using ONS median earnings data and published vendor pricing",
+            "sources_used": [
+                {
+                    "title": "Annual Survey of Hours and Earnings (ASHE) 2024",
+                    "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2024",
+                    "publisher": "Office for National Statistics",
+                    "accessed": "2026-06-25"
+                },
+                {
+                    "title": "ChatGPT Plans and Pricing",
+                    "url": "https://chatgpt.com/pricing/",
+                    "publisher": "OpenAI",
+                    "accessed": "2026-06-25"
+                }
+            ],
+            "workings": "ONS ASHE 2024: median full-time weekly earnings £728 × 52 = £37,856/year gross. Employer NI (13.8% above £9,100 secondary threshold): (£37,856 − £9,100) × 0.138 = £3,968. Employer pension 3% minimum (on qualifying earnings above £6,240): (£37,856 − £6,240) × 0.03 = £948. Total employer cost: £37,856 + £3,968 + £948 = £42,772/year ≈ £42,800/year. Hourly rate at 1,800 productive hours/year: £42,800 / 1,800 = £23.78/hour. ChatGPT Business annual at ~£16/user/month: 10 × £16 × 12 = £1,920/year. Per-person annual cost: £192. Hours to break even per person: £192 / £23.78 = 8.07 hours/year. Minutes per week: (8.07 × 60) / 52 = 9.3 min/person/week ≈ under 10 minutes.",
+            "first_used_in": "chatgpt-vs-claude-vs-gemini-for-business",
+            "first_used_date": "2026-06-25",
+            "layer": 2
         },
         {
-          "title": "AI Adoption Research (survey February to May 2025)",
-          "url": "https://www.gov.uk/government/publications/ai-adoption-research/ai-adoption-research",
-          "publisher": "Department for Science, Innovation and Technology (IFF Research and Technopolis Group)",
-          "accessed": "2026-07-01"
-        }
-      ],
-      "workings": "ONS BICS (late December 2025): 44% of UK firms with 250+ employees use some form of AI. DSIT AI Adoption Research (survey 12 Feb - 2 May 2025): agentic AI is the least-adopted AI technology at 7% of AI-using firms. Combined: 0.44 x 0.07 = 0.0308 = approximately 3.1% of large/mid-market UK firms running agentic AI in mid-2025. Conservative note: the two surveys use slightly different populations and reference dates, so treat as an order-of-magnitude estimate; neither source published the combined figure.",
-      "first_used_in": "agentic-ai-use-cases-mid-market",
-      "first_used_date": "2026-07-01",
-      "layer": 2
-    },
-    {
-      "_note": "Layer 2 calculation from this article, for the central process to merge into data/stat_bank.json. This subagent does NOT edit data/stat_bank.json directly.",
-      "id": "stat_006",
-      "stat": "Share of all UK businesses using generative/text-generation AI vs agentic AI, derived from DSIT adoption rates",
-      "value": "13.6% vs 1.1%",
-      "unit": "percent of all UK businesses (approx. 12x gap)",
-      "date_calculated": "2026-07-01",
-      "applies_to": [
-        "topics: agentic-ai-vs-generative-ai, what-is-agentic-ai, what-are-ai-agents",
-        "clusters: Technical & Build; Tools & emerging vocabulary; Strategy & ROI"
-      ],
-      "method": "Recipe C — share-of-all-firms cut derived from a single primary snapshot (DSIT) that the source did not publish in this form",
-      "sources_used": [
-        {
-          "title": "AI Adoption Research",
-          "url": "https://www.gov.uk/government/publications/ai-adoption-research/ai-adoption-research",
-          "publisher": "Department for Science, Innovation and Technology (DSIT)",
-          "accessed": "2026-07-01"
-        }
-      ],
-      "workings": "DSIT (published 13 Feb 2026): 16% of all UK businesses use at least one AI technology; among adopters, 85% use text generation and 7% use agentic AI. Share of ALL UK businesses using text generation = 0.16 x 0.85 = 0.136 = 13.6%. Share using agentic AI = 0.16 x 0.07 = 0.0112 = ~1.1%. Ratio = 85/7 = ~12.1x (holds across all firms as the 16% base cancels). Result: generative/text-generation AI reaches ~13.6% of all UK businesses vs ~1.1% for agentic AI, a ~12x gap.",
-      "first_used_in": "agentic-ai-vs-generative-ai",
-      "first_used_date": "2026-07-01",
-      "layer": 2
-    },
-    {
-      "_note": "Proposed Layer 2 entry for data/stat_bank.json. Written to the article output folder only; the central process merges it. This subagent does NOT edit data/stat_bank.json directly (per ad-hoc batch instructions).",
-      "id": "stat_007",
-      "stat": "Orchestration cost premium of a multi-agent orchestrated AI system over a single AI agent",
-      "value": "3.75",
-      "unit": "x (multiple of single-agent model spend)",
-      "date_calculated": "2026-07-01",
-      "applies_to": [
-        "topic: what-is-an-ai-agent-orchestrator",
-        "clusters: Technical & Build; Tools & emerging vocabulary"
-      ],
-      "method": "Recipe D — cost-per-outcome ratio derived from published Anthropic token multipliers",
-      "sources_used": [
-        {
-          "title": "How we built our multi-agent research system",
-          "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
-          "publisher": "Anthropic",
-          "accessed": "2026-07-01"
-        }
-      ],
-      "workings": "Anthropic reports a multi-agent system uses about 15x the tokens of a chat, and a single agent uses about 4x the tokens of a chat. Dividing isolates the orchestration premium: 15 / 4 = 3.75x. Illustrative sterling example: a request costing a single agent £100 in model spend runs to roughly £375 for an orchestrated multi-agent version. Caveat: token count is a proxy for model spend and assumes comparable per-token pricing; it is a coordination-cost indicator, not full TCO (excludes engineering, latency, observability).",
-      "first_used_in": "what-is-an-ai-agent-orchestrator",
-      "first_used_date": "2026-07-01",
-      "layer": 2
-    },
-    {
-      "id": "stat_008",
-      "stat": "Estimated sterling saving per employee per year from applying McKinsey's reported 10-20% AI cost reduction (software engineering, IT and manufacturing functions) to the fully loaded cost of a median UK employee",
-      "value": "4500-9000",
-      "unit": "GBP per employee per year",
-      "date_calculated": "2026-07-02",
-      "applies_to": [
-        "topic IDs: 1, 2, 5, 47",
-        "clusters: Strategy & ROI; Technical & Build"
-      ],
-      "method": "Recipe A — sterling conversion applying a published cost-reduction percentage to ONS UK median employee cost data",
-      "sources_used": [
-        {
-          "title": "Employee earnings in the UK: 2025 (ASHE 2025 provisional results)",
-          "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2025",
-          "publisher": "Office for National Statistics",
-          "accessed": "2026-07-02"
+            "id": "stat_004",
+            "stat": "AI adoption velocity among the UK's largest solicitors' firms, 2020-2023",
+            "value": "12",
+            "unit": "percentage points per year",
+            "date_calculated": "2026-06-30",
+            "applies_to": [
+                "topic ID: 60",
+                "clusters: UK Industry Verticals; Risk, Governance & Legal"
+            ],
+            "method": "Recipe C — year-on-year delta derived from SRA Risk Outlook Report (November 2023) data",
+            "sources_used": [
+                {
+                    "title": "SRA Risk Outlook report: The use of artificial intelligence in the legal market",
+                    "url": "https://www.sra.org.uk/sra/research-publications/artificial-intelligence-legal-market/",
+                    "publisher": "Solicitors Regulation Authority",
+                    "accessed": "2026-06-30"
+                }
+            ],
+            "workings": "SRA Risk Outlook (November 2023) states that 75% of the largest solicitors' firms were using AI, 'nearly twice the number from just three years ago.' Implied baseline (November 2020): 75% / ~2 = approximately 37.5%. Change over 3 years: 75% minus 37.5% = 37.5 percentage points. Annual adoption velocity: 37.5pp / 3 years = 12.5pp per year, rounded conservatively to 12pp. This calculation was completed before ChatGPT's mainstream availability (November 2022), so actual post-2022 velocity is likely higher.",
+            "first_used_in": "ai-for-uk-law-firms-sra-approved-use-cases",
+            "first_used_date": "2026-06-30",
+            "layer": 2
         },
         {
-          "title": "Rates and thresholds for employers 2026 to 2027",
-          "url": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027",
-          "publisher": "HM Revenue & Customs / GOV.UK",
-          "accessed": "2026-07-02"
+            "id": "stat_005",
+            "stat": "Implied share of UK firms with 250 or more staff actually running agentic AI, mid-2025",
+            "value": "3",
+            "unit": "percent (approx)",
+            "date_calculated": "2026-07-01",
+            "applies_to": [
+                "topic: agentic AI use cases for mid-market businesses",
+                "clusters: Strategy & ROI; Operations & Efficiency"
+            ],
+            "method": "Recipe C / cross-source derivation — combining two published UK adoption figures the sources did not multiply together",
+            "sources_used": [
+                {
+                    "title": "Business insights and impact on the UK economy (Business Insights and Conditions Survey), bulletin 8 January 2026",
+                    "url": "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/bulletins/businessinsightsandimpactontheukeconomy/8january2026",
+                    "publisher": "Office for National Statistics",
+                    "accessed": "2026-07-01"
+                },
+                {
+                    "title": "AI Adoption Research (survey February to May 2025)",
+                    "url": "https://www.gov.uk/government/publications/ai-adoption-research/ai-adoption-research",
+                    "publisher": "Department for Science, Innovation and Technology (IFF Research and Technopolis Group)",
+                    "accessed": "2026-07-01"
+                }
+            ],
+            "workings": "ONS BICS (late December 2025): 44% of UK firms with 250+ employees use some form of AI. DSIT AI Adoption Research (survey 12 Feb - 2 May 2025): agentic AI is the least-adopted AI technology at 7% of AI-using firms. Combined: 0.44 x 0.07 = 0.0308 = approximately 3.1% of large/mid-market UK firms running agentic AI in mid-2025. Conservative note: the two surveys use slightly different populations and reference dates, so treat as an order-of-magnitude estimate; neither source published the combined figure.",
+            "first_used_in": "agentic-ai-use-cases-mid-market",
+            "first_used_date": "2026-07-01",
+            "layer": 2
         },
         {
-          "title": "The state of AI: How organizations are rewiring to capture value",
-          "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-          "publisher": "McKinsey & Company (QuantumBlack)",
-          "accessed": "2026-07-02"
-        }
-      ],
-      "workings": "ONS ASHE 2025: median gross annual earnings for full-time employees in post at least a year, April 2025 = GBP 39,039. Employer NI 2026/27: 15% on earnings above the GBP 5,000 secondary threshold = (39,039 - 5,000) x 0.15 = GBP 5,105.85. Employer minimum pension (3% on qualifying earnings band GBP 6,240-GBP 50,270, unchanged for 2026/27) = (39,039 - 6,240) x 0.03 = GBP 983.97. Fully loaded employer cost = 39,039 + 5,105.85 + 983.97 = GBP 45,128.82, rounded to GBP 45,100. Applying McKinsey's reported 10-20% cost reduction in software engineering, IT and manufacturing functions: low end 45,100 x 0.10 = GBP 4,510; high end 45,100 x 0.20 = GBP 9,020. Rounded to a GBP 4,500-GBP 9,000 per employee per year range.",
-      "first_used_in": "ai-roi-uk-business-2026-what-the-evidence-actually-shows",
-      "first_used_date": "2026-07-02",
-      "layer": 2
-    },
-    {
-      "id": "stat_009",
-      "stat": "Sterling value of a Made Smarter-backed UK manufacturer's reported AI invoice-processing time saving, at ONS median admin/secretarial pay",
-      "value": "12200",
-      "unit": "GBP per year (approx)",
-      "date_calculated": "2026-07-09",
-      "applies_to": [
-        "topic IDs: 1, 2, 3, 5",
-        "clusters: Strategy & ROI"
-      ],
-      "method": "Recipe A (sterling conversion) — converting a reported hours-saved case study into a loaded sterling value using ONS pay data",
-      "sources_used": [
-        {
-          "title": "First wave of South East manufacturers geared for growth with Made Smarter",
-          "url": "https://www.madesmarter.uk/resources/news-first-wave-of-south-east-manufacturers-geared-for-growth-with-made-smarter/",
-          "publisher": "Made Smarter",
-          "accessed": "2026-07-09"
+            "_note": "Layer 2 calculation from this article, for the central process to merge into data/stat_bank.json. This subagent does NOT edit data/stat_bank.json directly.",
+            "id": "stat_006",
+            "stat": "Share of all UK businesses using generative/text-generation AI vs agentic AI, derived from DSIT adoption rates",
+            "value": "13.6% vs 1.1%",
+            "unit": "percent of all UK businesses (approx. 12x gap)",
+            "date_calculated": "2026-07-01",
+            "applies_to": [
+                "topics: agentic-ai-vs-generative-ai, what-is-agentic-ai, what-are-ai-agents",
+                "clusters: Technical & Build; Tools & emerging vocabulary; Strategy & ROI"
+            ],
+            "method": "Recipe C — share-of-all-firms cut derived from a single primary snapshot (DSIT) that the source did not publish in this form",
+            "sources_used": [
+                {
+                    "title": "AI Adoption Research",
+                    "url": "https://www.gov.uk/government/publications/ai-adoption-research/ai-adoption-research",
+                    "publisher": "Department for Science, Innovation and Technology (DSIT)",
+                    "accessed": "2026-07-01"
+                }
+            ],
+            "workings": "DSIT (published 13 Feb 2026): 16% of all UK businesses use at least one AI technology; among adopters, 85% use text generation and 7% use agentic AI. Share of ALL UK businesses using text generation = 0.16 x 0.85 = 0.136 = 13.6%. Share using agentic AI = 0.16 x 0.07 = 0.0112 = ~1.1%. Ratio = 85/7 = ~12.1x (holds across all firms as the 16% base cancels). Result: generative/text-generation AI reaches ~13.6% of all UK businesses vs ~1.1% for agentic AI, a ~12x gap.",
+            "first_used_in": "agentic-ai-vs-generative-ai",
+            "first_used_date": "2026-07-01",
+            "layer": 2
         },
         {
-          "title": "Employee earnings in the UK: 2025 (ASHE 2025)",
-          "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2025",
-          "publisher": "Office for National Statistics",
-          "accessed": "2026-07-09"
+            "_note": "Proposed Layer 2 entry for data/stat_bank.json. Written to the article output folder only; the central process merges it. This subagent does NOT edit data/stat_bank.json directly (per ad-hoc batch instructions).",
+            "id": "stat_007",
+            "stat": "Orchestration cost premium of a multi-agent orchestrated AI system over a single AI agent",
+            "value": "3.75",
+            "unit": "x (multiple of single-agent model spend)",
+            "date_calculated": "2026-07-01",
+            "applies_to": [
+                "topic: what-is-an-ai-agent-orchestrator",
+                "clusters: Technical & Build; Tools & emerging vocabulary"
+            ],
+            "method": "Recipe D — cost-per-outcome ratio derived from published Anthropic token multipliers",
+            "sources_used": [
+                {
+                    "title": "How we built our multi-agent research system",
+                    "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+                    "publisher": "Anthropic",
+                    "accessed": "2026-07-01"
+                }
+            ],
+            "workings": "Anthropic reports a multi-agent system uses about 15x the tokens of a chat, and a single agent uses about 4x the tokens of a chat. Dividing isolates the orchestration premium: 15 / 4 = 3.75x. Illustrative sterling example: a request costing a single agent £100 in model spend runs to roughly £375 for an orchestrated multi-agent version. Caveat: token count is a proxy for model spend and assumes comparable per-token pricing; it is a coordination-cost indicator, not full TCO (excludes engineering, latency, observability).",
+            "first_used_in": "what-is-an-ai-agent-orchestrator",
+            "first_used_date": "2026-07-01",
+            "layer": 2
         },
         {
-          "title": "Rates and thresholds for employers 2026 to 2027",
-          "url": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027",
-          "publisher": "HM Revenue & Customs / GOV.UK",
-          "accessed": "2026-07-09"
-        }
-      ],
-      "workings": "Made Smarter case study: Nordell's AI-powered invoice processing is expected to save more than 60 hours of administration every month, i.e. 720 hours/year. ONS ASHE 2025: full-time median hourly pay for administrative and secretarial occupations = GBP 14.80. Grossed to an annual full-time-equivalent salary at 37.5 hours/week x 52 weeks: 14.80 x 37.5 x 52 = GBP 28,860. Employer NI 2026/27 (15% above the GBP 5,000 secondary threshold): (28,860 - 5,000) x 0.15 = GBP 3,579. Employer minimum auto-enrolment pension (3% on qualifying earnings above GBP 6,240): (28,860 - 6,240) x 0.03 = GBP 678.60. Fully loaded annual cost: 28,860 + 3,579 + 678.60 = GBP 33,117.60. Loaded hourly rate at 1,950 hours/year (37.5 x 52): 33,117.60 / 1,950 = GBP 16.98/hour. Value of 720 hours/year saved: 720 x 16.98 = GBP 12,225.60, rounded to approximately GBP 12,200/year. This values only the reclaimed staff time; it excludes the AI software's own subscription cost and any Made Smarter grant contribution, so it is a gross saving figure, not a net ROI.",
-      "first_used_in": "ai-use-cases-that-pay-back-in-year-one",
-      "first_used_date": "2026-07-09",
-      "layer": 2
-    },
-    {
-      "id": "stat_010",
-      "stat": "Blended annual AI tooling budget range for a 10-seat UK team across five commonly cited subscription tiers",
-      "value": "1710-9000",
-      "unit": "GBP per year (10-seat team)",
-      "date_calculated": "2026-07-14",
-      "applies_to": [
-        "topic ID: 5",
-        "clusters: Strategy & ROI"
-      ],
-      "method": "Recipe D (cost-per-outcome ratio across vendors) — blending several vendors' published per-seat pricing into a single team-level annual budget range that no single vendor publishes",
-      "sources_used": [
-        {
-          "title": "GitHub Copilot Plans and pricing",
-          "url": "https://github.com/features/copilot/plans",
-          "publisher": "GitHub (Microsoft)",
-          "accessed": "2026-07-14"
+            "id": "stat_008",
+            "stat": "Estimated sterling saving per employee per year from applying McKinsey's reported 10-20% AI cost reduction (software engineering, IT and manufacturing functions) to the fully loaded cost of a median UK employee",
+            "value": "4500-9000",
+            "unit": "GBP per employee per year",
+            "date_calculated": "2026-07-02",
+            "applies_to": [
+                "topic IDs: 1, 2, 5, 47",
+                "clusters: Strategy & ROI; Technical & Build"
+            ],
+            "method": "Recipe A — sterling conversion applying a published cost-reduction percentage to ONS UK median employee cost data",
+            "sources_used": [
+                {
+                    "title": "Employee earnings in the UK: 2025 (ASHE 2025 provisional results)",
+                    "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2025",
+                    "publisher": "Office for National Statistics",
+                    "accessed": "2026-07-02"
+                },
+                {
+                    "title": "Rates and thresholds for employers 2026 to 2027",
+                    "url": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027",
+                    "publisher": "HM Revenue & Customs / GOV.UK",
+                    "accessed": "2026-07-02"
+                },
+                {
+                    "title": "The state of AI: How organizations are rewiring to capture value",
+                    "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+                    "publisher": "McKinsey & Company (QuantumBlack)",
+                    "accessed": "2026-07-02"
+                }
+            ],
+            "workings": "ONS ASHE 2025: median gross annual earnings for full-time employees in post at least a year, April 2025 = GBP 39,039. Employer NI 2026/27: 15% on earnings above the GBP 5,000 secondary threshold = (39,039 - 5,000) x 0.15 = GBP 5,105.85. Employer minimum pension (3% on qualifying earnings band GBP 6,240-GBP 50,270, unchanged for 2026/27) = (39,039 - 6,240) x 0.03 = GBP 983.97. Fully loaded employer cost = 39,039 + 5,105.85 + 983.97 = GBP 45,128.82, rounded to GBP 45,100. Applying McKinsey's reported 10-20% cost reduction in software engineering, IT and manufacturing functions: low end 45,100 x 0.10 = GBP 4,510; high end 45,100 x 0.20 = GBP 9,020. Rounded to a GBP 4,500-GBP 9,000 per employee per year range.",
+            "first_used_in": "ai-roi-uk-business-2026-what-the-evidence-actually-shows",
+            "first_used_date": "2026-07-02",
+            "layer": 2
         },
         {
-          "title": "ChatGPT Business pricing",
-          "url": "https://openai.com/business/chatgpt-pricing/",
-          "publisher": "OpenAI",
-          "accessed": "2026-07-14"
+            "id": "stat_009",
+            "stat": "Sterling value of a Made Smarter-backed UK manufacturer's reported AI invoice-processing time saving, at ONS median admin/secretarial pay",
+            "value": "12200",
+            "unit": "GBP per year (approx)",
+            "date_calculated": "2026-07-09",
+            "applies_to": [
+                "topic IDs: 1, 2, 3, 5",
+                "clusters: Strategy & ROI"
+            ],
+            "method": "Recipe A (sterling conversion) — converting a reported hours-saved case study into a loaded sterling value using ONS pay data",
+            "sources_used": [
+                {
+                    "title": "First wave of South East manufacturers geared for growth with Made Smarter",
+                    "url": "https://www.madesmarter.uk/resources/news-first-wave-of-south-east-manufacturers-geared-for-growth-with-made-smarter/",
+                    "publisher": "Made Smarter",
+                    "accessed": "2026-07-09"
+                },
+                {
+                    "title": "Employee earnings in the UK: 2025 (ASHE 2025)",
+                    "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2025",
+                    "publisher": "Office for National Statistics",
+                    "accessed": "2026-07-09"
+                },
+                {
+                    "title": "Rates and thresholds for employers 2026 to 2027",
+                    "url": "https://www.gov.uk/guidance/rates-and-thresholds-for-employers-2026-to-2027",
+                    "publisher": "HM Revenue & Customs / GOV.UK",
+                    "accessed": "2026-07-09"
+                }
+            ],
+            "workings": "Made Smarter case study: Nordell's AI-powered invoice processing is expected to save more than 60 hours of administration every month, i.e. 720 hours/year. ONS ASHE 2025: full-time median hourly pay for administrative and secretarial occupations = GBP 14.80. Grossed to an annual full-time-equivalent salary at 37.5 hours/week x 52 weeks: 14.80 x 37.5 x 52 = GBP 28,860. Employer NI 2026/27 (15% above the GBP 5,000 secondary threshold): (28,860 - 5,000) x 0.15 = GBP 3,579. Employer minimum auto-enrolment pension (3% on qualifying earnings above GBP 6,240): (28,860 - 6,240) x 0.03 = GBP 678.60. Fully loaded annual cost: 28,860 + 3,579 + 678.60 = GBP 33,117.60. Loaded hourly rate at 1,950 hours/year (37.5 x 52): 33,117.60 / 1,950 = GBP 16.98/hour. Value of 720 hours/year saved: 720 x 16.98 = GBP 12,225.60, rounded to approximately GBP 12,200/year. This values only the reclaimed staff time; it excludes the AI software's own subscription cost and any Made Smarter grant contribution, so it is a gross saving figure, not a net ROI.",
+            "first_used_in": "ai-use-cases-that-pay-back-in-year-one",
+            "first_used_date": "2026-07-09",
+            "layer": 2
         },
         {
-          "title": "Claude pricing",
-          "url": "https://claude.com/pricing",
-          "publisher": "Anthropic",
-          "accessed": "2026-07-14"
+            "id": "stat_010",
+            "stat": "Blended annual AI tooling budget range for a 10-seat UK team across five commonly cited subscription tiers",
+            "value": "1710-9000",
+            "unit": "GBP per year (10-seat team)",
+            "date_calculated": "2026-07-14",
+            "applies_to": [
+                "topic ID: 5",
+                "clusters: Strategy & ROI"
+            ],
+            "method": "Recipe D (cost-per-outcome ratio across vendors) — blending several vendors' published per-seat pricing into a single team-level annual budget range that no single vendor publishes",
+            "sources_used": [
+                {
+                    "title": "GitHub Copilot Plans and pricing",
+                    "url": "https://github.com/features/copilot/plans",
+                    "publisher": "GitHub (Microsoft)",
+                    "accessed": "2026-07-14"
+                },
+                {
+                    "title": "ChatGPT Business pricing",
+                    "url": "https://openai.com/business/chatgpt-pricing/",
+                    "publisher": "OpenAI",
+                    "accessed": "2026-07-14"
+                },
+                {
+                    "title": "Claude pricing",
+                    "url": "https://claude.com/pricing",
+                    "publisher": "Anthropic",
+                    "accessed": "2026-07-14"
+                },
+                {
+                    "title": "Microsoft 365 Copilot pricing",
+                    "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/pricing",
+                    "publisher": "Microsoft",
+                    "accessed": "2026-07-14"
+                }
+            ],
+            "workings": "Per-seat monthly list prices: GitHub Copilot Business $19, ChatGPT Business $20 (annual billing), Claude Team Standard $20 (annual billing), Microsoft 365 Copilot £30 (add-on), Claude Team Premium with Claude Code $100 (annual billing). Dollar prices converted at $1 = £0.75 (July 2026): $19 = £14.25, $20 = £15, $100 = £75. Each annualised for a 10-seat team (price x 10 x 12): GitHub Copilot Business £1,710; ChatGPT Business £1,800; Claude Team Standard £1,800; Microsoft 365 Copilot £3,600; Claude Team Premium £9,000. Range across all five tiers: £1,710 (lowest) to £9,000 (highest).",
+            "first_used_in": "how-much-should-a-uk-sme-budget-for-ai-in-2026",
+            "first_used_date": "2026-07-14",
+            "layer": 2
         },
         {
-          "title": "Microsoft 365 Copilot pricing",
-          "url": "https://www.microsoft.com/en-us/microsoft-365-copilot/pricing",
-          "publisher": "Microsoft",
-          "accessed": "2026-07-14"
-        }
-      ],
-      "workings": "Per-seat monthly list prices: GitHub Copilot Business $19, ChatGPT Business $20 (annual billing), Claude Team Standard $20 (annual billing), Microsoft 365 Copilot £30 (add-on), Claude Team Premium with Claude Code $100 (annual billing). Dollar prices converted at $1 = £0.75 (July 2026): $19 = £14.25, $20 = £15, $100 = £75. Each annualised for a 10-seat team (price x 10 x 12): GitHub Copilot Business £1,710; ChatGPT Business £1,800; Claude Team Standard £1,800; Microsoft 365 Copilot £3,600; Claude Team Premium £9,000. Range across all five tiers: £1,710 (lowest) to £9,000 (highest).",
-      "first_used_in": "how-much-should-a-uk-sme-budget-for-ai-in-2026",
-      "first_used_date": "2026-07-14",
-      "layer": 2
-    },
-    {
-      "id": "stat_011",
-      "stat": "UK businesses using AI in some form but not yet integrated into their own systems (the 'shallow adoption' gap)",
-      "value": "2.4",
-      "unit": "GBP million businesses (approx.)",
-      "date_calculated": "2026-07-21",
-      "applies_to": [
-        "topic ID: 15, 49, 56",
-        "clusters: Operations & Efficiency; Technical & Build"
-      ],
-      "method": "Recipe B (sector/segment cut) — combining two figures from a single primary survey with a UK business population count the survey did not itself apply",
-      "sources_used": [
-        {
-          "title": "Future of Work: AI in the Workplace (press release: 'Half of SMEs using AI, with limited headcount impact so far')",
-          "url": "https://www.britishchambers.org.uk/news/2026/03/half-of-smes-using-ai-with-limited-headcount-impact-so-far/",
-          "publisher": "British Chambers of Commerce and University of Essex ESRC Centre for Micro-Social Change (MiSoC)",
-          "accessed": "2026-07-21"
+            "id": "stat_011",
+            "stat": "UK businesses using AI in some form but not yet integrated into their own systems (the 'shallow adoption' gap)",
+            "value": "2.4",
+            "unit": "GBP million businesses (approx.)",
+            "date_calculated": "2026-07-21",
+            "applies_to": [
+                "topic ID: 15, 49, 56",
+                "clusters: Operations & Efficiency; Technical & Build"
+            ],
+            "method": "Recipe B (sector/segment cut) — combining two figures from a single primary survey with a UK business population count the survey did not itself apply",
+            "sources_used": [
+                {
+                    "title": "Future of Work: AI in the Workplace (press release: 'Half of SMEs using AI, with limited headcount impact so far')",
+                    "url": "https://www.britishchambers.org.uk/news/2026/03/half-of-smes-using-ai-with-limited-headcount-impact-so-far/",
+                    "publisher": "British Chambers of Commerce and University of Essex ESRC Centre for Micro-Social Change (MiSoC)",
+                    "accessed": "2026-07-21"
+                },
+                {
+                    "title": "Business population estimates for the UK and regions 2024: statistical release",
+                    "url": "https://www.gov.uk/government/statistics/business-population-estimates-2024/business-population-estimates-for-the-uk-and-regions-2024-statistical-release",
+                    "publisher": "Department for Business and Trade (gov.uk)",
+                    "accessed": "2026-07-21"
+                }
+            ],
+            "workings": "BCC/Essex (March 2026): 54% of UK SMEs use AI in some form; ~11% have moved beyond generic tools (ChatGPT, Copilot) into deeper, bespoke integration with their own systems. Gap = 54% - 11% = 43 percentage points using AI without deep integration. Applied to gov.uk's 5,499,000 UK private-sector businesses (start of 2024): 0.43 x 5,499,000 = 2,364,570, rounded to approximately 2.4 million. Caveat: the BCC/Essex sample is SMEs specifically, while the gov.uk figure covers all UK private-sector businesses; since SMEs are the large majority of that population by count, the two are treated as broadly comparable, but this is an order-of-magnitude estimate, not an exact calculation. Neither source publishes the combined figure.",
+            "first_used_in": "what-is-mcp-model-context-protocol",
+            "first_used_date": "2026-07-21",
+            "layer": 2
         },
         {
-          "title": "Business population estimates for the UK and regions 2024: statistical release",
-          "url": "https://www.gov.uk/government/statistics/business-population-estimates-2024/business-population-estimates-for-the-uk-and-regions-2024-statistical-release",
-          "publisher": "Department for Business and Trade (gov.uk)",
-          "accessed": "2026-07-21"
-        }
-      ],
-      "workings": "BCC/Essex (March 2026): 54% of UK SMEs use AI in some form; ~11% have moved beyond generic tools (ChatGPT, Copilot) into deeper, bespoke integration with their own systems. Gap = 54% - 11% = 43 percentage points using AI without deep integration. Applied to gov.uk's 5,499,000 UK private-sector businesses (start of 2024): 0.43 x 5,499,000 = 2,364,570, rounded to approximately 2.4 million. Caveat: the BCC/Essex sample is SMEs specifically, while the gov.uk figure covers all UK private-sector businesses; since SMEs are the large majority of that population by count, the two are treated as broadly comparable, but this is an order-of-magnitude estimate, not an exact calculation. Neither source publishes the combined figure.",
-      "first_used_in": "what-is-mcp-model-context-protocol",
-      "first_used_date": "2026-07-21",
-      "layer": 2
-    },
-    {
-      "id": "stat_012",
-      "stat": "UK businesses now using AI for marketing or content work",
-      "value": "2.1",
-      "unit": "million UK businesses",
-      "date_calculated": "2026-07-23",
-      "applies_to": [
-        "topic IDs: 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 73",
-        "clusters: Marketing & Sales"
-      ],
-      "method": "Recipe B (combination cut) — combining BCC/Essex SME AI adoption and marketing-use-case share with gov.uk's UK business population estimate",
-      "sources_used": [
-        {
-          "title": "Half of SMEs using AI, with limited headcount impact so far (BCC and University of Essex, with Atos, March 2026)",
-          "url": "https://www.britishchambers.org.uk/news/2026/03/half-of-smes-using-ai-with-limited-headcount-impact-so-far/",
-          "publisher": "British Chambers of Commerce",
-          "accessed": "2026-07-23"
+            "id": "stat_012",
+            "stat": "UK businesses now using AI for marketing or content work",
+            "value": "2.1",
+            "unit": "million UK businesses",
+            "date_calculated": "2026-07-23",
+            "applies_to": [
+                "topic IDs: 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 73",
+                "clusters: Marketing & Sales"
+            ],
+            "method": "Recipe B (combination cut) — combining BCC/Essex SME AI adoption and marketing-use-case share with gov.uk's UK business population estimate",
+            "sources_used": [
+                {
+                    "title": "Half of SMEs using AI, with limited headcount impact so far (BCC and University of Essex, with Atos, March 2026)",
+                    "url": "https://www.britishchambers.org.uk/news/2026/03/half-of-smes-using-ai-with-limited-headcount-impact-so-far/",
+                    "publisher": "British Chambers of Commerce",
+                    "accessed": "2026-07-23"
+                },
+                {
+                    "title": "Business population estimates for the UK and regions 2024: statistical release",
+                    "url": "https://www.gov.uk/government/statistics/business-population-estimates-2024/business-population-estimates-for-the-uk-and-regions-2024-statistical-release",
+                    "publisher": "Department for Business and Trade",
+                    "accessed": "2026-07-23"
+                }
+            ],
+            "workings": "BCC/Essex/Atos March 2026 survey: 54% of UK SMEs use AI in some form; of AI-using SMEs, marketing is a joint-top use case at 72% (tied with admin). 0.54 x 0.72 = 0.3888, i.e. 38.88% of the UK private-sector business population. Applied to gov.uk's 5,499,000 UK private-sector businesses (2024 estimate): 0.3888 x 5,499,000 = 2,138,011, rounded to 'roughly 2.1 million'.",
+            "first_used_in": "what-is-geo-vs-seo",
+            "first_used_date": "2026-07-23",
+            "layer": 2
         },
         {
-          "title": "Business population estimates for the UK and regions 2024: statistical release",
-          "url": "https://www.gov.uk/government/statistics/business-population-estimates-2024/business-population-estimates-for-the-uk-and-regions-2024-statistical-release",
-          "publisher": "Department for Business and Trade",
-          "accessed": "2026-07-23"
-        }
-      ],
-      "workings": "BCC/Essex/Atos March 2026 survey: 54% of UK SMEs use AI in some form; of AI-using SMEs, marketing is a joint-top use case at 72% (tied with admin). 0.54 x 0.72 = 0.3888, i.e. 38.88% of the UK private-sector business population. Applied to gov.uk's 5,499,000 UK private-sector businesses (2024 estimate): 0.3888 x 5,499,000 = 2,138,011, rounded to 'roughly 2.1 million'.",
-      "first_used_in": "what-is-geo-vs-seo",
-      "first_used_date": "2026-07-23",
-      "layer": 2
-    },
-    {
-      "id": "stat_013",
-      "stat": "Year-on-year growth multiple in UK web visits to ChatGPT, first eight months of 2024 vs first eight months of 2025",
-      "value": "4.9",
-      "unit": "x (multiple of prior-year UK web visits, approx. 389% growth)",
-      "date_calculated": "2026-07-28",
-      "applies_to": [
-        "topic ID: 22",
-        "clusters: Marketing & Sales; Generative Engine Optimization"
-      ],
-      "method": "Recipe C (year-on-year delta) — growth multiple derived from two snapshot totals in a single primary Ofcom publication",
-      "sources_used": [
-        {
-          "title": "From apps to AI search: how the UK goes online in 2025",
-          "url": "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025",
-          "publisher": "Ofcom",
-          "accessed": "2026-07-28"
-        }
-      ],
-      "workings": "Ofcom reports ChatGPT UK web visits of 1.8 billion across the first eight months of 2025, up from 368 million in the same period of 2024. Growth multiple: 1,800,000,000 / 368,000,000 = 4.891... rounded to 4.9x (approximately 389% growth). Ofcom's page states both absolute totals but does not publish the growth multiple or percentage itself.",
-      "first_used_in": "how-to-rank-in-chatgpt-2026",
-      "first_used_date": "2026-07-28",
-      "layer": 2
-    },
-    {
-      "id": "stat_014",
-      "stat": "Cost per tracked AI-visibility prompt per month across three named UK-available vendors' entry and growth tiers",
-      "value": "1.42-3.01",
-      "unit": "GBP per tracked prompt per month",
-      "date_calculated": "2026-07-30",
-      "applies_to": [
-        "topic ID: 29",
-        "clusters: Marketing & Sales"
-      ],
-      "method": "Recipe D (cost-per-outcome ratio across vendors) — dividing each vendor's published monthly price by its included prompt count, after sterling conversion",
-      "sources_used": [
-        {
-          "title": "OtterlyAI Pricing",
-          "url": "https://otterly.ai/pricing",
-          "publisher": "Otterly.AI",
-          "accessed": "2026-07-30"
+            "id": "stat_013",
+            "stat": "Year-on-year growth multiple in UK web visits to ChatGPT, first eight months of 2024 vs first eight months of 2025",
+            "value": "4.9",
+            "unit": "x (multiple of prior-year UK web visits, approx. 389% growth)",
+            "date_calculated": "2026-07-28",
+            "applies_to": [
+                "topic ID: 22",
+                "clusters: Marketing & Sales; Generative Engine Optimization"
+            ],
+            "method": "Recipe C (year-on-year delta) — growth multiple derived from two snapshot totals in a single primary Ofcom publication",
+            "sources_used": [
+                {
+                    "title": "From apps to AI search: how the UK goes online in 2025",
+                    "url": "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025",
+                    "publisher": "Ofcom",
+                    "accessed": "2026-07-28"
+                }
+            ],
+            "workings": "Ofcom reports ChatGPT UK web visits of 1.8 billion across the first eight months of 2025, up from 368 million in the same period of 2024. Growth multiple: 1,800,000,000 / 368,000,000 = 4.891... rounded to 4.9x (approximately 389% growth). Ofcom's page states both absolute totals but does not publish the growth multiple or percentage itself.",
+            "first_used_in": "how-to-rank-in-chatgpt-2026",
+            "first_used_date": "2026-07-28",
+            "layer": 2
         },
         {
-          "title": "Pricing for Peec AI",
-          "url": "https://peec.ai/pricing",
-          "publisher": "Peec AI",
-          "accessed": "2026-07-30"
+            "id": "stat_014",
+            "stat": "Cost per tracked AI-visibility prompt per month across three named UK-available vendors' entry and growth tiers",
+            "value": "1.42-3.01",
+            "unit": "GBP per tracked prompt per month",
+            "date_calculated": "2026-07-30",
+            "applies_to": [
+                "topic ID: 29",
+                "clusters: Marketing & Sales"
+            ],
+            "method": "Recipe D (cost-per-outcome ratio across vendors) — dividing each vendor's published monthly price by its included prompt count, after sterling conversion",
+            "sources_used": [
+                {
+                    "title": "OtterlyAI Pricing",
+                    "url": "https://otterly.ai/pricing",
+                    "publisher": "Otterly.AI",
+                    "accessed": "2026-07-30"
+                },
+                {
+                    "title": "Pricing for Peec AI",
+                    "url": "https://peec.ai/pricing",
+                    "publisher": "Peec AI",
+                    "accessed": "2026-07-30"
+                },
+                {
+                    "title": "AI Visibility Toolkit Pricing",
+                    "url": "https://www.semrush.com/pricing/ai/",
+                    "publisher": "Semrush",
+                    "accessed": "2026-07-30"
+                }
+            ],
+            "workings": "Sterling conversion at approximate July 2026 FX rates ($1 = £0.75, EUR1 = £0.845, consistent with prior stat_bank entries). Otterly Lite $29/mo / 15 prompts = £21.75 / 15 = £1.45 per prompt/month. Otterly Standard $189/mo / 100 prompts = £141.75 / 100 = £1.42. Semrush AI Visibility Toolkit $99/mo add-on / 25 prompts = £74.25 / 25 = £2.97. Peec AI Starter EUR89/mo / 25 prompts = £75.21 / 25 = £3.01. Peec AI Pro EUR199/mo / 100 prompts = £168.16 / 100 = £1.68. Range across all five tiers: £1.42 (cheapest, Otterly Standard) to £3.01 (priciest, Peec Starter). None of the three vendors publish this per-prompt figure themselves.",
+            "first_used_in": "how-to-measure-ai-brand-visibility",
+            "first_used_date": "2026-07-30",
+            "layer": 2
         },
         {
-          "title": "AI Visibility Toolkit Pricing",
-          "url": "https://www.semrush.com/pricing/ai/",
-          "publisher": "Semrush",
-          "accessed": "2026-07-30"
-        }
-      ],
-      "workings": "Sterling conversion at approximate July 2026 FX rates ($1 = £0.75, EUR1 = £0.845, consistent with prior stat_bank entries). Otterly Lite $29/mo / 15 prompts = £21.75 / 15 = £1.45 per prompt/month. Otterly Standard $189/mo / 100 prompts = £141.75 / 100 = £1.42. Semrush AI Visibility Toolkit $99/mo add-on / 25 prompts = £74.25 / 25 = £2.97. Peec AI Starter EUR89/mo / 25 prompts = £75.21 / 25 = £3.01. Peec AI Pro EUR199/mo / 100 prompts = £168.16 / 100 = £1.68. Range across all five tiers: £1.42 (cheapest, Otterly Standard) to £3.01 (priciest, Peec Starter). None of the three vendors publish this per-prompt figure themselves.",
-      "first_used_in": "how-to-measure-ai-brand-visibility",
-      "first_used_date": "2026-07-30",
-      "layer": 2
-    },
-    {
-      "id": "stat_015",
-      "stat": "Direct wasted costs ordered per AI-fabricated case citation in Ayinde v Haringey",
-      "value": "800",
-      "unit": "GBP per fabricated citation",
-      "date_calculated": "2026-08-04",
-      "applies_to": [
-        "topic ID: 37",
-        "clusters: Risk, Governance & Legal; UK Industry Verticals"
-      ],
-      "method": "Recipe A (sterling derivation from a single primary source) — direct division of a court-ordered wasted costs figure by the number of fabricated citations it addressed",
-      "sources_used": [
-        {
-          "title": "Ayinde, R (On the Application Of) v The London Borough of Haringey [2025] EWHC 1040 (Admin)",
-          "url": "https://www.judiciary.uk/wp-content/uploads/2025/05/Ayinde-v-LB-Haringey-Judgment-Ritchie-J-03.04.25-HD-2.pdf",
-          "publisher": "Courts and Tribunals Judiciary",
-          "accessed": "2026-08-04"
-        }
-      ],
-      "workings": "Mr Justice Ritchie ordered the claimant's solicitor and barrister to each pay the London Borough of Haringey £2,000 in wasted costs, a combined £4,000. Five fabricated case citations, including a fake Court of Appeal decision, were identified in the claimant's pleadings. £4,000 / 5 = £800 in direct wasted costs per fabricated citation. This counts only the costs the judge quantified; it excludes the council's own legal team's time spent identifying and investigating the fake citations, the SRA and Bar Standards Board referral process, and any reputational cost, all of which sit on top of this figure. Read as an illustrative floor for a single case, not an average across the wider pattern of UK AI-citation cases.",
-      "first_used_in": "ai-hallucination-risk-uk-businesses",
-      "first_used_date": "2026-08-04",
-      "layer": 2
-    },
-    {
-      "id": "stat_016",
-      "stat": "Reduction in the number of integrations to build when a UK enterprise connects AI tools to its core systems via MCP instead of point-to-point APIs",
-      "value": "86",
-      "unit": "percent fewer integrations (15 vs 105, for a 15-system enterprise stack)",
-      "date_calculated": "2026-08-06",
-      "applies_to": [
-        "topic IDs: 49, 56, 51, 15",
-        "clusters: Technical & Build"
-      ],
-      "method": "Recipe A (adapted) — mathematical derivation applying the standard M x N vs M + N integration-complexity formula (as described in MCP's own architecture rationale) to a concrete worked example",
-      "sources_used": [
-        {
-          "title": "MCP 2026-07-28 specification update",
-          "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
-          "publisher": "Model Context Protocol maintainers (Linux Foundation)",
-          "accessed": "2026-08-06"
-        }
-      ],
-      "workings": "For N systems needing full pairwise connectivity, point-to-point integration requires N(N-1)/2 unique connections. For N=15: 15 x 14 / 2 = 105 connections. Under MCP, each of the 15 systems exposes one MCP server, so the AI side needs only N=15 connections regardless of how many AI tools are added later. Reduction: (105-15)/105 = 90/105 = 0.857, rounded to 86%. This is an illustrative worked example using a stated assumption of 15 core systems, not a claimed average across UK enterprises; the underlying formula and its direction (M x N collapsing to M + N) is standard integration-architecture reasoning that MCP's own documentation uses to explain the protocol's purpose.",
-      "first_used_in": "what-is-mcp-enterprise-ai-integration",
-      "first_used_date": "2026-08-06",
-      "layer": 2
-    },
-    {
-      "id": "stat_017",
-      "stat": "Share of the UK creative industries' 2023 GVA that sits within its highest-AI-adoption sub-sector (IT, software and computer services)",
-      "value": "40",
-      "unit": "percent (£49.1bn of £124bn total creative industries GVA)",
-      "date_calculated": "2026-08-11",
-      "applies_to": [
-        "topic IDs: 64",
-        "clusters: UK Industry Verticals"
-      ],
-      "method": "Recipe B (sector cut) — cross-referencing a DCMS monetary dataset (GVA by sub-sector) against a DSIT behavioural dataset (AI adoption rate by sub-sector) to produce a derived observation neither source publishes alone",
-      "sources_used": [
-        {
-          "title": "DCMS Economic Estimates: GVA 2023 (provisional)",
-          "url": "https://www.gov.uk/government/statistics/dcms-economic-estimates-gva-2023-provisional-data-tables-only",
-          "publisher": "Department for Culture, Media and Sport (DCMS)",
-          "accessed": "2026-08-11"
+            "id": "stat_015",
+            "stat": "Direct wasted costs ordered per AI-fabricated case citation in Ayinde v Haringey",
+            "value": "800",
+            "unit": "GBP per fabricated citation",
+            "date_calculated": "2026-08-04",
+            "applies_to": [
+                "topic ID: 37",
+                "clusters: Risk, Governance & Legal; UK Industry Verticals"
+            ],
+            "method": "Recipe A (sterling derivation from a single primary source) — direct division of a court-ordered wasted costs figure by the number of fabricated citations it addressed",
+            "sources_used": [
+                {
+                    "title": "Ayinde, R (On the Application Of) v The London Borough of Haringey [2025] EWHC 1040 (Admin)",
+                    "url": "https://www.judiciary.uk/wp-content/uploads/2025/05/Ayinde-v-LB-Haringey-Judgment-Ritchie-J-03.04.25-HD-2.pdf",
+                    "publisher": "Courts and Tribunals Judiciary",
+                    "accessed": "2026-08-04"
+                }
+            ],
+            "workings": "Mr Justice Ritchie ordered the claimant's solicitor and barrister to each pay the London Borough of Haringey £2,000 in wasted costs, a combined £4,000. Five fabricated case citations, including a fake Court of Appeal decision, were identified in the claimant's pleadings. £4,000 / 5 = £800 in direct wasted costs per fabricated citation. This counts only the costs the judge quantified; it excludes the council's own legal team's time spent identifying and investigating the fake citations, the SRA and Bar Standards Board referral process, and any reputational cost, all of which sit on top of this figure. Read as an illustrative floor for a single case, not an average across the wider pattern of UK AI-citation cases.",
+            "first_used_in": "ai-hallucination-risk-uk-businesses",
+            "first_used_date": "2026-08-04",
+            "layer": 2
         },
         {
-          "title": "AI Adoption Plan: Creative Industries",
-          "url": "https://www.gov.uk/government/publications/ai-champions-ai-adoption-plans/ai-adoption-plan-creative-industries",
-          "publisher": "Department for Science, Innovation and Technology (DSIT)",
-          "accessed": "2026-08-11"
-        }
-      ],
-      "workings": "IT, software and computer services GVA (2023): £49.1bn. Total UK creative industries GVA (2023): £124bn. £49.1bn / £124bn = 0.396, rounded to 'nearly 40%'. Separately, the AI Adoption Plan for the Creative Industries (DSIT, June 2026) reports 60% AI adoption for the same IT/software/computer-services sub-sector, the highest of any creative-industries sub-sector measured (vs 53% design, 44% film/TV, 22% music/performing arts). The two figures are not contemporaneous (2023 GVA vs 2026 adoption); presented as a directional/structural observation about where AI adoption concentrates by economic value, not a causal claim.",
-      "first_used_in": "ai-in-uk-creative-and-media-agencies",
-      "first_used_date": "2026-08-11",
-      "layer": 2
-    },
-    {
-      "id": "stat_018",
-      "stat": "Ratio by which UK AI adoption breadth grew faster than depth of use, 2023-2026",
-      "value": "2.5",
-      "unit": "ratio (breadth growth multiple ÷ depth growth multiple)",
-      "date_calculated": "2026-08-13",
-      "applies_to": [
-        "topic ID: 7",
-        "clusters: Strategy & ROI"
-      ],
-      "method": "Recipe C (year-on-year delta) — derived ratio from two time-series figures in a single ONS release",
-      "sources_used": [
-        {
-          "title": "Artificial intelligence in UK businesses: 2023 to 2026",
-          "url": "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026",
-          "publisher": "Office for National Statistics",
-          "accessed": "2026-08-13"
-        }
-      ],
-      "workings": "ONS reports self-reported AI adoption among UK businesses with 10+ employees rose from ~12% (late 2023) to ~35% (2026): a growth multiple of 35/12 = 2.917x. The same release reports the average number of AI technologies used per adopting business rose from ~1.4 to ~1.6 over the same period: a growth multiple of 1.6/1.4 = 1.143x. Ratio of the two growth multiples: 2.917 / 1.143 = 2.552, rounded to 2.5x. This quantifies that the breadth of adoption (how many businesses use AI) grew roughly 2.5 times faster than the depth of adoption (how many tools each adopting business uses), the same 'wide but shallow' pattern MIT's GenAI Divide report describes globally, expressed as a single UK-specific ratio derived from ONS's own published figures.",
-      "first_used_in": "why-do-most-ai-projects-fail",
-      "first_used_date": "2026-08-13",
-      "layer": 2
-    },
-    {
-      "id": "stat_019",
-      "stat": "Share of AI-using UK SMEs that use AI to automate operations extensively, rather than lightly assist",
-      "value": "20",
-      "unit": "percent (approx. 1 in 5)",
-      "date_calculated": "2026-08-18",
-      "applies_to": [
-        "topic ID: 11",
-        "clusters: Operations & Efficiency; Strategy & ROI"
-      ],
-      "method": "Derived ratio of two published figures from the same survey (closest fit: Recipe B/C style aggregate cut, not a named recipe verbatim)",
-      "sources_used": [
-        {
-          "title": "Half of SMEs using AI, with limited headcount impact so far (Future of Work: AI in the Workplace survey)",
-          "url": "https://www.britishchambers.org.uk/news/2026/03/half-of-smes-using-ai-with-limited-headcount-impact-so-far/",
-          "publisher": "British Chambers of Commerce, with Atos and the University of Essex",
-          "accessed": "2026-08-18"
-        }
-      ],
-      "workings": "BCC/Atos survey (March 2026 wave) reports 54% of UK SMEs use AI in some form, and separately that 11% of SMEs use AI extensively to automate operations. 11 / 54 = 0.2037, approx 20%, i.e. roughly 1 in 5 AI-using SMEs are using AI for deep automation rather than lighter assistance. The source publishes both figures but never states the ratio between them.",
-      "first_used_in": "ai-agents-vs-rpa-vs-traditional-automation",
-      "first_used_date": "2026-08-18",
-      "layer": 2
-    },
-    {
-      "id": "stat_020",
-      "stat": "Annual staff-hours saving implied by scaling NHS England's Microsoft 365 Copilot trial time-saving to the full 500,000-staff rollout",
-      "value": "79",
-      "unit": "million hours per year (approx)",
-      "date_calculated": "2026-08-20",
-      "applies_to": [
-        "topic ID: 12",
-        "clusters: Operations & Efficiency; UK Industry Verticals"
-      ],
-      "method": "Recipe A-style scaling — multiplying a published per-person time-saving figure by a published rollout headcount and a standard working-year assumption, a total the source did not publish itself",
-      "sources_used": [
-        {
-          "title": "500,000 NHS staff to get new artificial intelligence tools to help free up more time for patients",
-          "url": "https://www.england.nhs.uk/2026/06/500000-nhs-staff-to-get-new-artificial-intelligence-tools-to-help-free-up-more-time-for-patients/",
-          "publisher": "NHS England",
-          "accessed": "2026-08-20"
+            "id": "stat_016",
+            "stat": "Reduction in the number of integrations to build when a UK enterprise connects AI tools to its core systems via MCP instead of point-to-point APIs",
+            "value": "86",
+            "unit": "percent fewer integrations (15 vs 105, for a 15-system enterprise stack)",
+            "date_calculated": "2026-08-06",
+            "applies_to": [
+                "topic IDs: 49, 56, 51, 15",
+                "clusters: Technical & Build"
+            ],
+            "method": "Recipe A (adapted) — mathematical derivation applying the standard M x N vs M + N integration-complexity formula (as described in MCP's own architecture rationale) to a concrete worked example",
+            "sources_used": [
+                {
+                    "title": "MCP 2026-07-28 specification update",
+                    "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+                    "publisher": "Model Context Protocol maintainers (Linux Foundation)",
+                    "accessed": "2026-08-06"
+                }
+            ],
+            "workings": "For N systems needing full pairwise connectivity, point-to-point integration requires N(N-1)/2 unique connections. For N=15: 15 x 14 / 2 = 105 connections. Under MCP, each of the 15 systems exposes one MCP server, so the AI side needs only N=15 connections regardless of how many AI tools are added later. Reduction: (105-15)/105 = 90/105 = 0.857, rounded to 86%. This is an illustrative worked example using a stated assumption of 15 core systems, not a claimed average across UK enterprises; the underlying formula and its direction (M x N collapsing to M + N) is standard integration-architecture reasoning that MCP's own documentation uses to explain the protocol's purpose.",
+            "first_used_in": "what-is-mcp-enterprise-ai-integration",
+            "first_used_date": "2026-08-06",
+            "layer": 2
         },
         {
-          "title": "NHS accelerates artificial intelligence rollout to cut waiting times and improve care for millions",
-          "url": "https://www.england.nhs.uk/2026/07/nhs-accelerates-artificial-intelligence-rollout-to-cut-waiting-times-and-improve-care-for-millions/",
-          "publisher": "NHS England",
-          "accessed": "2026-08-20"
-        }
-      ],
-      "workings": "NHS England's Microsoft 365 Copilot trial (90 organisations, 30,000+ staff) found an average saving of at least 43 minutes of staff time per person per day. Scaled to the 500,000 staff targeted for the full rollout by October 2026: 43 minutes x 500,000 staff = 21,500,000 minutes/day = 358,333 hours/day. Applying a standard assumed 220-day NHS working year (a Tom & Co assumption, not an NHS-published figure): 358,333 x 220 = approximately 78,833,333 hours/year, rounded to roughly 79 million hours a year. NHS England has not published this national annualised total itself.",
-      "first_used_in": "agentic-ai-enterprise-deployment",
-      "first_used_date": "2026-08-20",
-      "layer": 2
-    },
-    {
-      "id": "stat_021",
-      "stat": "Share of the whole UK adult population within reach of an AI-generated answer at least sometimes",
-      "value": "71",
-      "unit": "percent (approx) of all UK adults aged 16+",
-      "date_calculated": "2026-08-25",
-      "applies_to": [
-        "topic IDs: 22, 29, 30, 31",
-        "clusters: Marketing & Sales; Generative Engine Optimization"
-      ],
-      "method": "Recipe B (combination cut) — multiplying two rates published separately in a single primary Ofcom survey to derive a population-wide share the source does not state directly",
-      "sources_used": [
-        {
-          "title": "Passive social media use, AI companionship, and online side hustles: UK adults' media and online lives revealed (Adults' Media Use and Attitudes 2026)",
-          "url": "https://www.ofcom.org.uk/media-use-and-attitudes/media-habits-adults/passive-social-media-use-ai-companionship-and-online-side-hustles-uk-adults-media-and-online-lives-revealed",
-          "publisher": "Ofcom",
-          "accessed": "2026-08-25"
-        }
-      ],
-      "workings": "Ofcom's 2026 Adults' Media Use and Attitudes research (survey of 7,533 UK adults 16+, fieldwork Sep-Nov 2025, published 2 April 2026) reports two rates separately: 94% of UK adults have home internet access, and 75% of online adults read AI-generated search summaries at least sometimes. Multiplying the two published rates gives the share of the WHOLE UK adult population (online or not) likely exposed to an AI-generated summary at least sometimes: 0.94 x 0.75 = 0.705, rounded to approximately 71%. Ofcom does not publish this combined population-wide figure itself.",
-      "first_used_in": "category-authority-for-ai-retrieval",
-      "first_used_date": "2026-08-25",
-      "layer": 2
-    },
-    {
-      "id": "stat_022",
-      "stat": "Calendar-day gap between the Data (Use and Access) Act 2025 receiving royal assent and Section 80 (replacing UK GDPR Article 22) actually coming into force",
-      "value": "231",
-      "unit": "days",
-      "date_calculated": "2026-08-27",
-      "applies_to": [
-        "topic ID: 35",
-        "clusters: Risk, Governance & Legal"
-      ],
-      "method": "Recipe F (time-to-comply estimate) — calendar-day delta between two dates published separately on legislation.gov.uk, neither of which the source states as a single elapsed figure",
-      "sources_used": [
-        {
-          "title": "Data (Use and Access) Act 2025 (royal assent)",
-          "url": "https://www.legislation.gov.uk/ukpga/2025/18/contents/enacted",
-          "publisher": "legislation.gov.uk (The National Archives)",
-          "accessed": "2026-08-27"
+            "id": "stat_017",
+            "stat": "Share of the UK creative industries' 2023 GVA that sits within its highest-AI-adoption sub-sector (IT, software and computer services)",
+            "value": "40",
+            "unit": "percent (£49.1bn of £124bn total creative industries GVA)",
+            "date_calculated": "2026-08-11",
+            "applies_to": [
+                "topic IDs: 64",
+                "clusters: UK Industry Verticals"
+            ],
+            "method": "Recipe B (sector cut) — cross-referencing a DCMS monetary dataset (GVA by sub-sector) against a DSIT behavioural dataset (AI adoption rate by sub-sector) to produce a derived observation neither source publishes alone",
+            "sources_used": [
+                {
+                    "title": "DCMS Economic Estimates: GVA 2023 (provisional)",
+                    "url": "https://www.gov.uk/government/statistics/dcms-economic-estimates-gva-2023-provisional-data-tables-only",
+                    "publisher": "Department for Culture, Media and Sport (DCMS)",
+                    "accessed": "2026-08-11"
+                },
+                {
+                    "title": "AI Adoption Plan: Creative Industries",
+                    "url": "https://www.gov.uk/government/publications/ai-champions-ai-adoption-plans/ai-adoption-plan-creative-industries",
+                    "publisher": "Department for Science, Innovation and Technology (DSIT)",
+                    "accessed": "2026-08-11"
+                }
+            ],
+            "workings": "IT, software and computer services GVA (2023): £49.1bn. Total UK creative industries GVA (2023): £124bn. £49.1bn / £124bn = 0.396, rounded to 'nearly 40%'. Separately, the AI Adoption Plan for the Creative Industries (DSIT, June 2026) reports 60% AI adoption for the same IT/software/computer-services sub-sector, the highest of any creative-industries sub-sector measured (vs 53% design, 44% film/TV, 22% music/performing arts). The two figures are not contemporaneous (2023 GVA vs 2026 adoption); presented as a directional/structural observation about where AI adoption concentrates by economic value, not a causal claim.",
+            "first_used_in": "ai-in-uk-creative-and-media-agencies",
+            "first_used_date": "2026-08-11",
+            "layer": 2
         },
         {
-          "title": "Data (Use and Access) Act 2025, Section 80",
-          "url": "https://www.legislation.gov.uk/ukpga/2025/18/section/80",
-          "publisher": "legislation.gov.uk (The National Archives)",
-          "accessed": "2026-08-27"
-        }
-      ],
-      "workings": "Royal assent: 19 June 2025. Section 80 (automated decision-making, replacing UK GDPR Article 22) commencement: 5 February 2026. Days remaining in June after the 19th: 11. Plus full months July (31) + August (31) + September (30) + October (31) + November (30) + December (31) + January (31) = 215. Plus 5 days in February to reach commencement. Total: 11 + 215 + 5 = 231 days.",
-      "first_used_in": "ai-uk-gdpr-ico-guidance-2026",
-      "first_used_date": "2026-08-27",
-      "layer": 2
-    },
-    {
-      "id": "stat_023",
-      "stat": "How much longer the worst-case ICO prior-consultation response window is than the standard one",
-      "value": "75",
-      "unit": "percent longer (98 days vs 56 days)",
-      "date_calculated": "2026-09-01",
-      "applies_to": [
-        "topic ID: 36",
-        "clusters: Risk, Governance & Legal"
-      ],
-      "method": "Recipe A (percentage delta derivation) — the ICO publishes the standard 8-week window and the maximum 6-week extension separately but does not publish the resulting percentage uplift",
-      "sources_used": [
-        {
-          "title": "ICO, Do we need to consult the ICO?",
-          "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/data-protection-impact-assessments-dpias/do-we-need-to-consult-the-ico/",
-          "publisher": "Information Commissioner's Office",
-          "accessed": "2026-09-01"
-        }
-      ],
-      "workings": "Standard prior-consultation response window: 8 weeks = 56 days. Maximum extension: a further 6 weeks, taking the ceiling to 14 weeks = 98 days. Percentage increase from standard to maximum: (98 - 56) / 56 = 42 / 56 = 0.75 = 75% longer.",
-      "first_used_in": "dpia-for-ai-the-practical-template",
-      "first_used_date": "2026-09-01",
-      "layer": 2
-    },
-    {
-      "id": "stat_024",
-      "stat": "Margin by which the UK government's statutory Report on Copyright and Artificial Intelligence beat its own 9-month deadline under the Data (Use and Access) Act 2025",
-      "value": "1",
-      "unit": "day",
-      "date_calculated": "2026-09-03",
-      "applies_to": [
-        "topic ID: 39",
-        "clusters: Risk, Governance & Legal"
-      ],
-      "method": "Recipe F (time-to-comply / deadline analysis) — calendar-day delta between the Act's royal assent date and the report's actual publication date, neither of which the sources state as a single elapsed or margin figure",
-      "sources_used": [
-        {
-          "title": "Data (Use and Access) Act 2025 (royal assent)",
-          "url": "https://www.legislation.gov.uk/ukpga/2025/18/contents/enacted",
-          "publisher": "legislation.gov.uk (The National Archives)",
-          "accessed": "2026-09-03"
+            "id": "stat_018",
+            "stat": "Ratio by which UK AI adoption breadth grew faster than depth of use, 2023-2026",
+            "value": "2.5",
+            "unit": "ratio (breadth growth multiple ÷ depth growth multiple)",
+            "date_calculated": "2026-08-13",
+            "applies_to": [
+                "topic ID: 7",
+                "clusters: Strategy & ROI"
+            ],
+            "method": "Recipe C (year-on-year delta) — derived ratio from two time-series figures in a single ONS release",
+            "sources_used": [
+                {
+                    "title": "Artificial intelligence in UK businesses: 2023 to 2026",
+                    "url": "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026",
+                    "publisher": "Office for National Statistics",
+                    "accessed": "2026-08-13"
+                }
+            ],
+            "workings": "ONS reports self-reported AI adoption among UK businesses with 10+ employees rose from ~12% (late 2023) to ~35% (2026): a growth multiple of 35/12 = 2.917x. The same release reports the average number of AI technologies used per adopting business rose from ~1.4 to ~1.6 over the same period: a growth multiple of 1.6/1.4 = 1.143x. Ratio of the two growth multiples: 2.917 / 1.143 = 2.552, rounded to 2.5x. This quantifies that the breadth of adoption (how many businesses use AI) grew roughly 2.5 times faster than the depth of adoption (how many tools each adopting business uses), the same 'wide but shallow' pattern MIT's GenAI Divide report describes globally, expressed as a single UK-specific ratio derived from ONS's own published figures.",
+            "first_used_in": "why-do-most-ai-projects-fail",
+            "first_used_date": "2026-08-13",
+            "layer": 2
         },
         {
-          "title": "Data (Use and Access) Act 2025, Part 7, ss.135-136 (copyright works and artificial intelligence systems)",
-          "url": "https://www.legislation.gov.uk/ukpga/2025/18/part/7/crossheading/copyright-works-and-artificial-intelligence-systems",
-          "publisher": "legislation.gov.uk (The National Archives)",
-          "accessed": "2026-09-03"
+            "id": "stat_019",
+            "stat": "Share of AI-using UK SMEs that use AI to automate operations extensively, rather than lightly assist",
+            "value": "20",
+            "unit": "percent (approx. 1 in 5)",
+            "date_calculated": "2026-08-18",
+            "applies_to": [
+                "topic ID: 11",
+                "clusters: Operations & Efficiency; Strategy & ROI"
+            ],
+            "method": "Derived ratio of two published figures from the same survey (closest fit: Recipe B/C style aggregate cut, not a named recipe verbatim)",
+            "sources_used": [
+                {
+                    "title": "Half of SMEs using AI, with limited headcount impact so far (Future of Work: AI in the Workplace survey)",
+                    "url": "https://www.britishchambers.org.uk/news/2026/03/half-of-smes-using-ai-with-limited-headcount-impact-so-far/",
+                    "publisher": "British Chambers of Commerce, with Atos and the University of Essex",
+                    "accessed": "2026-08-18"
+                }
+            ],
+            "workings": "BCC/Atos survey (March 2026 wave) reports 54% of UK SMEs use AI in some form, and separately that 11% of SMEs use AI extensively to automate operations. 11 / 54 = 0.2037, approx 20%, i.e. roughly 1 in 5 AI-using SMEs are using AI for deep automation rather than lighter assistance. The source publishes both figures but never states the ratio between them.",
+            "first_used_in": "ai-agents-vs-rpa-vs-traditional-automation",
+            "first_used_date": "2026-08-18",
+            "layer": 2
         },
         {
-          "title": "Report on Copyright and Artificial Intelligence",
-          "url": "https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence",
-          "publisher": "Department for Science, Innovation and Technology (DSIT), Department for Culture, Media and Sport (DCMS), Intellectual Property Office (IPO)",
-          "accessed": "2026-09-03"
-        }
-      ],
-      "workings": "Royal assent of the Data (Use and Access) Act 2025: 19 June 2025. Sections 135 and 136 require the report and impact assessment to be published within 9 months of that date, a deadline falling on 19 March 2026. The report was in fact published on 18 March 2026. 19 March 2026 minus 18 March 2026 = 1 calendar day of margin before the statutory deadline would have been missed.",
-      "first_used_in": "ai-copyright-uk-getty-v-stability-ai",
-      "first_used_date": "2026-09-03",
-      "layer": 2
-    },
-    {
-      "id": "stat_025",
-      "stat": "Sterling cost of fine-tuning OpenAI's GPT-4.1/GPT-4o and the o4-mini reinforcement fine-tuning training rate, converted from OpenAI's published USD pricing",
-      "value": "18.50 / 74",
-      "unit": "GBP per 1M training tokens (GPT-4.1/4o) / GBP per hour of training compute (o4-mini RFT)",
-      "date_calculated": "2026-09-10",
-      "applies_to": [
-        "topic ID: 45",
-        "clusters: Technical & Build"
-      ],
-      "method": "Recipe A (sterling conversion of a foreign benchmark) — OpenAI's own published USD fine-tuning pricing converted at an approximate September 2026 GBP/USD market rate",
-      "sources_used": [
-        {
-          "title": "Pricing",
-          "url": "https://developers.openai.com/api/docs/pricing",
-          "publisher": "OpenAI",
-          "accessed": "2026-09-10"
+            "id": "stat_020",
+            "stat": "Annual staff-hours saving implied by scaling NHS England's Microsoft 365 Copilot trial time-saving to the full 500,000-staff rollout",
+            "value": "79",
+            "unit": "million hours per year (approx)",
+            "date_calculated": "2026-08-20",
+            "applies_to": [
+                "topic ID: 12",
+                "clusters: Operations & Efficiency; UK Industry Verticals"
+            ],
+            "method": "Recipe A-style scaling — multiplying a published per-person time-saving figure by a published rollout headcount and a standard working-year assumption, a total the source did not publish itself",
+            "sources_used": [
+                {
+                    "title": "500,000 NHS staff to get new artificial intelligence tools to help free up more time for patients",
+                    "url": "https://www.england.nhs.uk/2026/06/500000-nhs-staff-to-get-new-artificial-intelligence-tools-to-help-free-up-more-time-for-patients/",
+                    "publisher": "NHS England",
+                    "accessed": "2026-08-20"
+                },
+                {
+                    "title": "NHS accelerates artificial intelligence rollout to cut waiting times and improve care for millions",
+                    "url": "https://www.england.nhs.uk/2026/07/nhs-accelerates-artificial-intelligence-rollout-to-cut-waiting-times-and-improve-care-for-millions/",
+                    "publisher": "NHS England",
+                    "accessed": "2026-08-20"
+                }
+            ],
+            "workings": "NHS England's Microsoft 365 Copilot trial (90 organisations, 30,000+ staff) found an average saving of at least 43 minutes of staff time per person per day. Scaled to the 500,000 staff targeted for the full rollout by October 2026: 43 minutes x 500,000 staff = 21,500,000 minutes/day = 358,333 hours/day. Applying a standard assumed 220-day NHS working year (a Tom & Co assumption, not an NHS-published figure): 358,333 x 220 = approximately 78,833,333 hours/year, rounded to roughly 79 million hours a year. NHS England has not published this national annualised total itself.",
+            "first_used_in": "agentic-ai-enterprise-deployment",
+            "first_used_date": "2026-08-20",
+            "layer": 2
         },
         {
-          "title": "Deprecations",
-          "url": "https://developers.openai.com/api/docs/deprecations",
-          "publisher": "OpenAI",
-          "accessed": "2026-09-10"
+            "id": "stat_021",
+            "stat": "Share of the whole UK adult population within reach of an AI-generated answer at least sometimes",
+            "value": "71",
+            "unit": "percent (approx) of all UK adults aged 16+",
+            "date_calculated": "2026-08-25",
+            "applies_to": [
+                "topic IDs: 22, 29, 30, 31",
+                "clusters: Marketing & Sales; Generative Engine Optimization"
+            ],
+            "method": "Recipe B (combination cut) — multiplying two rates published separately in a single primary Ofcom survey to derive a population-wide share the source does not state directly",
+            "sources_used": [
+                {
+                    "title": "Passive social media use, AI companionship, and online side hustles: UK adults' media and online lives revealed (Adults' Media Use and Attitudes 2026)",
+                    "url": "https://www.ofcom.org.uk/media-use-and-attitudes/media-habits-adults/passive-social-media-use-ai-companionship-and-online-side-hustles-uk-adults-media-and-online-lives-revealed",
+                    "publisher": "Ofcom",
+                    "accessed": "2026-08-25"
+                }
+            ],
+            "workings": "Ofcom's 2026 Adults' Media Use and Attitudes research (survey of 7,533 UK adults 16+, fieldwork Sep-Nov 2025, published 2 April 2026) reports two rates separately: 94% of UK adults have home internet access, and 75% of online adults read AI-generated search summaries at least sometimes. Multiplying the two published rates gives the share of the WHOLE UK adult population (online or not) likely exposed to an AI-generated summary at least sometimes: 0.94 x 0.75 = 0.705, rounded to approximately 71%. Ofcom does not publish this combined population-wide figure itself.",
+            "first_used_in": "category-authority-for-ai-retrieval",
+            "first_used_date": "2026-08-25",
+            "layer": 2
+        },
+        {
+            "id": "stat_022",
+            "stat": "Calendar-day gap between the Data (Use and Access) Act 2025 receiving royal assent and Section 80 (replacing UK GDPR Article 22) actually coming into force",
+            "value": "231",
+            "unit": "days",
+            "date_calculated": "2026-08-27",
+            "applies_to": [
+                "topic ID: 35",
+                "clusters: Risk, Governance & Legal"
+            ],
+            "method": "Recipe F (time-to-comply estimate) — calendar-day delta between two dates published separately on legislation.gov.uk, neither of which the source states as a single elapsed figure",
+            "sources_used": [
+                {
+                    "title": "Data (Use and Access) Act 2025 (royal assent)",
+                    "url": "https://www.legislation.gov.uk/ukpga/2025/18/contents/enacted",
+                    "publisher": "legislation.gov.uk (The National Archives)",
+                    "accessed": "2026-08-27"
+                },
+                {
+                    "title": "Data (Use and Access) Act 2025, Section 80",
+                    "url": "https://www.legislation.gov.uk/ukpga/2025/18/section/80",
+                    "publisher": "legislation.gov.uk (The National Archives)",
+                    "accessed": "2026-08-27"
+                }
+            ],
+            "workings": "Royal assent: 19 June 2025. Section 80 (automated decision-making, replacing UK GDPR Article 22) commencement: 5 February 2026. Days remaining in June after the 19th: 11. Plus full months July (31) + August (31) + September (30) + October (31) + November (30) + December (31) + January (31) = 215. Plus 5 days in February to reach commencement. Total: 11 + 215 + 5 = 231 days.",
+            "first_used_in": "ai-uk-gdpr-ico-guidance-2026",
+            "first_used_date": "2026-08-27",
+            "layer": 2
+        },
+        {
+            "id": "stat_023",
+            "stat": "How much longer the worst-case ICO prior-consultation response window is than the standard one",
+            "value": "75",
+            "unit": "percent longer (98 days vs 56 days)",
+            "date_calculated": "2026-09-01",
+            "applies_to": [
+                "topic ID: 36",
+                "clusters: Risk, Governance & Legal"
+            ],
+            "method": "Recipe A (percentage delta derivation) — the ICO publishes the standard 8-week window and the maximum 6-week extension separately but does not publish the resulting percentage uplift",
+            "sources_used": [
+                {
+                    "title": "ICO, Do we need to consult the ICO?",
+                    "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/data-protection-impact-assessments-dpias/do-we-need-to-consult-the-ico/",
+                    "publisher": "Information Commissioner's Office",
+                    "accessed": "2026-09-01"
+                }
+            ],
+            "workings": "Standard prior-consultation response window: 8 weeks = 56 days. Maximum extension: a further 6 weeks, taking the ceiling to 14 weeks = 98 days. Percentage increase from standard to maximum: (98 - 56) / 56 = 42 / 56 = 0.75 = 75% longer.",
+            "first_used_in": "dpia-for-ai-the-practical-template",
+            "first_used_date": "2026-09-01",
+            "layer": 2
+        },
+        {
+            "id": "stat_024",
+            "stat": "Margin by which the UK government's statutory Report on Copyright and Artificial Intelligence beat its own 9-month deadline under the Data (Use and Access) Act 2025",
+            "value": "1",
+            "unit": "day",
+            "date_calculated": "2026-09-03",
+            "applies_to": [
+                "topic ID: 39",
+                "clusters: Risk, Governance & Legal"
+            ],
+            "method": "Recipe F (time-to-comply / deadline analysis) — calendar-day delta between the Act's royal assent date and the report's actual publication date, neither of which the sources state as a single elapsed or margin figure",
+            "sources_used": [
+                {
+                    "title": "Data (Use and Access) Act 2025 (royal assent)",
+                    "url": "https://www.legislation.gov.uk/ukpga/2025/18/contents/enacted",
+                    "publisher": "legislation.gov.uk (The National Archives)",
+                    "accessed": "2026-09-03"
+                },
+                {
+                    "title": "Data (Use and Access) Act 2025, Part 7, ss.135-136 (copyright works and artificial intelligence systems)",
+                    "url": "https://www.legislation.gov.uk/ukpga/2025/18/part/7/crossheading/copyright-works-and-artificial-intelligence-systems",
+                    "publisher": "legislation.gov.uk (The National Archives)",
+                    "accessed": "2026-09-03"
+                },
+                {
+                    "title": "Report on Copyright and Artificial Intelligence",
+                    "url": "https://www.gov.uk/government/publications/report-and-impact-assessment-on-copyright-and-artificial-intelligence/report-on-copyright-and-artificial-intelligence",
+                    "publisher": "Department for Science, Innovation and Technology (DSIT), Department for Culture, Media and Sport (DCMS), Intellectual Property Office (IPO)",
+                    "accessed": "2026-09-03"
+                }
+            ],
+            "workings": "Royal assent of the Data (Use and Access) Act 2025: 19 June 2025. Sections 135 and 136 require the report and impact assessment to be published within 9 months of that date, a deadline falling on 19 March 2026. The report was in fact published on 18 March 2026. 19 March 2026 minus 18 March 2026 = 1 calendar day of margin before the statutory deadline would have been missed.",
+            "first_used_in": "ai-copyright-uk-getty-v-stability-ai",
+            "first_used_date": "2026-09-03",
+            "layer": 2
+        },
+        {
+            "id": "stat_025",
+            "stat": "Sterling cost of fine-tuning OpenAI's GPT-4.1/GPT-4o and the o4-mini reinforcement fine-tuning training rate, converted from OpenAI's published USD pricing",
+            "value": "18.50 / 74",
+            "unit": "GBP per 1M training tokens (GPT-4.1/4o) / GBP per hour of training compute (o4-mini RFT)",
+            "date_calculated": "2026-09-10",
+            "applies_to": [
+                "topic ID: 45",
+                "clusters: Technical & Build"
+            ],
+            "method": "Recipe A (sterling conversion of a foreign benchmark) — OpenAI's own published USD fine-tuning pricing converted at an approximate September 2026 GBP/USD market rate",
+            "sources_used": [
+                {
+                    "title": "Pricing",
+                    "url": "https://developers.openai.com/api/docs/pricing",
+                    "publisher": "OpenAI",
+                    "accessed": "2026-09-10"
+                },
+                {
+                    "title": "Deprecations",
+                    "url": "https://developers.openai.com/api/docs/deprecations",
+                    "publisher": "OpenAI",
+                    "accessed": "2026-09-10"
+                }
+            ],
+            "workings": "OpenAI's published fine-tuning price list: standard supervised fine-tuning for GPT-4.1 and GPT-4o costs $25 per 1M training tokens; the reinforcement fine-tuning route for o4-mini bills training compute at $100 per hour of wall-clock core-training-loop time. Converted at an approximate GBP/USD market rate of 1.35 for the week of 8 September 2026 (multiple financial data sources placed the pair between 1.33 and 1.36 that week; this is an approximate market rate, not a same-day Bank of England reference rate pulled directly, consistent with the conversion methodology used in stat_002). $25 / 1.35 = £18.52/1M tokens, rounded to £18.50. $100 / 1.35 = £74.07/hour, rounded to £74/hour. Note: OpenAI began winding down this fine-tuning platform to new customers from 7 May 2026, so this cost figure has a shrinking pool of UK businesses who can actually access it as new customers.",
+            "first_used_in": "rag-vs-fine-tuning-vs-prompt-engineering",
+            "first_used_date": "2026-09-10",
+            "layer": 2
+        },
+        {
+            "id": "stat_026",
+            "stat": "Share of UK businesses with 10 or more employees already running a large language model day to day, expressed as a business count",
+            "value": "46,000",
+            "unit": "UK businesses (approx.)",
+            "date_calculated": "2026-09-15",
+            "applies_to": [
+                "topic ID: 48",
+                "clusters: Technical & Build; Strategy & ROI"
+            ],
+            "method": "Recipe B (sector/population cut from an aggregate) — applying a published adoption percentage to a published business population count, a total neither source publishes itself",
+            "sources_used": [
+                {
+                    "title": "Artificial intelligence in UK businesses: 2023 to 2026",
+                    "url": "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026",
+                    "publisher": "Office for National Statistics",
+                    "accessed": "2026-09-15"
+                },
+                {
+                    "title": "Business population estimates for the UK and regions 2024: statistical release",
+                    "url": "https://www.gov.uk/government/statistics/business-population-estimates-2024/business-population-estimates-for-the-uk-and-regions-2024-statistical-release",
+                    "publisher": "Department for Business and Trade",
+                    "accessed": "2026-09-15"
+                }
+            ],
+            "workings": "ONS reports that large language models were the most widely used AI technology among UK businesses with 10+ employees in June 2026, at 18% adoption. DBT's 2024 business population estimates give approximately 211,000 businesses with 10-49 employees, 37,800 with 50-249, and 8,250 with 250+, summing to 257,050 businesses with 10 or more employees. 257,050 x 0.18 = 46,269, rounded to approximately 46,000. Caveat: this joins a June 2026 survey figure to a 2024 population count; the combined total is a Tom & Co estimate, not a figure either source publishes.",
+            "first_used_in": "microsoft-copilot-vs-chatgpt-enterprise-uk-buyers-guide",
+            "first_used_date": "2026-09-15",
+            "layer": 2
         }
-      ],
-      "workings": "OpenAI's published fine-tuning price list: standard supervised fine-tuning for GPT-4.1 and GPT-4o costs $25 per 1M training tokens; the reinforcement fine-tuning route for o4-mini bills training compute at $100 per hour of wall-clock core-training-loop time. Converted at an approximate GBP/USD market rate of 1.35 for the week of 8 September 2026 (multiple financial data sources placed the pair between 1.33 and 1.36 that week; this is an approximate market rate, not a same-day Bank of England reference rate pulled directly, consistent with the conversion methodology used in stat_002). $25 / 1.35 = £18.52/1M tokens, rounded to £18.50. $100 / 1.35 = £74.07/hour, rounded to £74/hour. Note: OpenAI began winding down this fine-tuning platform to new customers from 7 May 2026, so this cost figure has a shrinking pool of UK businesses who can actually access it as new customers.",
-      "first_used_in": "rag-vs-fine-tuning-vs-prompt-engineering",
-      "first_used_date": "2026-09-10",
-      "layer": 2
-    }
-  ]
+    ]
 }

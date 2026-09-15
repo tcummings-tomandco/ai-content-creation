@@ -1,0 +1,30 @@
+{
+  "id": "stat_026",
+  "stat": "Share of UK businesses with 10 or more employees already running a large language model day to day, expressed as a business count",
+  "value": "46,000",
+  "unit": "UK businesses (approx.)",
+  "date_calculated": "2026-09-15",
+  "applies_to": [
+    "topic ID: 48",
+    "clusters: Technical & Build; Strategy & ROI"
+  ],
+  "method": "Recipe B (sector/population cut from an aggregate) — applying a published adoption percentage to a published business population count, a total neither source publishes itself",
+  "sources_used": [
+    {
+      "title": "Artificial intelligence in UK businesses: 2023 to 2026",
+      "url": "https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026",
+      "publisher": "Office for National Statistics",
+      "accessed": "2026-09-15"
+    },
+    {
+      "title": "Business population estimates for the UK and regions 2024: statistical release",
+      "url": "https://www.gov.uk/government/statistics/business-population-estimates-2024/business-population-estimates-for-the-uk-and-regions-2024-statistical-release",
+      "publisher": "Department for Business and Trade",
+      "accessed": "2026-09-15"
+    }
+  ],
+  "workings": "ONS reports that large language models were the most widely used AI technology among UK businesses with 10+ employees in June 2026, at 18% adoption. DBT's 2024 business population estimates give approximately 211,000 businesses with 10-49 employees, 37,800 with 50-249, and 8,250 with 250+, summing to 257,050 businesses with 10 or more employees. 257,050 x 0.18 = 46,269, rounded to approximately 46,000. Caveat: this joins a June 2026 survey figure to a 2024 population count; the combined total is a Tom & Co estimate, not a figure either source publishes.",
+  "first_used_in": "microsoft-copilot-vs-chatgpt-enterprise-uk-buyers-guide",
+  "first_used_date": "2026-09-15",
+  "layer": 2
+}
