@@ -1121,10 +1121,11 @@
       "Competition": "Low",
       "Suggested length": "2200-3000",
       "Quick win": null,
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-09-17",
+      "Notes": "slug: ai-in-uk-financial-services-fca-survey-2026",
+      "Slug": "ai-in-uk-financial-services-fca-survey-2026"
     },
     {
       "ID": 59,

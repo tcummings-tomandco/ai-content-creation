@@ -1,0 +1,24 @@
+{
+  "id": "stat_027",
+  "stat": "Share of all AI use cases in UK financial services that are both built on a foundation model and rated high materiality by the firm running them",
+  "value": "2",
+  "unit": "percent (approx.)",
+  "date_calculated": "2026-09-17",
+  "applies_to": [
+    "topic ID: 58",
+    "clusters: UK Industry Verticals; Risk, Governance & Legal"
+  ],
+  "method": "Recipe B (combination cut) — multiplying two rates published separately in the same primary Bank of England/FCA survey to derive a combined share the source does not state directly",
+  "sources_used": [
+    {
+      "title": "Artificial intelligence in UK financial services - 2024",
+      "url": "https://www.bankofengland.co.uk/report/2024/artificial-intelligence-in-uk-financial-services-2024",
+      "publisher": "Bank of England and Financial Conduct Authority",
+      "accessed": "2026-09-17"
+    }
+  ],
+  "workings": "The Bank of England and FCA's third joint AI survey (published 21 November 2024, 118 respondents across six financial services sectors) reports that foundation models (including LLMs) made up 17% of all AI use cases, and separately that 12% of foundation model use cases were rated 'high materiality' by the firm running them. Multiplying the two published rates gives the share of ALL AI use cases in UK financial services that are both foundation-model-based and high materiality: 0.17 x 0.12 = 0.0204 = approximately 2%. The survey does not publish this combined figure itself.",
+  "first_used_in": "ai-in-uk-financial-services-fca-survey-2026",
+  "first_used_date": "2026-09-17",
+  "layer": 2
+}
