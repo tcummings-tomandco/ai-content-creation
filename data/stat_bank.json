@@ -776,6 +776,30 @@
             "first_used_in": "ai-in-uk-financial-services-fca-survey-2026",
             "first_used_date": "2026-09-17",
             "layer": 2
+        },
+        {
+            "id": "stat_028",
+            "stat": "How much faster UK SME AI adoption grew in the year to 2026 than its average annual pace in the two years before",
+            "value": "3.2",
+            "unit": "x (multiple of average annual percentage-point growth)",
+            "date_calculated": "2026-09-22",
+            "applies_to": [
+                "topic ID: 68",
+                "cluster: Workforce"
+            ],
+            "method": "Recipe C (year-on-year delta from snapshots) — BCC and Atos publish four separate annual adoption percentages (2023-2026) but do not publish the year-on-year growth rate or its acceleration",
+            "sources_used": [
+                {
+                    "title": "Half of SMEs Using AI - With Limited Headcount Impact So Far",
+                    "url": "https://www.britishchambers.org.uk/news/2026/03/half-of-smes-using-ai-with-limited-headcount-impact-so-far/",
+                    "publisher": "British Chambers of Commerce and Atos, with the University of Essex ESRC Centre for Micro-Social Change (MiSoC)",
+                    "accessed": "2026-09-22"
+                }
+            ],
+            "workings": "The BCC/Atos Future of Work: AI in the Workplace survey series reports UK SME AI adoption at 23% (2023), 25% (2024), 35% (2025) and 54% (2026). Year-on-year deltas: 2023-24: +2pp, 2024-25: +10pp, 2025-26: +19pp. Average annual pace across the two years 2023-2025: (35-23)/2 = 6pp/year. Single-year pace 2025-2026: +19pp. Ratio of the most recent year's pace to the prior average: 19/6 = 3.1667, rounded to 3.2x. The source publishes each year's adoption percentage separately but does not state the year-on-year growth rate or its acceleration.",
+            "first_used_in": "will-ai-take-my-job-uk-workforce-evidence-2026",
+            "first_used_date": "2026-09-22",
+            "layer": 2
         }
     ]
 }

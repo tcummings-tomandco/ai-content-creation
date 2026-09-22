@@ -1314,10 +1314,11 @@
       "Competition": "Med",
       "Suggested length": "2000-2800",
       "Quick win": null,
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-09-22",
+      "Notes": "slug: will-ai-take-my-job-uk-workforce-evidence-2026",
+      "Slug": "will-ai-take-my-job-uk-workforce-evidence-2026"
     },
     {
       "ID": 69,

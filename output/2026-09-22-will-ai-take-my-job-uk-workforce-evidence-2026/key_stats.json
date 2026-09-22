@@ -1,0 +1,24 @@
+{
+  "stats": [
+    {
+      "value": "95%",
+      "label": "Of UK SMEs using AI report no change to headcount in the past year",
+      "source": "British Chambers of Commerce and Atos, March 2026"
+    },
+    {
+      "value": "7.4m",
+      "label": "UK workers already using AI-enabled software at work, Q2 2024",
+      "source": "GAISI (arXiv 2507.22748), UK academic index"
+    },
+    {
+      "value": "3.2x",
+      "label": "Faster UK SME AI adoption grew in the year to 2026 vs the two years before",
+      "source": "Tom & Co analysis of BCC and Atos survey data"
+    },
+    {
+      "value": "4.9%",
+      "label": "UK unemployment rate, three months to April 2026, near pre-AI levels",
+      "source": "ONS Labour Market Overview, June 2026"
+    }
+  ]
+}
