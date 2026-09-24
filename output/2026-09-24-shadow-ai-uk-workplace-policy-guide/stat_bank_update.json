@@ -1,0 +1,30 @@
+{
+  "id": "stat_029",
+  "stat": "Estimated number of UK workers routinely using AI tools their employer hasn't sanctioned (shadow AI)",
+  "value": "6.7",
+  "unit": "million UK workers (population estimate)",
+  "date_calculated": "2026-09-24",
+  "applies_to": [
+    "topic ID: 70",
+    "clusters: Workforce; Risk, Governance & Legal"
+  ],
+  "method": "Recipe B (population extrapolation from a survey rate applied to an ONS aggregate)",
+  "sources_used": [
+    {
+      "title": "British workers spend nearly £1bn of their own money on GenAI for work (GenAI Workforce Survey)",
+      "url": "https://www.deloitte.com/uk/en/about/press-room/british-workers-spend-one-billion-pounds-of-their-own-money-on-gen-ai-for-work.html",
+      "publisher": "Deloitte UK",
+      "accessed": "2026-09-24"
+    },
+    {
+      "title": "Labour market overview, UK: September 2026",
+      "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/september2026",
+      "publisher": "Office for National Statistics",
+      "accessed": "2026-09-24"
+    }
+  ],
+  "workings": "Deloitte's GenAI Workforce Survey (n=25,000 UK workers, fieldwork 7 May-10 June 2026) found 63% of UK workers knowingly use GenAI for work, and 31% of those users do so without their employer's knowledge (shadow AI). Combined shadow-AI usage rate across all UK workers: 0.63 x 0.31 = 0.1953 (19.53%, rounded to 19.5%). Applied to ONS's UK employment total of 34.48 million people in work (May-July 2026, from the September 2026 Labour Market Overview): 34,480,000 x 0.1953 = 6,733,344, rounded down conservatively to 6.7 million. Assumes Deloitte's usage rate, measured among UK workers aged 18-70, applies uniformly across the ONS employment total; not adjusted for sector or occupation mix.",
+  "first_used_in": "shadow-ai-uk-workplace-policy-guide",
+  "first_used_date": "2026-09-24",
+  "layer": 2
+}

@@ -1353,10 +1353,11 @@
       "Competition": "Low",
       "Suggested length": "1800-2400",
       "Quick win": null,
-      "Status": null,
-      "Owner": null,
-      "Target publish date": null,
-      "Notes": null
+      "Status": "Draft pending Storyblok",
+      "Owner": "Routine",
+      "Target publish date": "2026-09-24",
+      "Notes": "slug: shadow-ai-uk-workplace-policy-guide",
+      "Slug": "shadow-ai-uk-workplace-policy-guide"
     },
     {
       "ID": 71,
